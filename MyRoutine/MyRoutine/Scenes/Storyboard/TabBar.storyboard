@@ -13,15 +13,62 @@
         <scene sceneID="fXq-Wy-408">
             <objects>
                 <tabBarController storyboardIdentifier="TabBar" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eV6-VD-M16" customClass="TabBarController" customModule="MyRoutine" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vm9-pz-DUR">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Vm9-pz-DUR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="1" green="0.66666666669999997" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="1" green="0.66666666669999997" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
+                    <connections>
+                        <segue destination="lkV-MZ-KZO" kind="relationship" relationship="viewControllers" id="xJC-DP-NQe"/>
+                        <segue destination="sPv-WH-sPX" kind="relationship" relationship="viewControllers" id="pq1-mU-Nzg"/>
+                        <segue destination="UZ7-Hh-EHR" kind="relationship" relationship="viewControllers" id="1dF-sy-ztY"/>
+                    </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zMJ-lP-nVR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-810" y="-229"/>
+            <point key="canvasLocation" x="-1072" y="-226"/>
+        </scene>
+        <!--Diary-->
+        <scene sceneID="BXN-n7-irq">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Diary" storyboardName="Diary" referencedIdentifier="Diary" id="lkV-MZ-KZO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Nhật ký" image="iconDiary" id="vP2-pY-jgL">
+                        <color key="badgeColor" red="0.95294117649999999" green="0.68235294120000001" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZrV-WH-urL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-239" y="-518"/>
+        </scene>
+        <!--StatisticAll-->
+        <scene sceneID="09k-WF-YZS">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="StatisticAll" storyboardName="StatisticAll" referencedIdentifier="StatisticAll" id="sPv-WH-sPX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="iconStatistic" id="0C9-Kd-fJ7"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="syu-x0-Xgz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-214" y="-226"/>
+        </scene>
+        <!--Setting-->
+        <scene sceneID="HDq-kY-o4g">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Setting" storyboardName="Setting" referencedIdentifier="Setting" id="UZ7-Hh-EHR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="iconSetting" id="fUz-dU-kxg"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1fI-B9-2FI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-171" y="31"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="iconDiary" width="30" height="30"/>
+        <image name="iconSetting" width="30" height="30"/>
+        <image name="iconStatistic" width="30" height="30"/>
+    </resources>
 </document>

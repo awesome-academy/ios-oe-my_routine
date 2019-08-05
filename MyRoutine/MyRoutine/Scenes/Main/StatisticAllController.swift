@@ -1,13 +1,16 @@
 //
-//  ViewController.swift
+//  StatisticAllController.swift
 //  MyRoutine
 //
-//  Created by Bùi Xuân Huy on 7/31/19.
+//  Created by Bùi Xuân Huy on 8/1/19.
 //  Copyright © 2019 huy. All rights reserved.
 //
 
-final class MainController: UIViewController {
+class StatisticAllController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
 }
+

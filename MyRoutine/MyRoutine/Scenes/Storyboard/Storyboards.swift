@@ -8,7 +8,7 @@
 
 enum Storyboards {
     
-    // MARK: - Properties
+    // MARK: - List of Storyboard
     static let main = UIStoryboard(name: "Main", bundle: nil)
     static let tabbar = UIStoryboard(name: "TabBar", bundle: nil)
     static let diary = UIStoryboard(name: "Diary", bundle: nil)

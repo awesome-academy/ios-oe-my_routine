@@ -11,7 +11,7 @@ import RealmSwift
 class RealmService {
     
     // MARK: - Singleton
-    static var instance = RealmService()
+    static var shared = RealmService()
     
     // MARK: - Supporting function
     func load<T: Object>(listOf: T.Type, filter: String? = nil) -> [T] {

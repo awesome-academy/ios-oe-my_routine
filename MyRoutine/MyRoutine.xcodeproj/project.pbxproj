@@ -15,10 +15,16 @@
 		058A3DA822F2797C00AB00F2 /* StatisticAllController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A3DA722F2797C00AB00F2 /* StatisticAllController.swift */; };
 		058A3DAA22F2798C00AB00F2 /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A3DA922F2798C00AB00F2 /* SettingController.swift */; };
 		058A3DAC22F27EF200AB00F2 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058A3DAB22F27EF200AB00F2 /* Setting.storyboard */; };
+		058A3DC422F48AE000AB00F2 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A3DC322F48AE000AB00F2 /* RealmService.swift */; };
+		058A3DC622F48B2A00AB00F2 /* RoutineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A3DC522F48B2A00AB00F2 /* RoutineModel.swift */; };
+		058A3DC822F48E3100AB00F2 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A3DC722F48E3100AB00F2 /* String+.swift */; };
+		058A3DCA22F4942100AB00F2 /* RoutineModelRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A3DC922F4942100AB00F2 /* RoutineModelRealm.swift */; };
+		058A3DCC22F496D400AB00F2 /* RoutineService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A3DCB22F496D400AB00F2 /* RoutineService.swift */; };
 		05B23D3322F1678000E8140F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B23D3222F1678000E8140F /* AppDelegate.swift */; };
 		05B23D3A22F1678100E8140F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05B23D3922F1678100E8140F /* Assets.xcassets */; };
 		05B23D3D22F1678100E8140F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05B23D3B22F1678100E8140F /* LaunchScreen.storyboard */; };
 		05B23D4B22F16B9A00E8140F /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B23D4A22F16B9A00E8140F /* Storyboards.swift */; };
+		6FFBB7FB7B5E42CB9207EE70 /* Pods_MyRoutine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 358C4E0060BD992129D1A5B5 /* Pods_MyRoutine.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +36,11 @@
 		058A3DA722F2797C00AB00F2 /* StatisticAllController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticAllController.swift; sourceTree = "<group>"; };
 		058A3DA922F2798C00AB00F2 /* SettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
 		058A3DAB22F27EF200AB00F2 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		058A3DC322F48AE000AB00F2 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		058A3DC522F48B2A00AB00F2 /* RoutineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RoutineModel.swift; path = MyRoutine/Data/Source/RoutineModel.swift; sourceTree = SOURCE_ROOT; };
+		058A3DC722F48E3100AB00F2 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "String+.swift"; path = "MyRoutine/Data/Source/String+.swift"; sourceTree = SOURCE_ROOT; };
+		058A3DC922F4942100AB00F2 /* RoutineModelRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineModelRealm.swift; sourceTree = "<group>"; };
+		058A3DCB22F496D400AB00F2 /* RoutineService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineService.swift; sourceTree = "<group>"; };
 		05B23D2F22F1678000E8140F /* MyRoutine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyRoutine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05B23D3222F1678000E8140F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05B23D3922F1678100E8140F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -37,6 +48,9 @@
 		05B23D3E22F1678100E8140F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05B23D4A22F16B9A00E8140F /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		05B23D4C22F16BC600E8140F /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		358C4E0060BD992129D1A5B5 /* Pods_MyRoutine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyRoutine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D8B598E586CF566BAA5F1E3 /* Pods-MyRoutine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRoutine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyRoutine/Pods-MyRoutine.debug.xcconfig"; sourceTree = "<group>"; };
+		BA59DF1CAEF1699CF2953C6A /* Pods-MyRoutine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRoutine.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyRoutine/Pods-MyRoutine.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,17 +58,44 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FFBB7FB7B5E42CB9207EE70 /* Pods_MyRoutine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		058A3DBE22F48A1200AB00F2 /* Diary */ = {
+			isa = PBXGroup;
+			children = (
+				058A3DA522F2796200AB00F2 /* DiaryController.swift */,
+			);
+			path = Diary;
+			sourceTree = "<group>";
+		};
+		058A3DBF22F48A4400AB00F2 /* StatisticAll */ = {
+			isa = PBXGroup;
+			children = (
+				058A3DA722F2797C00AB00F2 /* StatisticAllController.swift */,
+			);
+			path = StatisticAll;
+			sourceTree = "<group>";
+		};
+		058A3DC022F48A5500AB00F2 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				058A3DA922F2798C00AB00F2 /* SettingController.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
 		05B23D2622F1678000E8140F = {
 			isa = PBXGroup;
 			children = (
 				05B23D3122F1678000E8140F /* MyRoutine */,
 				05B23D3022F1678000E8140F /* Products */,
+				46F722ABA6C7CCDA2E8F7DA0 /* Pods */,
+				F3216918D3655C3931286EFC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +132,7 @@
 		05B23D4622F16AF700E8140F /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				058A3DC722F48E3100AB00F2 /* String+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -107,7 +149,10 @@
 		05B23D4822F16B1F00E8140F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				05B23D5122F16F1E00E8140F /* Main */,
+				058A3DC022F48A5500AB00F2 /* Setting */,
+				058A3DBF22F48A4400AB00F2 /* StatisticAll */,
+				058A3DBE22F48A1200AB00F2 /* Diary */,
+				05B23D5122F16F1E00E8140F /* TabBar */,
 				05B23D4922F16B7100E8140F /* Storyboard */,
 				05B23D4D22F16DC800E8140F /* Common */,
 			);
@@ -137,6 +182,8 @@
 		05B23D4E22F16EBD00E8140F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				058A3DC522F48B2A00AB00F2 /* RoutineModel.swift */,
+				058A3DC922F4942100AB00F2 /* RoutineModelRealm.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -152,19 +199,18 @@
 		05B23D5022F16EE200E8140F /* Local */ = {
 			isa = PBXGroup;
 			children = (
+				058A3DC322F48AE000AB00F2 /* RealmService.swift */,
+				058A3DCB22F496D400AB00F2 /* RoutineService.swift */,
 			);
-			path = Local;
+			name = Local;
 			sourceTree = "<group>";
 		};
-		05B23D5122F16F1E00E8140F /* Main */ = {
+		05B23D5122F16F1E00E8140F /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
 				058A3D9D22F2773B00AB00F2 /* TabBarController.swift */,
-				058A3DA522F2796200AB00F2 /* DiaryController.swift */,
-				058A3DA722F2797C00AB00F2 /* StatisticAllController.swift */,
-				058A3DA922F2798C00AB00F2 /* SettingController.swift */,
 			);
-			path = Main;
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		05B23D5222F16F7C00E8140F /* Resource */ = {
@@ -175,6 +221,23 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		46F722ABA6C7CCDA2E8F7DA0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7D8B598E586CF566BAA5F1E3 /* Pods-MyRoutine.debug.xcconfig */,
+				BA59DF1CAEF1699CF2953C6A /* Pods-MyRoutine.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F3216918D3655C3931286EFC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				358C4E0060BD992129D1A5B5 /* Pods_MyRoutine.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -182,10 +245,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05B23D4122F1678100E8140F /* Build configuration list for PBXNativeTarget "MyRoutine" */;
 			buildPhases = (
+				BC3F8213B593CE28C90BC41F /* [CP] Check Pods Manifest.lock */,
 				05B23D2B22F1678000E8140F /* Sources */,
 				05B23D2C22F1678000E8140F /* Frameworks */,
 				05B23D2D22F1678000E8140F /* Resources */,
 				05B23D4422F167A900E8140F /* ShellScript */,
+				E55E2DE4645DC334E30CE118 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -263,6 +328,52 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
+		BC3F8213B593CE28C90BC41F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyRoutine-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E55E2DE4645DC334E30CE118 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MyRoutine/Pods-MyRoutine-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyRoutine/Pods-MyRoutine-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -271,8 +382,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				058A3DA822F2797C00AB00F2 /* StatisticAllController.swift in Sources */,
+				058A3DC822F48E3100AB00F2 /* String+.swift in Sources */,
+				058A3DCA22F4942100AB00F2 /* RoutineModelRealm.swift in Sources */,
 				05B23D4B22F16B9A00E8140F /* Storyboards.swift in Sources */,
+				058A3DC422F48AE000AB00F2 /* RealmService.swift in Sources */,
 				058A3D9E22F2773B00AB00F2 /* TabBarController.swift in Sources */,
+				058A3DC622F48B2A00AB00F2 /* RoutineModel.swift in Sources */,
+				058A3DCC22F496D400AB00F2 /* RoutineService.swift in Sources */,
 				058A3DA622F2796200AB00F2 /* DiaryController.swift in Sources */,
 				05B23D3322F1678000E8140F /* AppDelegate.swift in Sources */,
 				058A3DAA22F2798C00AB00F2 /* SettingController.swift in Sources */,
@@ -411,6 +527,7 @@
 		};
 		05B23D4222F1678100E8140F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D8B598E586CF566BAA5F1E3 /* Pods-MyRoutine.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -430,6 +547,7 @@
 		};
 		05B23D4322F1678100E8140F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA59DF1CAEF1699CF2953C6A /* Pods-MyRoutine.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

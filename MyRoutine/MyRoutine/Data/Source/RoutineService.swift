@@ -6,8 +6,6 @@
 //  Copyright © 2019 huy. All rights reserved.
 //
 
-import RealmSwift
-
 class RoutineService {
     
     // MARK: - Singleton
@@ -20,10 +18,22 @@ class RoutineService {
             return RoutineModel(idRoutine: obj.idRoutine,
                                 name: obj.name,
                                 dayStart: obj.dayStart,
-                                repeatRoutine: obj.repeatRoutine,
-                                remind: obj.remind,
-                                period: obj.period)
+                                target: obj.targetRoutine ?? TargetModel(type: 1, number: 1),
+                                repeatRoutine: obj.repeatRoutine ?? RepeatModel(type: 1,
+                                                                                value: [1, 2, 3, 4, 5, 6, 7]),
+                                remind: obj.remindRoutine,
+                                period: obj.period,
+                                doneCount: obj.doneCount)
         })
+    }
+    
+    func removeAllRoutine() {
+        do {
+            let realm = try Realm()
+            try realm.write {
+                realm.delete(realm.objects(RoutineModelRealm.self))
+            }
+        } catch { }
     }
     
     func saveRoutinetoDB(_ routine: RoutineModel, completion: ((RoutineModelRealm?) -> Void)? = nil) {
@@ -31,14 +41,15 @@ class RoutineService {
             let realm = try Realm()
             try realm.write {
                 let obj = RoutineModelRealm()
-                obj.idRoutine = String(routine.idRoutine)
-                obj.name = routine.name
+                obj.idRoutine = routine.idRoutine
+                obj.name = routine.nameRoutine
                 obj.dayStart = routine.dayStart
-                var temp = [String]()
-                temp.append(contentsOf: routine.repeatRoutine.map { String($0) })
-                obj.repeatRoutine = temp
-                obj.remind = routine.remind
-                obj.period = String(obj.period)
+                obj.targetRoutine = routine.targetRoutine
+                obj.repeatRoutine = routine.repeatRoutine
+                for i in routine.remindRoutine {
+                    obj.remindRoutine.append(i)
+                }
+                obj.doneCount = routine.doneCount
                 realm.add(obj)
                 completion?(obj)
             }

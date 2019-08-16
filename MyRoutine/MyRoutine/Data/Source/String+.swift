@@ -7,9 +7,7 @@
 //
 
 extension String {
-    
-    var int: Int {
-        return Int(self) ?? -1
+    var int: Int? {
+        return Int(self)
     }
-    
 }

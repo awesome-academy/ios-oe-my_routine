@@ -9,34 +9,38 @@
 struct RoutineModel {
     
     // MARK: - Properties
-    var idRoutine: Int
-    var name: String
-    var dayStart: String
-    var repeatRoutine: [Int]
-    var remind: [String]
-    var period: Int
+    var idRoutine: Int//
+    var nameRoutine: String//
+    var dayStart: Date
+    var repeatRoutine: RepeatModel
+    var targetRoutine: TargetModel
+    var remindRoutine: [RemindModel]
+    var periodRoutine: Int
+    var doneCount: Int
     
     // MARK: - Init
-    init(idRoutine: Int, name: String, dayStart: String,
-         repeatRoutine: [Int], remind: [String], period: Int) {
+    init(idRoutine: Int, name: String, dayStart: Date, target: TargetModel,
+         repeatRoutine: RepeatModel, remind: [RemindModel], period: Int, doneCount: Int) {
         self.idRoutine = idRoutine
-        self.name = name
+        self.nameRoutine = name
         self.dayStart = dayStart
+        self.targetRoutine = target
         self.repeatRoutine = repeatRoutine
-        self.remind = remind
-        self.period = period
+        self.remindRoutine = remind
+        self.periodRoutine = period
+        self.doneCount = doneCount
     }
     
-    init(idRoutine: String, name: String, dayStart: String,
-         repeatRoutine: [String], remind: [String], period: String) {
-        self.idRoutine = idRoutine.int
-        self.name = name
+    init (idRoutine: Int, name: String, dayStart: Date, target: TargetModel,
+          repeatRoutine: RepeatModel, remind: List<RemindModel>, period: Int, doneCount: Int) {
+        self.idRoutine = idRoutine
+        self.nameRoutine = name
         self.dayStart = dayStart
-        var temp = [Int]()
-        temp.append(contentsOf: repeatRoutine.map { $0.int })
-        self.repeatRoutine = temp
-        self.remind = remind
-        self.period = period.int
+        self.targetRoutine = target
+        self.repeatRoutine = repeatRoutine
+        self.remindRoutine = remind.toArray(type: RemindModel.self)
+        self.periodRoutine = period
+        self.doneCount = doneCount
     }
     
 }

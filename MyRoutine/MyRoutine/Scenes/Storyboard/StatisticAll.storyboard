@@ -17,7 +17,18 @@
                     <view key="view" contentMode="scaleToFill" id="cw1-ll-J3F">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pr_profile_bg" translatesAutoresizingMaskIntoConstraints="NO" id="O7f-dR-Q9U">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6J2-y4-gIr" firstAttribute="trailing" secondItem="O7f-dR-Q9U" secondAttribute="trailing" id="0hP-tN-DMz"/>
+                            <constraint firstItem="O7f-dR-Q9U" firstAttribute="leading" secondItem="6J2-y4-gIr" secondAttribute="leading" id="7t1-pp-40L"/>
+                            <constraint firstItem="6J2-y4-gIr" firstAttribute="bottom" secondItem="O7f-dR-Q9U" secondAttribute="bottom" id="Tt5-cO-hP0"/>
+                            <constraint firstItem="O7f-dR-Q9U" firstAttribute="top" secondItem="cw1-ll-J3F" secondAttribute="top" id="tjc-cA-QCk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6J2-y4-gIr"/>
                     </view>
                     <tabBarItem key="tabBarItem" tag="1" title="Item" image="iconStatistic" id="svf-i4-sN4"/>
@@ -30,5 +41,6 @@
     </scenes>
     <resources>
         <image name="iconStatistic" width="30" height="30"/>
+        <image name="pr_profile_bg" width="375" height="812"/>
     </resources>
 </document>

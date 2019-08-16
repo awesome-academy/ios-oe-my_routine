@@ -8,8 +8,16 @@
 
 class DiaryController: UIViewController {
     
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    // MARK: - Actions
+    @IBAction func btnCreat(_ sender: Any) {
+        let controller = Storyboards.diary.instantiateViewController(withIdentifier: "Nav")
+        self.present(controller, animated: true, completion: nil)
+        
     }
     
 }

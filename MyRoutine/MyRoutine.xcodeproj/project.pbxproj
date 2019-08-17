@@ -23,6 +23,7 @@
 		0537C55C2307B96B00454618 /* CellOption.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0537C55A2307B96B00454618 /* CellOption.xib */; };
 		0537C55D2307B96B00454618 /* CellOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C55B2307B96B00454618 /* CellOption.swift */; };
 		0537C55F2307B9F100454618 /* Integer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C55E2307B9F100454618 /* Integer+.swift */; };
+		0537C5622307F19600454618 /* DayPeriodController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C5612307F19600454618 /* DayPeriodController.swift */; };
 		058A3D9A22F276DA00AB00F2 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058A3D9922F276DA00AB00F2 /* TabBar.storyboard */; };
 		058A3D9E22F2773B00AB00F2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A3D9D22F2773B00AB00F2 /* TabBarController.swift */; };
 		058A3DA022F2787E00AB00F2 /* Diary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058A3D9F22F2787E00AB00F2 /* Diary.storyboard */; };
@@ -60,6 +61,7 @@
 		0537C55A2307B96B00454618 /* CellOption.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellOption.xib; sourceTree = "<group>"; };
 		0537C55B2307B96B00454618 /* CellOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellOption.swift; sourceTree = "<group>"; };
 		0537C55E2307B9F100454618 /* Integer+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Integer+.swift"; sourceTree = "<group>"; };
+		0537C5612307F19600454618 /* DayPeriodController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPeriodController.swift; sourceTree = "<group>"; };
 		058A3D9922F276DA00AB00F2 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		058A3D9D22F2773B00AB00F2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		058A3D9F22F2787E00AB00F2 /* Diary.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Diary.storyboard; sourceTree = "<group>"; };
@@ -106,7 +108,7 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		058A3DBE22F48A1200AB00F2 /* Diary */ = {
+		0537C5602307F17200454618 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
 				0537C55B2307B96B00454618 /* CellOption.swift */,
@@ -115,9 +117,18 @@
 				0537C5412306815500454618 /* CellSetUp.xib */,
 				0537C5422306815500454618 /* CellSuggest.swift */,
 				0537C53F2306815500454618 /* CellSuggest.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		058A3DBE22F48A1200AB00F2 /* Diary */ = {
+			isa = PBXGroup;
+			children = (
+				0537C5602307F17200454618 /* Cell */,
 				058A3DA522F2796200AB00F2 /* DiaryController.swift */,
 				0537C53B23066A6600454618 /* CreateRoutineController.swift */,
 				0537C5582307B88A00454618 /* RepeatController.swift */,
+				0537C5612307F19600454618 /* DayPeriodController.swift */,
 			);
 			path = Diary;
 			sourceTree = "<group>";
@@ -461,6 +472,7 @@
 				058A3DCC22F496D400AB00F2 /* RoutineService.swift in Sources */,
 				0537C5322306568600454618 /* RepeatModel.swift in Sources */,
 				0537C5302306568000454618 /* RemindModel.swift in Sources */,
+				0537C5622307F19600454618 /* DayPeriodController.swift in Sources */,
 				058A3DA622F2796200AB00F2 /* DiaryController.swift in Sources */,
 				05B23D3322F1678000E8140F /* AppDelegate.swift in Sources */,
 				058A3DAA22F2798C00AB00F2 /* SettingController.swift in Sources */,

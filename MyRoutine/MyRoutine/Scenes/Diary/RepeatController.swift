@@ -26,6 +26,7 @@ class RepeatController: UIViewController {
         segment.selectedSegmentIndex = checkOptionWeek != 1 ? 1 : 0
     }
     
+    // MARK: - Actions
     @IBAction func reloadTbv(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             checkOptionDay = [1, 2, 3, 4, 5, 6, 7]
@@ -34,6 +35,7 @@ class RepeatController: UIViewController {
         }
         tbvOption.reloadData()
     }
+    
     @IBAction func btnBack(_ sender: Any) {
         if segment.selectedSegmentIndex == 0 {
             kqua.type = 1

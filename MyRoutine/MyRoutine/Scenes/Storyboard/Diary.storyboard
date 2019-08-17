@@ -333,6 +333,65 @@
             </objects>
             <point key="canvasLocation" x="2524" y="116"/>
         </scene>
+        <!--Day Period Controller-->
+        <scene sceneID="kCu-H7-iNH">
+            <objects>
+                <viewController storyboardIdentifier="DayPeriod" useStoryboardIdentifierAsRestorationIdentifier="YES" id="frd-T4-Xzp" customClass="DayPeriodController" customModule="MyRoutine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gKc-cg-yeX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Dx-Vh-3am">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="89.666666666666671"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thời gian trong ngày" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6gv-bj-zcK">
+                                        <rect key="frame" x="111.33333333333333" y="50.666666666666664" width="191.33333333333337" height="23.999999999999993"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEu-PA-fRp">
+                                        <rect key="frame" x="12" y="47.666666666666664" width="84" height="29.999999999999993"/>
+                                        <state key="normal" title="Button" image="back"/>
+                                        <connections>
+                                            <action selector="btnBack:" destination="frd-T4-Xzp" eventType="touchUpInside" id="wTi-wB-s71"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="eEu-PA-fRp" firstAttribute="leading" secondItem="0Dx-Vh-3am" secondAttribute="leading" constant="12" id="EGE-z6-Kvh"/>
+                                    <constraint firstItem="6gv-bj-zcK" firstAttribute="centerY" secondItem="0Dx-Vh-3am" secondAttribute="centerY" multiplier="1.4" id="NYf-d5-wJl"/>
+                                    <constraint firstItem="eEu-PA-fRp" firstAttribute="centerY" secondItem="6gv-bj-zcK" secondAttribute="centerY" id="xWV-x7-Z77"/>
+                                    <constraint firstItem="6gv-bj-zcK" firstAttribute="centerX" secondItem="0Dx-Vh-3am" secondAttribute="centerX" id="xer-kT-zG1"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jea-Ox-uJ8">
+                                <rect key="frame" x="0.0" y="104.66666666666669" width="414" height="757.33333333333326"/>
+                                <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="fEP-ui-mOK" firstAttribute="bottom" secondItem="jea-Ox-uJ8" secondAttribute="bottom" id="9gd-09-fUO"/>
+                            <constraint firstItem="jea-Ox-uJ8" firstAttribute="leading" secondItem="fEP-ui-mOK" secondAttribute="leading" id="Bx4-4f-XoO"/>
+                            <constraint firstItem="0Dx-Vh-3am" firstAttribute="height" secondItem="gKc-cg-yeX" secondAttribute="height" multiplier="1/10" id="IzD-gY-9iy"/>
+                            <constraint firstItem="jea-Ox-uJ8" firstAttribute="top" secondItem="0Dx-Vh-3am" secondAttribute="bottom" constant="15" id="WTf-bC-sGq"/>
+                            <constraint firstItem="0Dx-Vh-3am" firstAttribute="leading" secondItem="fEP-ui-mOK" secondAttribute="leading" id="Zn5-NW-hmO"/>
+                            <constraint firstItem="fEP-ui-mOK" firstAttribute="trailing" secondItem="jea-Ox-uJ8" secondAttribute="trailing" id="nQ9-su-2oz"/>
+                            <constraint firstItem="fEP-ui-mOK" firstAttribute="trailing" secondItem="0Dx-Vh-3am" secondAttribute="trailing" id="o7Z-3a-ttJ"/>
+                            <constraint firstItem="0Dx-Vh-3am" firstAttribute="top" secondItem="gKc-cg-yeX" secondAttribute="top" id="uiy-Lb-WNh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fEP-ui-mOK"/>
+                    </view>
+                    <connections>
+                        <outlet property="tbView" destination="jea-Ox-uJ8" id="qDl-3d-FDQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fdC-Qm-OqS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3216" y="116"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="XZZ-jc-G9P">
             <objects>

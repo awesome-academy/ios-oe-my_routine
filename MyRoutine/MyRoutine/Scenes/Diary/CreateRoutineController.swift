@@ -60,7 +60,8 @@ class CreateRoutineController: UIViewController {
         collectionViewSuggest.collectionViewLayout = layout
         collectionViewSuggest.dataSource = self
         collectionViewSuggest.delegate = self
-        collectionViewSuggest.register(UINib(nibName: "CellSuggest", bundle: nil), forCellWithReuseIdentifier: "cell")
+        collectionViewSuggest.register(UINib(nibName: "CellSuggest", bundle: nil),
+                                       forCellWithReuseIdentifier: "cell")
     }
     
     func setUpTableView() {
@@ -75,6 +76,10 @@ class CreateRoutineController: UIViewController {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(updateRepeat(notifi:)),
                                                name: NSNotification.Name(rawValue: "Repeat"),
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(updatePeriod(notifi:)),
+                                               name: NSNotification.Name(rawValue: "Period"),
                                                object: nil)
     }
     
@@ -108,6 +113,19 @@ class CreateRoutineController: UIViewController {
         }
     }
     
+    @objc func updatePeriod(notifi: Notification) {
+        if let mess = notifi.userInfo, let msg = mess["message"] {
+            state[4] = msg as? String ?? ""
+            switch state[4] {
+            case "Sáng": routine.periodRoutine = 1
+            case "Chiều": routine.periodRoutine = 2
+            case "Tối": routine.periodRoutine = 3
+            default: routine.periodRoutine = 4
+            }
+            tableViewSetting.reloadData()
+        }
+    }
+    
 }
 
 // MARK: - CollectionView
@@ -138,10 +156,17 @@ extension CreateRoutineController: UICollectionViewDelegate {
             controller.checkOptionDay = repeatDay
             controller.checkOptionWeek = repeatWeek
             navigationController?.pushViewController(controller, animated: true)
+        case 4:
+            guard let controller = Storyboards.diary.instantiateViewController(withIdentifier: "DayPeriod") as? DayPeriodController else {
+                return
+            }
+            controller.state = state[4]
+            navigationController?.pushViewController(controller, animated: true)
         default:
             return
         }
     }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         tfNameRoutine.text = suggest[indexPath.row]
     }

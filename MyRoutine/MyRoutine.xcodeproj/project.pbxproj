@@ -19,6 +19,10 @@
 		0537C5462306815600454618 /* CellSuggest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C5422306815500454618 /* CellSuggest.swift */; };
 		0537C54A230799DB00454618 /* ShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C548230799DB00454618 /* ShadowButton.swift */; };
 		0537C54B230799DB00454618 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C549230799DB00454618 /* RoundedView.swift */; };
+		0537C5592307B88A00454618 /* RepeatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C5582307B88A00454618 /* RepeatController.swift */; };
+		0537C55C2307B96B00454618 /* CellOption.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0537C55A2307B96B00454618 /* CellOption.xib */; };
+		0537C55D2307B96B00454618 /* CellOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C55B2307B96B00454618 /* CellOption.swift */; };
+		0537C55F2307B9F100454618 /* Integer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C55E2307B9F100454618 /* Integer+.swift */; };
 		058A3D9A22F276DA00AB00F2 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058A3D9922F276DA00AB00F2 /* TabBar.storyboard */; };
 		058A3D9E22F2773B00AB00F2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A3D9D22F2773B00AB00F2 /* TabBarController.swift */; };
 		058A3DA022F2787E00AB00F2 /* Diary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058A3D9F22F2787E00AB00F2 /* Diary.storyboard */; };
@@ -52,6 +56,10 @@
 		0537C5422306815500454618 /* CellSuggest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellSuggest.swift; sourceTree = "<group>"; };
 		0537C548230799DB00454618 /* ShadowButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowButton.swift; sourceTree = "<group>"; };
 		0537C549230799DB00454618 /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		0537C5582307B88A00454618 /* RepeatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatController.swift; sourceTree = "<group>"; };
+		0537C55A2307B96B00454618 /* CellOption.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellOption.xib; sourceTree = "<group>"; };
+		0537C55B2307B96B00454618 /* CellOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellOption.swift; sourceTree = "<group>"; };
+		0537C55E2307B9F100454618 /* Integer+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Integer+.swift"; sourceTree = "<group>"; };
 		058A3D9922F276DA00AB00F2 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		058A3D9D22F2773B00AB00F2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		058A3D9F22F2787E00AB00F2 /* Diary.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Diary.storyboard; sourceTree = "<group>"; };
@@ -101,12 +109,15 @@
 		058A3DBE22F48A1200AB00F2 /* Diary */ = {
 			isa = PBXGroup;
 			children = (
+				0537C55B2307B96B00454618 /* CellOption.swift */,
+				0537C55A2307B96B00454618 /* CellOption.xib */,
 				0537C5402306815500454618 /* CellSetUp.swift */,
 				0537C5412306815500454618 /* CellSetUp.xib */,
 				0537C5422306815500454618 /* CellSuggest.swift */,
 				0537C53F2306815500454618 /* CellSuggest.xib */,
 				058A3DA522F2796200AB00F2 /* DiaryController.swift */,
 				0537C53B23066A6600454618 /* CreateRoutineController.swift */,
+				0537C5582307B88A00454618 /* RepeatController.swift */,
 			);
 			path = Diary;
 			sourceTree = "<group>";
@@ -171,6 +182,7 @@
 		05B23D4622F16AF700E8140F /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				0537C55E2307B9F100454618 /* Integer+.swift */,
 				0537C535230657BB00454618 /* List+.swift */,
 				058A3DC722F48E3100AB00F2 /* String+.swift */,
 				0537C53D2306811F00454618 /* UIView+.swift */,
@@ -350,6 +362,7 @@
 				058A3DA022F2787E00AB00F2 /* Diary.storyboard in Resources */,
 				058A3DAC22F27EF200AB00F2 /* Setting.storyboard in Resources */,
 				0537C5432306815600454618 /* CellSuggest.xib in Resources */,
+				0537C55C2307B96B00454618 /* CellOption.xib in Resources */,
 				0537C5452306815600454618 /* CellSetUp.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,6 +442,7 @@
 			files = (
 				058A3DA822F2797C00AB00F2 /* StatisticAllController.swift in Sources */,
 				0537C536230657BB00454618 /* List+.swift in Sources */,
+				0537C55F2307B9F100454618 /* Integer+.swift in Sources */,
 				0537C54B230799DB00454618 /* RoundedView.swift in Sources */,
 				0537C5462306815600454618 /* CellSuggest.swift in Sources */,
 				058A3DC822F48E3100AB00F2 /* String+.swift in Sources */,
@@ -436,7 +450,9 @@
 				05B23D4B22F16B9A00E8140F /* Storyboards.swift in Sources */,
 				0537C5342306568E00454618 /* TargetModel.swift in Sources */,
 				0537C53C23066A6600454618 /* CreateRoutineController.swift in Sources */,
+				0537C55D2307B96B00454618 /* CellOption.swift in Sources */,
 				058A3DC422F48AE000AB00F2 /* RealmService.swift in Sources */,
+				0537C5592307B88A00454618 /* RepeatController.swift in Sources */,
 				058A3D9E22F2773B00AB00F2 /* TabBarController.swift in Sources */,
 				0537C5442306815600454618 /* CellSetUp.swift in Sources */,
 				0537C54A230799DB00454618 /* ShadowButton.swift in Sources */,

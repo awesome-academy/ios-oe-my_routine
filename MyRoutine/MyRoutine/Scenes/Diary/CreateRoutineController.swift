@@ -37,12 +37,18 @@ class CreateRoutineController: UIViewController {
         setUp()
     }
     
+    // MARK: - Denit
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     // MARK: - Setup
     func setUp() {
         tfNameRoutine.delegate = self
         tfNameRoutine.returnKeyType = .done
         setUpCollectionView()
         setUpTableView()
+        receiveNotifi()
     }
     
     func setUpCollectionView() {
@@ -60,7 +66,46 @@ class CreateRoutineController: UIViewController {
     func setUpTableView() {
         tableViewSetting.dataSource = self
         tableViewSetting.delegate = self
-        tableViewSetting.register(UINib(nibName: "CellSetUp", bundle: nil), forCellReuseIdentifier: "tbvcell")
+        tableViewSetting.register(UINib(nibName: "CellSetUp", bundle: nil),
+                                  forCellReuseIdentifier: "tbvcell")
+    }
+    
+    // MARK: - Support Method
+    func receiveNotifi() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(updateRepeat(notifi:)),
+                                               name: NSNotification.Name(rawValue: "Repeat"),
+                                               object: nil)
+    }
+    
+    @objc func updateRepeat(notifi: Notification) {
+        if let mess = notifi.userInfo, let msg = mess["message"] {
+            guard let repeatRoutine = msg as? RepeatModel else {
+                return
+            }
+            routine.repeatRoutine = repeatRoutine
+            state[0] = xylyKQ(res: repeatRoutine)
+            tableViewSetting.reloadData()
+        }
+    }
+    
+    func xylyKQ(res: RepeatModel) -> String {
+        if res.type == 1 {
+            repeatWeek = 1
+            repeatDay = res.value.toArray(type: Int.self)
+            if repeatDay == [1, 2, 3, 4, 5, 6, 7] {
+                return "Hàng ngày"
+            } else {
+                let temp = res.value.filter { $0 != 0 }
+                                    .map { $0.convertToDay }
+                                    .reduce ("", { $0 + " " + $1 })
+                return temp
+            }
+        } else {
+            repeatWeek = res.value[0]
+            repeatDay = [1, 2, 3, 4, 5, 6, 7]
+            return "\(repeatWeek) ngày / tuần"
+        }
     }
     
 }
@@ -84,6 +129,19 @@ extension CreateRoutineController: UICollectionViewDataSource {
 
 extension CreateRoutineController: UICollectionViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            guard let controller = Storyboards.diary.instantiateViewController(withIdentifier: "RepeatVC") as? RepeatController else {
+                return
+            }
+            controller.checkOptionDay = repeatDay
+            controller.checkOptionWeek = repeatWeek
+            navigationController?.pushViewController(controller, animated: true)
+        default:
+            return
+        }
+    }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         tfNameRoutine.text = suggest[indexPath.row]
     }

@@ -71,6 +71,31 @@ class CreateRoutineController: UIViewController {
                                   forCellReuseIdentifier: "tbvcell")
     }
     
+    // MARK: - Actions
+    @IBAction func btnBack(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func btnSave(_ sender: Any) {
+        if let name = tfNameRoutine.text {
+            if name.isEmpty {
+                UIAlertController.showQuickSystemAlert(title: "Lỗi",
+                                                       message: "Không được để trống tên",
+                                                       cancelButtonTitle: "OK")
+            } else {
+                routine.nameRoutine = name
+                RoutineService.shared.saveRoutinetoDB(routine) { routine in
+                    if routine != nil {
+                        self.dismiss(animated: true, completion: nil)
+                    } else {
+                        UIAlertController.showQuickSystemAlert(title: "Lỗi",
+                                                               cancelButtonTitle: "OK")
+                    }
+                }
+            }
+        }
+    }
+    
     // MARK: - Support Method
     func receiveNotifi() {
         NotificationCenter.default.addObserver(self,
@@ -84,6 +109,10 @@ class CreateRoutineController: UIViewController {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(updateTarget(notifi:)),
                                                name: NSNotification.Name(rawValue: "Target"),
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(updateRemind(notifi:)),
+                                               name: NSNotification.Name(rawValue: "Remind"),
                                                object: nil)
     }
     
@@ -141,6 +170,21 @@ class CreateRoutineController: UIViewController {
         }
     }
     
+    @objc func updateRemind(notifi: Notification) {
+        if let mess = notifi.userInfo, let msg = mess["message"] {
+            guard let remind = msg as? [RemindModel] else {
+                return
+            }
+            routine.remindRoutine = remind
+            let check = remind.filter { $0.state }
+            switch check.count {
+            case 0: state[3] = "Tắt"
+            case 1: state[3] = check[0].timeString
+            default: state[3] = "\(check.count) lần / ngày"
+            }
+            tableViewSetting.reloadData()
+        }
+    }
 }
 
 // MARK: - CollectionView
@@ -189,6 +233,12 @@ extension CreateRoutineController: UICollectionViewDelegate {
                 return
             }
             controller.target = routine.targetRoutine
+            navigationController?.pushViewController(controller, animated: true)
+        case 3:
+            guard let controller = Storyboards.diary.instantiateViewController(withIdentifier: "RemindVC") as? RemindController else {
+                return
+            }
+            controller.remind = routine.remindRoutine
             navigationController?.pushViewController(controller, animated: true)
         case 4:
             guard let controller = Storyboards.diary.instantiateViewController(withIdentifier: "DayPeriod") as? DayPeriodController else {

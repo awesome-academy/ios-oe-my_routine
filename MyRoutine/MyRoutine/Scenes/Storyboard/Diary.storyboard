@@ -109,6 +109,9 @@
                                         <state key="normal" title="Huỷ">
                                             <color key="titleColor" red="0.95294117649999999" green="0.68235294120000001" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btnBack:" destination="yvv-cx-hoH" eventType="touchUpInside" id="Szb-jX-yji"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3nZ-Aj-ROf">
                                         <rect key="frame" x="370" y="46.333333333333336" width="32" height="33.000000000000007"/>
@@ -116,6 +119,9 @@
                                         <state key="normal" title="Lưu">
                                             <color key="titleColor" red="0.95294117649999999" green="0.68235294120000001" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btnSave:" destination="yvv-cx-hoH" eventType="touchUpInside" id="lXt-QV-k0O"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -575,6 +581,78 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qgm-Ad-Kyo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3952" y="116"/>
+        </scene>
+        <!--Remind Controller-->
+        <scene sceneID="0p3-Ob-qeJ">
+            <objects>
+                <viewController storyboardIdentifier="RemindVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oEk-5S-pzM" customClass="RemindController" customModule="MyRoutine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TcY-zd-MUG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fqL-wk-Z5t">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="89.666666666666671"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nhắc nhở" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMZ-tV-zou">
+                                        <rect key="frame" x="161.66666666666666" y="50.666666666666664" width="90.666666666666657" height="23.999999999999993"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z34-gZ-LtZ">
+                                        <rect key="frame" x="370" y="46.333333333333336" width="32" height="33.000000000000007"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                        <state key="normal" title="Sửa">
+                                            <color key="titleColor" red="0.8862745098" green="0.73333333329999995" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnEdit:" destination="oEk-5S-pzM" eventType="touchUpInside" id="QRL-OX-tNv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gj-bQ-mIY">
+                                        <rect key="frame" x="12" y="47.666666666666664" width="30" height="29.999999999999993"/>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="btnBack:" destination="oEk-5S-pzM" eventType="touchUpInside" id="uRZ-Vm-v6B"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="uMZ-tV-zou" firstAttribute="centerY" secondItem="fqL-wk-Z5t" secondAttribute="centerY" multiplier="1.4" id="Md5-nv-pgW"/>
+                                    <constraint firstItem="2gj-bQ-mIY" firstAttribute="leading" secondItem="fqL-wk-Z5t" secondAttribute="leading" constant="12" id="Wab-kT-3Za"/>
+                                    <constraint firstItem="Z34-gZ-LtZ" firstAttribute="centerY" secondItem="uMZ-tV-zou" secondAttribute="centerY" id="bzw-KJ-9zH"/>
+                                    <constraint firstAttribute="trailing" secondItem="Z34-gZ-LtZ" secondAttribute="trailing" constant="12" id="hnx-qO-w1E"/>
+                                    <constraint firstItem="2gj-bQ-mIY" firstAttribute="centerY" secondItem="uMZ-tV-zou" secondAttribute="centerY" id="lty-G2-1UD"/>
+                                    <constraint firstItem="uMZ-tV-zou" firstAttribute="centerX" secondItem="fqL-wk-Z5t" secondAttribute="centerX" id="txy-9F-8dj"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4j9-t8-P2d">
+                                <rect key="frame" x="0.0" y="89.666666666666686" width="414" height="806.33333333333326"/>
+                                <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="66A-Bp-AtB" firstAttribute="trailing" secondItem="4j9-t8-P2d" secondAttribute="trailing" id="C4B-ZR-C74"/>
+                            <constraint firstItem="4j9-t8-P2d" firstAttribute="top" secondItem="fqL-wk-Z5t" secondAttribute="bottom" id="G5x-ry-ypx"/>
+                            <constraint firstItem="fqL-wk-Z5t" firstAttribute="top" secondItem="TcY-zd-MUG" secondAttribute="top" id="JYr-vJ-aW7"/>
+                            <constraint firstAttribute="bottom" secondItem="4j9-t8-P2d" secondAttribute="bottom" id="P7B-30-B8U"/>
+                            <constraint firstItem="fqL-wk-Z5t" firstAttribute="height" secondItem="TcY-zd-MUG" secondAttribute="height" multiplier="1/10" id="PN8-bX-yyG"/>
+                            <constraint firstItem="fqL-wk-Z5t" firstAttribute="leading" secondItem="66A-Bp-AtB" secondAttribute="leading" id="cYK-FY-Asj"/>
+                            <constraint firstItem="4j9-t8-P2d" firstAttribute="leading" secondItem="66A-Bp-AtB" secondAttribute="leading" id="mDg-ZL-oWU"/>
+                            <constraint firstItem="66A-Bp-AtB" firstAttribute="trailing" secondItem="fqL-wk-Z5t" secondAttribute="trailing" id="qrj-jF-fo5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="66A-Bp-AtB"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnEditOutlet" destination="Z34-gZ-LtZ" id="GbW-Y5-TXd"/>
+                        <outlet property="tbvRemind" destination="4j9-t8-P2d" id="6cn-9X-cSf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="upL-Xf-YDL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4684" y="113"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XZZ-jc-G9P">

@@ -81,6 +81,10 @@ class CreateRoutineController: UIViewController {
                                                selector: #selector(updatePeriod(notifi:)),
                                                name: NSNotification.Name(rawValue: "Period"),
                                                object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(updateTarget(notifi:)),
+                                               name: NSNotification.Name(rawValue: "Target"),
+                                               object: nil)
     }
     
     @objc func updateRepeat(notifi: Notification) {
@@ -122,6 +126,17 @@ class CreateRoutineController: UIViewController {
             case "Tối": routine.periodRoutine = 3
             default: routine.periodRoutine = 4
             }
+            tableViewSetting.reloadData()
+        }
+    }
+    
+    @objc func updateTarget(notifi: Notification) {
+        if let mess = notifi.userInfo, let msg = mess["message"] {
+            guard let target = msg as? TargetModel else {
+                return
+            }
+            routine.targetRoutine = target
+            state[2] = target.type == 1 ? "\(target.number) lần / ngày" : "\(target.number) phút / ngày"
             tableViewSetting.reloadData()
         }
     }
@@ -169,6 +184,12 @@ extension CreateRoutineController: UICollectionViewDelegate {
                     self?.tableViewSetting.reloadData()
                 }
             }
+        case 2:
+            guard let controller = Storyboards.diary.instantiateViewController(withIdentifier: "TargetVC") as? TargetController else {
+                return
+            }
+            controller.target = routine.targetRoutine
+            navigationController?.pushViewController(controller, animated: true)
         case 4:
             guard let controller = Storyboards.diary.instantiateViewController(withIdentifier: "DayPeriod") as? DayPeriodController else {
                 return
@@ -211,7 +232,7 @@ extension CreateRoutineController: UITableViewDelegate {
     
 }
 
-// MARK: - Textfi 
+// MARK: - Textfield
 extension CreateRoutineController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

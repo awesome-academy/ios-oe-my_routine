@@ -156,6 +156,19 @@ extension CreateRoutineController: UICollectionViewDelegate {
             controller.checkOptionDay = repeatDay
             controller.checkOptionWeek = repeatWeek
             navigationController?.pushViewController(controller, animated: true)
+        case 1:
+            PickerViewControl.showDatePicker(type: .date,
+                                             title: "Ngày bắt đầu") {[weak self] dateChange in
+                if let date = dateChange {
+                    if date.getStringDate() == Date().stringBy(format: "dd/MM/YYYY") {
+                        self?.state[1] = "Hôm nay"
+                    } else {
+                        self?.state[1] = date.stringBy(format: "dd/MM/YYYY")
+                    }
+                    self?.routine.dayStart = date
+                    self?.tableViewSetting.reloadData()
+                }
+            }
         case 4:
             guard let controller = Storyboards.diary.instantiateViewController(withIdentifier: "DayPeriod") as? DayPeriodController else {
                 return

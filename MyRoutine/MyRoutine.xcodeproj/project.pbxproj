@@ -24,6 +24,13 @@
 		0537C55D2307B96B00454618 /* CellOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C55B2307B96B00454618 /* CellOption.swift */; };
 		0537C55F2307B9F100454618 /* Integer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C55E2307B9F100454618 /* Integer+.swift */; };
 		0537C5622307F19600454618 /* DayPeriodController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C5612307F19600454618 /* DayPeriodController.swift */; };
+		0537C5692307F65B00454618 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C5642307F65A00454618 /* DatePicker.swift */; };
+		0537C56A2307F65B00454618 /* TextPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C5652307F65A00454618 /* TextPicker.swift */; };
+		0537C56B2307F65B00454618 /* PickerViewControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C5662307F65A00454618 /* PickerViewControl.swift */; };
+		0537C56C2307F65B00454618 /* TextPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0537C5672307F65A00454618 /* TextPicker.xib */; };
+		0537C56D2307F65B00454618 /* DatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0537C5682307F65A00454618 /* DatePicker.xib */; };
+		0537C5712307F6CB00454618 /* SystemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C5702307F6CB00454618 /* SystemInfo.swift */; };
+		0537C5732307F7D300454618 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C5722307F7D300454618 /* Date+.swift */; };
 		058A3D9A22F276DA00AB00F2 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058A3D9922F276DA00AB00F2 /* TabBar.storyboard */; };
 		058A3D9E22F2773B00AB00F2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A3D9D22F2773B00AB00F2 /* TabBarController.swift */; };
 		058A3DA022F2787E00AB00F2 /* Diary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058A3D9F22F2787E00AB00F2 /* Diary.storyboard */; };
@@ -62,6 +69,13 @@
 		0537C55B2307B96B00454618 /* CellOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellOption.swift; sourceTree = "<group>"; };
 		0537C55E2307B9F100454618 /* Integer+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Integer+.swift"; sourceTree = "<group>"; };
 		0537C5612307F19600454618 /* DayPeriodController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPeriodController.swift; sourceTree = "<group>"; };
+		0537C5642307F65A00454618 /* DatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
+		0537C5652307F65A00454618 /* TextPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextPicker.swift; sourceTree = "<group>"; };
+		0537C5662307F65A00454618 /* PickerViewControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewControl.swift; sourceTree = "<group>"; };
+		0537C5672307F65A00454618 /* TextPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextPicker.xib; sourceTree = "<group>"; };
+		0537C5682307F65A00454618 /* DatePicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePicker.xib; sourceTree = "<group>"; };
+		0537C5702307F6CB00454618 /* SystemInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemInfo.swift; sourceTree = "<group>"; };
+		0537C5722307F7D300454618 /* Date+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		058A3D9922F276DA00AB00F2 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		058A3D9D22F2773B00AB00F2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		058A3D9F22F2787E00AB00F2 /* Diary.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Diary.storyboard; sourceTree = "<group>"; };
@@ -121,6 +135,35 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		0537C5632307F65A00454618 /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				0537C5642307F65A00454618 /* DatePicker.swift */,
+				0537C5652307F65A00454618 /* TextPicker.swift */,
+				0537C5662307F65A00454618 /* PickerViewControl.swift */,
+				0537C5672307F65A00454618 /* TextPicker.xib */,
+				0537C5682307F65A00454618 /* DatePicker.xib */,
+			);
+			path = Picker;
+			sourceTree = "<group>";
+		};
+		0537C56E2307F65F00454618 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				0537C5632307F65A00454618 /* Picker */,
+				0537C547230799DB00454618 /* View */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		0537C56F2307F6CB00454618 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				0537C5702307F6CB00454618 /* SystemInfo.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		058A3DBE22F48A1200AB00F2 /* Diary */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,7 +213,8 @@
 		05B23D3122F1678000E8140F /* MyRoutine */ = {
 			isa = PBXGroup;
 			children = (
-				0537C547230799DB00454618 /* View */,
+				0537C56F2307F6CB00454618 /* Utilities */,
+				0537C56E2307F65F00454618 /* Custom */,
 				05B23D5222F16F7C00E8140F /* Resource */,
 				05B23D4522F16A9400E8140F /* App */,
 				05B23D4722F16B0D00E8140F /* Data */,
@@ -197,6 +241,7 @@
 				0537C535230657BB00454618 /* List+.swift */,
 				058A3DC722F48E3100AB00F2 /* String+.swift */,
 				0537C53D2306811F00454618 /* UIView+.swift */,
+				0537C5722307F7D300454618 /* Date+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -368,6 +413,8 @@
 			files = (
 				058A3D9A22F276DA00AB00F2 /* TabBar.storyboard in Resources */,
 				05B23D3D22F1678100E8140F /* LaunchScreen.storyboard in Resources */,
+				0537C56D2307F65B00454618 /* DatePicker.xib in Resources */,
+				0537C56C2307F65B00454618 /* TextPicker.xib in Resources */,
 				05B23D3A22F1678100E8140F /* Assets.xcassets in Resources */,
 				058A3DA222F278C500AB00F2 /* StatisticAll.storyboard in Resources */,
 				058A3DA022F2787E00AB00F2 /* Diary.storyboard in Resources */,
@@ -458,6 +505,7 @@
 				0537C5462306815600454618 /* CellSuggest.swift in Sources */,
 				058A3DC822F48E3100AB00F2 /* String+.swift in Sources */,
 				058A3DCA22F4942100AB00F2 /* RoutineModelRealm.swift in Sources */,
+				0537C5692307F65B00454618 /* DatePicker.swift in Sources */,
 				05B23D4B22F16B9A00E8140F /* Storyboards.swift in Sources */,
 				0537C5342306568E00454618 /* TargetModel.swift in Sources */,
 				0537C53C23066A6600454618 /* CreateRoutineController.swift in Sources */,
@@ -466,6 +514,7 @@
 				0537C5592307B88A00454618 /* RepeatController.swift in Sources */,
 				058A3D9E22F2773B00AB00F2 /* TabBarController.swift in Sources */,
 				0537C5442306815600454618 /* CellSetUp.swift in Sources */,
+				0537C56B2307F65B00454618 /* PickerViewControl.swift in Sources */,
 				0537C54A230799DB00454618 /* ShadowButton.swift in Sources */,
 				0537C53E2306811F00454618 /* UIView+.swift in Sources */,
 				058A3DC622F48B2A00AB00F2 /* RoutineModel.swift in Sources */,
@@ -473,7 +522,10 @@
 				0537C5322306568600454618 /* RepeatModel.swift in Sources */,
 				0537C5302306568000454618 /* RemindModel.swift in Sources */,
 				0537C5622307F19600454618 /* DayPeriodController.swift in Sources */,
+				0537C5712307F6CB00454618 /* SystemInfo.swift in Sources */,
 				058A3DA622F2796200AB00F2 /* DiaryController.swift in Sources */,
+				0537C56A2307F65B00454618 /* TextPicker.swift in Sources */,
+				0537C5732307F7D300454618 /* Date+.swift in Sources */,
 				05B23D3322F1678000E8140F /* AppDelegate.swift in Sources */,
 				058A3DAA22F2798C00AB00F2 /* SettingController.swift in Sources */,
 			);

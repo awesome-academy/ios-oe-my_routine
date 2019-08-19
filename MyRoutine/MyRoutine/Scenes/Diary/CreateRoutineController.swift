@@ -12,15 +12,7 @@ class CreateRoutineController: UIViewController {
     var state = Constants.defaultNewRoutine
     var repeatDay = Constants.allWeek
     var repeatWeek = 1
-    var routine =  RoutineModel(idRoutine: RoutineService.shared.getAllRoutine().count,
-                                name: "NewRoutine",
-                                dayStart: Date(),
-                                target: TargetModel(type: 1, number: 1),
-                                repeatRoutine: RepeatModel(type: 1,
-                                                           value: Constants.allWeek),
-                                remind: [RemindModel(timeString: "9:00", state: true)],
-                                period: 4,
-                                doneCount: 0)
+    var routine =  RoutineModel.defautInit()
     
     // MARK: - Outlets
     @IBOutlet weak var suggestCollectionView: UICollectionView!
@@ -31,6 +23,7 @@ class CreateRoutineController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUp()
+        print(routine)
     }
     
     // MARK: - Setup
@@ -50,13 +43,13 @@ class CreateRoutineController: UIViewController {
         suggestCollectionView.collectionViewLayout = layout
         suggestCollectionView.dataSource = self
         suggestCollectionView.delegate = self
-        suggestCollectionView.register(cellType: CellSuggest.self)
+        suggestCollectionView.register(cellType: SuggestionViewCell.self)
     }
     
     func setUpTableView() {
         settingTableView.dataSource = self
         settingTableView.delegate = self
-        settingTableView.register(cellType: CellSetUp.self)
+        settingTableView.register(cellType: RoutineComponentCell.self)
     }
     
 }
@@ -68,7 +61,7 @@ extension CreateRoutineController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: CellSuggest = collectionView.dequeueReusableCell(for: indexPath)
+        let cell: SuggestionViewCell = collectionView.dequeueReusableCell(for: indexPath)
         cell.setUp(icon: Constants.suggestIcon[indexPath.row],
                    suggest: Constants.suggestNameRoutine[indexPath.row])
         return cell
@@ -84,13 +77,13 @@ extension CreateRoutineController: UICollectionViewDelegate {
 // MARK: - TableView
 extension CreateRoutineController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Constants.defaultCategory.count
+        return Constants.defaultComponents.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: CellSetUp = tableView.dequeueReusableCell(for: indexPath)
+        let cell: RoutineComponentCell = tableView.dequeueReusableCell(for: indexPath)
         cell.setUp(iconSetting: Constants.iconCategory[indexPath.row],
-                   setting: Constants.defaultCategory[indexPath.row],
+                   setting: Constants.defaultComponents[indexPath.row],
                    state: state[indexPath.row])
         return cell
     }

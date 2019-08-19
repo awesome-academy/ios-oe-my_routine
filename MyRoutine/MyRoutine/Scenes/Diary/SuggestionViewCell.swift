@@ -6,7 +6,7 @@
 //  Copyright © 2019 huy. All rights reserved.
 //
 
-class CellSuggest: UICollectionViewCell, NibReusable {
+class SuggestionViewCell: UICollectionViewCell, NibReusable {
     
     // MARK: - Outlets
     @IBOutlet weak var iconView: UIView!

@@ -13,10 +13,10 @@
 		0537C536230657BB00454618 /* List+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C535230657BB00454618 /* List+.swift */; };
 		0537C53C23066A6600454618 /* CreateRoutineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C53B23066A6600454618 /* CreateRoutineController.swift */; };
 		0537C53E2306811F00454618 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C53D2306811F00454618 /* UIView+.swift */; };
-		0537C5432306815600454618 /* CellSuggest.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0537C53F2306815500454618 /* CellSuggest.xib */; };
-		0537C5442306815600454618 /* CellSetUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C5402306815500454618 /* CellSetUp.swift */; };
-		0537C5452306815600454618 /* CellSetUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0537C5412306815500454618 /* CellSetUp.xib */; };
-		0537C5462306815600454618 /* CellSuggest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C5422306815500454618 /* CellSuggest.swift */; };
+		0537C5432306815600454618 /* SuggestionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0537C53F2306815500454618 /* SuggestionViewCell.xib */; };
+		0537C5442306815600454618 /* RoutineComponentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C5402306815500454618 /* RoutineComponentCell.swift */; };
+		0537C5452306815600454618 /* RoutineComponentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0537C5412306815500454618 /* RoutineComponentCell.xib */; };
+		0537C5462306815600454618 /* SuggestionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C5422306815500454618 /* SuggestionViewCell.swift */; };
 		0537C54A230799DB00454618 /* ShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C548230799DB00454618 /* ShadowButton.swift */; };
 		0537C54B230799DB00454618 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C549230799DB00454618 /* RoundedView.swift */; };
 		058A3D9A22F276DA00AB00F2 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058A3D9922F276DA00AB00F2 /* TabBar.storyboard */; };
@@ -47,10 +47,10 @@
 		0537C535230657BB00454618 /* List+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "List+.swift"; sourceTree = "<group>"; };
 		0537C53B23066A6600454618 /* CreateRoutineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoutineController.swift; sourceTree = "<group>"; };
 		0537C53D2306811F00454618 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
-		0537C53F2306815500454618 /* CellSuggest.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellSuggest.xib; sourceTree = "<group>"; };
-		0537C5402306815500454618 /* CellSetUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellSetUp.swift; sourceTree = "<group>"; };
-		0537C5412306815500454618 /* CellSetUp.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellSetUp.xib; sourceTree = "<group>"; };
-		0537C5422306815500454618 /* CellSuggest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellSuggest.swift; sourceTree = "<group>"; };
+		0537C53F2306815500454618 /* SuggestionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuggestionViewCell.xib; sourceTree = "<group>"; };
+		0537C5402306815500454618 /* RoutineComponentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutineComponentCell.swift; sourceTree = "<group>"; };
+		0537C5412306815500454618 /* RoutineComponentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoutineComponentCell.xib; sourceTree = "<group>"; };
+		0537C5422306815500454618 /* SuggestionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionViewCell.swift; sourceTree = "<group>"; };
 		0537C548230799DB00454618 /* ShadowButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowButton.swift; sourceTree = "<group>"; };
 		0537C549230799DB00454618 /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		058A3D9922F276DA00AB00F2 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
@@ -103,10 +103,10 @@
 		058A3DBE22F48A1200AB00F2 /* Diary */ = {
 			isa = PBXGroup;
 			children = (
-				0537C5402306815500454618 /* CellSetUp.swift */,
-				0537C5412306815500454618 /* CellSetUp.xib */,
-				0537C5422306815500454618 /* CellSuggest.swift */,
-				0537C53F2306815500454618 /* CellSuggest.xib */,
+				0537C5402306815500454618 /* RoutineComponentCell.swift */,
+				0537C5412306815500454618 /* RoutineComponentCell.xib */,
+				0537C5422306815500454618 /* SuggestionViewCell.swift */,
+				0537C53F2306815500454618 /* SuggestionViewCell.xib */,
 				058A3DA522F2796200AB00F2 /* DiaryController.swift */,
 				0537C53B23066A6600454618 /* CreateRoutineController.swift */,
 			);
@@ -368,8 +368,8 @@
 				058A3DA222F278C500AB00F2 /* StatisticAll.storyboard in Resources */,
 				058A3DA022F2787E00AB00F2 /* Diary.storyboard in Resources */,
 				058A3DAC22F27EF200AB00F2 /* Setting.storyboard in Resources */,
-				0537C5432306815600454618 /* CellSuggest.xib in Resources */,
-				0537C5452306815600454618 /* CellSetUp.xib in Resources */,
+				0537C5432306815600454618 /* SuggestionViewCell.xib in Resources */,
+				0537C5452306815600454618 /* RoutineComponentCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,7 +452,7 @@
 				0599454E230A73210050830E /* Constants.swift in Sources */,
 				0537C536230657BB00454618 /* List+.swift in Sources */,
 				0537C54B230799DB00454618 /* RoundedView.swift in Sources */,
-				0537C5462306815600454618 /* CellSuggest.swift in Sources */,
+				0537C5462306815600454618 /* SuggestionViewCell.swift in Sources */,
 				058A3DC822F48E3100AB00F2 /* String+.swift in Sources */,
 				058A3DCA22F4942100AB00F2 /* RoutineModelRealm.swift in Sources */,
 				05B23D4B22F16B9A00E8140F /* Storyboards.swift in Sources */,
@@ -460,7 +460,7 @@
 				0537C53C23066A6600454618 /* CreateRoutineController.swift in Sources */,
 				058A3DC422F48AE000AB00F2 /* RealmService.swift in Sources */,
 				058A3D9E22F2773B00AB00F2 /* TabBarController.swift in Sources */,
-				0537C5442306815600454618 /* CellSetUp.swift in Sources */,
+				0537C5442306815600454618 /* RoutineComponentCell.swift in Sources */,
 				0537C54A230799DB00454618 /* ShadowButton.swift in Sources */,
 				0537C53E2306811F00454618 /* UIView+.swift in Sources */,
 				058A3DC622F48B2A00AB00F2 /* RoutineModel.swift in Sources */,

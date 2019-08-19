@@ -6,11 +6,11 @@
 //  Copyright © 2019 huy. All rights reserved.
 //
 
-class CellSetUp: UITableViewCell, NibReusable {
+class RoutineComponentCell: UITableViewCell, NibReusable {
     
     // MARK: - Outlets
     @IBOutlet weak var stateLabel: UILabel!
-    @IBOutlet weak var settingLabel: UILabel!
+    @IBOutlet weak var componentLabel: UILabel!
     @IBOutlet weak var iconImage: UIImageView!
     
     // MARK: Setup
@@ -21,7 +21,7 @@ class CellSetUp: UITableViewCell, NibReusable {
     
     func setUp(iconSetting: UIImage, setting: String, state: String) {
         iconImage.image = iconSetting
-        settingLabel.text = setting
+        componentLabel.text = setting
         stateLabel.text = state
     }
     

@@ -6,8 +6,6 @@
 //  Copyright © 2019 huy. All rights reserved.
 //
 
-import RealmSwift
-
 class RealmService {
     
     // MARK: - Singleton

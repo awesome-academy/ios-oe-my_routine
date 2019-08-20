@@ -7,7 +7,7 @@
 //
 
 class SettingController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

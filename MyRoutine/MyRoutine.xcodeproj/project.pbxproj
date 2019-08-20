@@ -11,6 +11,13 @@
 		0537C5322306568600454618 /* RepeatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C5312306568600454618 /* RepeatModel.swift */; };
 		0537C5342306568E00454618 /* TargetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C5332306568E00454618 /* TargetModel.swift */; };
 		0537C536230657BB00454618 /* List+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C535230657BB00454618 /* List+.swift */; };
+		0537C53C23066A6600454618 /* CreateRoutineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C53B23066A6600454618 /* CreateRoutineController.swift */; };
+		0537C53E2306811F00454618 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C53D2306811F00454618 /* UIView+.swift */; };
+		0537C5432306815600454618 /* SuggestionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0537C53F2306815500454618 /* SuggestionViewCell.xib */; };
+		0537C5442306815600454618 /* RoutineComponentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C5402306815500454618 /* RoutineComponentCell.swift */; };
+		0537C5452306815600454618 /* RoutineComponentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0537C5412306815500454618 /* RoutineComponentCell.xib */; };
+		0537C5462306815600454618 /* SuggestionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C5422306815500454618 /* SuggestionViewCell.swift */; };
+		0537C54B230799DB00454618 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C549230799DB00454618 /* RoundedView.swift */; };
 		058A3D9A22F276DA00AB00F2 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058A3D9922F276DA00AB00F2 /* TabBar.storyboard */; };
 		058A3D9E22F2773B00AB00F2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A3D9D22F2773B00AB00F2 /* TabBarController.swift */; };
 		058A3DA022F2787E00AB00F2 /* Diary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058A3D9F22F2787E00AB00F2 /* Diary.storyboard */; };
@@ -24,6 +31,8 @@
 		058A3DC822F48E3100AB00F2 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A3DC722F48E3100AB00F2 /* String+.swift */; };
 		058A3DCA22F4942100AB00F2 /* RoutineModelRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A3DC922F4942100AB00F2 /* RoutineModelRealm.swift */; };
 		058A3DCC22F496D400AB00F2 /* RoutineService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A3DCB22F496D400AB00F2 /* RoutineService.swift */; };
+		0599454E230A73210050830E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0599454D230A73210050830E /* Constants.swift */; };
+		05994552230C35D30050830E /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05994551230C35D30050830E /* RoundedButton.swift */; };
 		05B23D3322F1678000E8140F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B23D3222F1678000E8140F /* AppDelegate.swift */; };
 		05B23D3A22F1678100E8140F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05B23D3922F1678100E8140F /* Assets.xcassets */; };
 		05B23D3D22F1678100E8140F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05B23D3B22F1678100E8140F /* LaunchScreen.storyboard */; };
@@ -36,6 +45,13 @@
 		0537C5312306568600454618 /* RepeatModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepeatModel.swift; sourceTree = "<group>"; };
 		0537C5332306568E00454618 /* TargetModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetModel.swift; sourceTree = "<group>"; };
 		0537C535230657BB00454618 /* List+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "List+.swift"; sourceTree = "<group>"; };
+		0537C53B23066A6600454618 /* CreateRoutineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoutineController.swift; sourceTree = "<group>"; };
+		0537C53D2306811F00454618 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		0537C53F2306815500454618 /* SuggestionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuggestionViewCell.xib; sourceTree = "<group>"; };
+		0537C5402306815500454618 /* RoutineComponentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutineComponentCell.swift; sourceTree = "<group>"; };
+		0537C5412306815500454618 /* RoutineComponentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoutineComponentCell.xib; sourceTree = "<group>"; };
+		0537C5422306815500454618 /* SuggestionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionViewCell.swift; sourceTree = "<group>"; };
+		0537C549230799DB00454618 /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		058A3D9922F276DA00AB00F2 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		058A3D9D22F2773B00AB00F2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		058A3D9F22F2787E00AB00F2 /* Diary.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Diary.storyboard; sourceTree = "<group>"; };
@@ -49,6 +65,8 @@
 		058A3DC722F48E3100AB00F2 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "String+.swift"; path = "MyRoutine/Data/Source/String+.swift"; sourceTree = SOURCE_ROOT; };
 		058A3DC922F4942100AB00F2 /* RoutineModelRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineModelRealm.swift; sourceTree = "<group>"; };
 		058A3DCB22F496D400AB00F2 /* RoutineService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineService.swift; sourceTree = "<group>"; };
+		0599454D230A73210050830E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		05994551230C35D30050830E /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		05B23D2F22F1678000E8140F /* MyRoutine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyRoutine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05B23D3222F1678000E8140F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05B23D3922F1678100E8140F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -73,10 +91,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0537C547230799DB00454618 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				05994551230C35D30050830E /* RoundedButton.swift */,
+				0537C549230799DB00454618 /* RoundedView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		058A3DBE22F48A1200AB00F2 /* Diary */ = {
 			isa = PBXGroup;
 			children = (
+				0537C5402306815500454618 /* RoutineComponentCell.swift */,
+				0537C5412306815500454618 /* RoutineComponentCell.xib */,
+				0537C5422306815500454618 /* SuggestionViewCell.swift */,
+				0537C53F2306815500454618 /* SuggestionViewCell.xib */,
 				058A3DA522F2796200AB00F2 /* DiaryController.swift */,
+				0537C53B23066A6600454618 /* CreateRoutineController.swift */,
 			);
 			path = Diary;
 			sourceTree = "<group>";
@@ -95,6 +127,23 @@
 				058A3DA922F2798C00AB00F2 /* SettingController.swift */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		0599454B230A72FA0050830E /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				0599454C230A73050050830E /* Custom */,
+				0599454D230A73210050830E /* Constants.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		0599454C230A73050050830E /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				0537C547230799DB00454618 /* View */,
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 		05B23D2622F1678000E8140F = {
@@ -118,6 +167,7 @@
 		05B23D3122F1678000E8140F /* MyRoutine */ = {
 			isa = PBXGroup;
 			children = (
+				0599454B230A72FA0050830E /* Support */,
 				05B23D5222F16F7C00E8140F /* Resource */,
 				05B23D4522F16A9400E8140F /* App */,
 				05B23D4722F16B0D00E8140F /* Data */,
@@ -142,6 +192,7 @@
 			children = (
 				0537C535230657BB00454618 /* List+.swift */,
 				058A3DC722F48E3100AB00F2 /* String+.swift */,
+				0537C53D2306811F00454618 /* UIView+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -317,6 +368,8 @@
 				058A3DA222F278C500AB00F2 /* StatisticAll.storyboard in Resources */,
 				058A3DA022F2787E00AB00F2 /* Diary.storyboard in Resources */,
 				058A3DAC22F27EF200AB00F2 /* Setting.storyboard in Resources */,
+				0537C5432306815600454618 /* SuggestionViewCell.xib in Resources */,
+				0537C5452306815600454618 /* RoutineComponentCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +426,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-MyRoutine/Pods-MyRoutine-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -380,6 +434,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -394,13 +449,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				058A3DA822F2797C00AB00F2 /* StatisticAllController.swift in Sources */,
+				0599454E230A73210050830E /* Constants.swift in Sources */,
 				0537C536230657BB00454618 /* List+.swift in Sources */,
+				0537C54B230799DB00454618 /* RoundedView.swift in Sources */,
+				0537C5462306815600454618 /* SuggestionViewCell.swift in Sources */,
+				05994552230C35D30050830E /* RoundedButton.swift in Sources */,
 				058A3DC822F48E3100AB00F2 /* String+.swift in Sources */,
 				058A3DCA22F4942100AB00F2 /* RoutineModelRealm.swift in Sources */,
 				05B23D4B22F16B9A00E8140F /* Storyboards.swift in Sources */,
 				0537C5342306568E00454618 /* TargetModel.swift in Sources */,
+				0537C53C23066A6600454618 /* CreateRoutineController.swift in Sources */,
 				058A3DC422F48AE000AB00F2 /* RealmService.swift in Sources */,
 				058A3D9E22F2773B00AB00F2 /* TabBarController.swift in Sources */,
+				0537C5442306815600454618 /* RoutineComponentCell.swift in Sources */,
+				0537C53E2306811F00454618 /* UIView+.swift in Sources */,
 				058A3DC622F48B2A00AB00F2 /* RoutineModel.swift in Sources */,
 				058A3DCC22F496D400AB00F2 /* RoutineService.swift in Sources */,
 				0537C5322306568600454618 /* RepeatModel.swift in Sources */,

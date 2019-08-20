@@ -47,4 +47,16 @@ struct RoutineModel {
         self.doneCount = doneCount
     }
     
+    static func defautInit() -> RoutineModel {
+        return  RoutineModel(idRoutine: RoutineService.shared.getAllRoutine().count,
+                             name: "NewRoutine",
+                             dayStart: Date(),
+                             target: TargetModel(type: 1, number: 1),
+                             repeatRoutine: RepeatModel(type: 1,
+                                                        value: Constants.allWeek),
+                             remind: [RemindModel(timeString: "9:00", state: true)],
+                             period: 4,
+                             doneCount: 0)
+    }
+    
 }

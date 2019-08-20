@@ -15,5 +15,5 @@ class Constants {
     static let defaultNewRoutine = ["Hàng ngày", "Hôm nay", "1 lần / ngày", "09:00", "Mọi lúc"]
     static let allWeek: [DayOfWeek] = [.Monday, .Tuesday, .Wednesday,
                                        .Thursday, .Friday, .Saturday, .Sunday]
-    
+
 }

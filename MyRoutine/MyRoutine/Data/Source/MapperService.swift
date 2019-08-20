@@ -41,4 +41,24 @@ class MapperService {
                             doneCount: routineRealm.doneCount)
     }
     
+    func convertAnyToObject<T, E>(any: T, typeOpject: E.Type) -> E? {
+        return any as? E
+    }
+    
+    func daysOfWeekToBoolCheck(days: [DayOfWeek]) -> [Bool] {
+        var checkSelect = [false, false, false, false, false, false, false]
+        for i in days {
+            checkSelect[i.value] = true
+        }
+        return checkSelect
+    }
+    
+    func boolCheckToDaysOfWeek(check: [Bool]) -> [DayOfWeek] {
+        var daysOfWeek = [DayOfWeek]()
+        for i in 0 ..< check.count where check[i] {
+            daysOfWeek.append(DayOfWeek(rawValue: i) ?? DayOfWeek.Monday)
+        }
+        return daysOfWeek
+    }
+    
 }

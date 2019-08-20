@@ -17,7 +17,6 @@
 		0537C5442306815600454618 /* RoutineComponentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C5402306815500454618 /* RoutineComponentCell.swift */; };
 		0537C5452306815600454618 /* RoutineComponentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0537C5412306815500454618 /* RoutineComponentCell.xib */; };
 		0537C5462306815600454618 /* SuggestionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C5422306815500454618 /* SuggestionViewCell.swift */; };
-		0537C54A230799DB00454618 /* ShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C548230799DB00454618 /* ShadowButton.swift */; };
 		0537C54B230799DB00454618 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C549230799DB00454618 /* RoundedView.swift */; };
 		058A3D9A22F276DA00AB00F2 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058A3D9922F276DA00AB00F2 /* TabBar.storyboard */; };
 		058A3D9E22F2773B00AB00F2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A3D9D22F2773B00AB00F2 /* TabBarController.swift */; };
@@ -33,6 +32,7 @@
 		058A3DCA22F4942100AB00F2 /* RoutineModelRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A3DC922F4942100AB00F2 /* RoutineModelRealm.swift */; };
 		058A3DCC22F496D400AB00F2 /* RoutineService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A3DCB22F496D400AB00F2 /* RoutineService.swift */; };
 		0599454E230A73210050830E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0599454D230A73210050830E /* Constants.swift */; };
+		05994552230C35D30050830E /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05994551230C35D30050830E /* RoundedButton.swift */; };
 		05B23D3322F1678000E8140F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B23D3222F1678000E8140F /* AppDelegate.swift */; };
 		05B23D3A22F1678100E8140F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05B23D3922F1678100E8140F /* Assets.xcassets */; };
 		05B23D3D22F1678100E8140F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05B23D3B22F1678100E8140F /* LaunchScreen.storyboard */; };
@@ -51,7 +51,6 @@
 		0537C5402306815500454618 /* RoutineComponentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutineComponentCell.swift; sourceTree = "<group>"; };
 		0537C5412306815500454618 /* RoutineComponentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoutineComponentCell.xib; sourceTree = "<group>"; };
 		0537C5422306815500454618 /* SuggestionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionViewCell.swift; sourceTree = "<group>"; };
-		0537C548230799DB00454618 /* ShadowButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowButton.swift; sourceTree = "<group>"; };
 		0537C549230799DB00454618 /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		058A3D9922F276DA00AB00F2 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		058A3D9D22F2773B00AB00F2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -67,6 +66,7 @@
 		058A3DC922F4942100AB00F2 /* RoutineModelRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineModelRealm.swift; sourceTree = "<group>"; };
 		058A3DCB22F496D400AB00F2 /* RoutineService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineService.swift; sourceTree = "<group>"; };
 		0599454D230A73210050830E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		05994551230C35D30050830E /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		05B23D2F22F1678000E8140F /* MyRoutine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyRoutine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05B23D3222F1678000E8140F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05B23D3922F1678100E8140F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -94,7 +94,7 @@
 		0537C547230799DB00454618 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0537C548230799DB00454618 /* ShadowButton.swift */,
+				05994551230C35D30050830E /* RoundedButton.swift */,
 				0537C549230799DB00454618 /* RoundedView.swift */,
 			);
 			path = View;
@@ -453,6 +453,7 @@
 				0537C536230657BB00454618 /* List+.swift in Sources */,
 				0537C54B230799DB00454618 /* RoundedView.swift in Sources */,
 				0537C5462306815600454618 /* SuggestionViewCell.swift in Sources */,
+				05994552230C35D30050830E /* RoundedButton.swift in Sources */,
 				058A3DC822F48E3100AB00F2 /* String+.swift in Sources */,
 				058A3DCA22F4942100AB00F2 /* RoutineModelRealm.swift in Sources */,
 				05B23D4B22F16B9A00E8140F /* Storyboards.swift in Sources */,
@@ -461,7 +462,6 @@
 				058A3DC422F48AE000AB00F2 /* RealmService.swift in Sources */,
 				058A3D9E22F2773B00AB00F2 /* TabBarController.swift in Sources */,
 				0537C5442306815600454618 /* RoutineComponentCell.swift in Sources */,
-				0537C54A230799DB00454618 /* ShadowButton.swift in Sources */,
 				0537C53E2306811F00454618 /* UIView+.swift in Sources */,
 				058A3DC622F48B2A00AB00F2 /* RoutineModel.swift in Sources */,
 				058A3DCC22F496D400AB00F2 /* RoutineService.swift in Sources */,

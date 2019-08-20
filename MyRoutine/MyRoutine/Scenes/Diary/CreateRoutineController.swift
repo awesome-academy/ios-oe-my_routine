@@ -23,7 +23,6 @@ class CreateRoutineController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUp()
-        print(routine)
     }
     
     // MARK: - Setup

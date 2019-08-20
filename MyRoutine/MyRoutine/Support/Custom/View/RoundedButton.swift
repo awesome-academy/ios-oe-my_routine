@@ -1,5 +1,5 @@
 //
-//  RoundedView.swift
+//  ShadowButton.swift
 //  MyRoutine
 //
 //  Created by Bùi Xuân Huy on 8/5/19.
@@ -7,9 +7,9 @@
 //
 
 @IBDesignable
-class RoundedView: UIView {
-    
-    // MARK: - Inspectable
+class RoundedButton: UIButton {
+
+    /// MARK: - Inspectable
     @IBInspectable var fillColor: UIColor = .white
     @IBInspectable var cornerTopLeft: Bool = true
     @IBInspectable var cornerTopRight: Bool = true
@@ -40,5 +40,5 @@ class RoundedView: UIView {
                      borderWidth: borderWidth,
                      rect: rect)
     }
-
+    
 }

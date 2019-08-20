@@ -38,33 +38,32 @@
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yM-Hv-Xi8" customClass="ShadowButton" customModule="MyRoutine" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jxo-Ue-0Tz" customClass="RoundedButton" customModule="MyRoutine" customModuleProvider="target">
                                         <rect key="frame" x="123" y="6" width="234" height="32"/>
-                                        <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="32" id="1xE-LE-k0l"/>
+                                            <constraint firstAttribute="height" constant="32" id="o7J-Hb-m1F"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                         <state key="normal" title="Toàn bộ thói quen">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
                                                 <color key="value" red="0.8862745098" green="0.73333333329999995" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="Jxo-Ue-0Tz" firstAttribute="centerY" secondItem="2j3-Jm-byC" secondAttribute="centerY" id="2AH-gT-KKX"/>
+                                    <constraint firstItem="Jxo-Ue-0Tz" firstAttribute="leading" secondItem="2j3-Jm-byC" secondAttribute="trailing" constant="7" id="3P0-OL-QfU"/>
                                     <constraint firstAttribute="trailing" secondItem="kEf-nr-zUX" secondAttribute="trailing" constant="10" id="3X1-gA-CNb"/>
-                                    <constraint firstItem="3yM-Hv-Xi8" firstAttribute="centerY" secondItem="2j3-Jm-byC" secondAttribute="centerY" id="DDZ-Pa-hiI"/>
+                                    <constraint firstItem="kEf-nr-zUX" firstAttribute="leading" secondItem="Jxo-Ue-0Tz" secondAttribute="trailing" constant="12" id="Ubg-ZK-PKd"/>
                                     <constraint firstItem="2j3-Jm-byC" firstAttribute="leading" secondItem="fc3-R4-OaA" secondAttribute="leading" constant="10" id="igd-8E-6Lq"/>
-                                    <constraint firstItem="kEf-nr-zUX" firstAttribute="leading" secondItem="3yM-Hv-Xi8" secondAttribute="trailing" constant="12" id="jTa-el-uFc"/>
-                                    <constraint firstItem="3yM-Hv-Xi8" firstAttribute="leading" secondItem="2j3-Jm-byC" secondAttribute="trailing" constant="7" id="tfD-uc-yIA"/>
                                     <constraint firstItem="kEf-nr-zUX" firstAttribute="centerY" secondItem="2j3-Jm-byC" secondAttribute="centerY" id="twp-Nf-Pqa"/>
                                     <constraint firstItem="2j3-Jm-byC" firstAttribute="top" secondItem="fc3-R4-OaA" secondAttribute="top" constant="7" id="y7A-dw-O1y"/>
                                 </constraints>
@@ -84,7 +83,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tTa-sx-9bM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="151.875" y="113.02816901408451"/>
+            <point key="canvasLocation" x="150" y="111.97183098591549"/>
         </scene>
         <!--Create Routine Controller-->
         <scene sceneID="euU-Kv-PyR">

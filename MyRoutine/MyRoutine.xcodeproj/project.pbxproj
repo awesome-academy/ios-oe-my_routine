@@ -37,6 +37,7 @@
 		05B23D4B22F16B9A00E8140F /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B23D4A22F16B9A00E8140F /* Storyboards.swift */; };
 		05DA76B7230D361100929FA3 /* MapperService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA76B6230D361100929FA3 /* MapperService.swift */; };
 		05DA76B9230D390200929FA3 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA76B8230D390200929FA3 /* Date+.swift */; };
+		05DA76BB230D7A6200929FA3 /* DayOfWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA76BA230D7A6200929FA3 /* DayOfWeek.swift */; };
 		6FFBB7FB7B5E42CB9207EE70 /* Pods_MyRoutine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 358C4E0060BD992129D1A5B5 /* Pods_MyRoutine.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,7 @@
 		05B23D4C22F16BC600E8140F /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		05DA76B6230D361100929FA3 /* MapperService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperService.swift; sourceTree = "<group>"; };
 		05DA76B8230D390200929FA3 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
+		05DA76BA230D7A6200929FA3 /* DayOfWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayOfWeek.swift; sourceTree = "<group>"; };
 		358C4E0060BD992129D1A5B5 /* Pods_MyRoutine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyRoutine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D8B598E586CF566BAA5F1E3 /* Pods-MyRoutine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRoutine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyRoutine/Pods-MyRoutine.debug.xcconfig"; sourceTree = "<group>"; };
 		BA59DF1CAEF1699CF2953C6A /* Pods-MyRoutine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRoutine.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyRoutine/Pods-MyRoutine.release.xcconfig"; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 				0537C52F2306568000454618 /* RemindModel.swift */,
 				058A3DC522F48B2A00AB00F2 /* RoutineModel.swift */,
 				058A3DC922F4942100AB00F2 /* RoutineModelRealm.swift */,
+				05DA76BA230D7A6200929FA3 /* DayOfWeek.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				058A3DCC22F496D400AB00F2 /* RoutineService.swift in Sources */,
 				0537C5302306568000454618 /* RemindModel.swift in Sources */,
 				058A3DA622F2796200AB00F2 /* DiaryController.swift in Sources */,
+				05DA76BB230D7A6200929FA3 /* DayOfWeek.swift in Sources */,
 				05DA76B7230D361100929FA3 /* MapperService.swift in Sources */,
 				05B23D3322F1678000E8140F /* AppDelegate.swift in Sources */,
 				058A3DAA22F2798C00AB00F2 /* SettingController.swift in Sources */,

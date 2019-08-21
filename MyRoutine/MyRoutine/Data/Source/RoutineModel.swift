@@ -9,53 +9,25 @@
 struct RoutineModel {
     
     // MARK: - Properties
-    var idRoutine: Int
+    var idRoutine: String
     var nameRoutine: String
     var dayStart: String
-    var repeatRoutine: [Bool]
+    var repeatRoutine: [DayOfWeek]
     var targetRoutine: Int
     var remindRoutine: [RemindModel]
     var periodRoutine: Int
     var doneCount: Int
     
     // MARK: - Init
-    init(idRoutine: Int, name: String,
-         dayStart: String, target: Int,
-         repeatRoutine: [Bool], remind: [RemindModel],
-         period: Int, doneCount: Int) {
-        self.idRoutine = idRoutine
-        self.nameRoutine = name
-        self.dayStart = dayStart
-        self.targetRoutine = target
-        self.repeatRoutine = repeatRoutine
-        self.remindRoutine = remind
-        self.periodRoutine = period
-        self.doneCount = doneCount
-    }
-    
-    init (idRoutine: Int, name: String,
-          dayStart: String, target: Int,
-          repeatRoutine: List<Bool>, remind: List<RemindModel>,
-          period: Int, doneCount: Int) {
-        self.idRoutine = idRoutine
-        self.nameRoutine = name
-        self.dayStart = dayStart
-        self.targetRoutine = target
-        self.repeatRoutine = repeatRoutine.toArray(type: Bool.self)
-        self.remindRoutine = remind.toArray(type: RemindModel.self)
-        self.periodRoutine = period
-        self.doneCount = doneCount
-    }
-    
     static func defautInit() -> RoutineModel {
-        return  RoutineModel(idRoutine: RoutineService.shared.getAllRoutine().count,
-                             name: "NewRoutine",
-                             dayStart: Date().getStringDate(),
-                             target: 1,
-                             repeatRoutine: Constants.allWeek,
-                             remind: [RemindModel(timeString: "9:00", state: true)],
-                             period: 4,
-                             doneCount: 0)
+        return RoutineModel(idRoutine: Date().getStrDateFormat(format: "yyyyMMddHHmmss"),
+                            nameRoutine: "NewRoutine",
+                            dayStart: Date().getStringDate(),
+                            repeatRoutine: Constants.allWeek,
+                            targetRoutine: 1,
+                            remindRoutine: [RemindModel(timeString: "09:00", state: true)],
+                            periodRoutine: 4,
+                            doneCount: 0)
     }
     
 }

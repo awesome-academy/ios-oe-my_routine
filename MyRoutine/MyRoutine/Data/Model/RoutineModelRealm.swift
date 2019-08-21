@@ -11,10 +11,10 @@ class RoutineModelRealm: Object {
     // MARK: - Properties
     @objc dynamic var idRoutine = 0
     @objc dynamic var name = ""
-    @objc dynamic var dayStart = Date()
+    @objc dynamic var dayStart = ""
     @objc dynamic var period = 4
-    @objc dynamic var targetRoutine: TargetModel?
-    @objc dynamic var repeatRoutine: RepeatModel?
+    @objc dynamic var targetRoutine = 1
+    let repeatRoutine = List<Bool>()
     let remindRoutine = List<RemindModel>()
     @objc dynamic var doneCount = 0
     

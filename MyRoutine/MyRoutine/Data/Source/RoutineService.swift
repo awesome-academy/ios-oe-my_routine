@@ -15,15 +15,7 @@ class RoutineService {
     func getAllRoutine() -> [RoutineModel] {
         let list = RealmService.shared.load(listOf: RoutineModelRealm.self)
         return list.map({ (obj) in
-            return RoutineModel(idRoutine: obj.idRoutine,
-                                name: obj.name,
-                                dayStart: obj.dayStart,
-                                target: obj.targetRoutine ?? TargetModel(type: 1, number: 1),
-                                repeatRoutine: obj.repeatRoutine ?? RepeatModel(type: 1,
-                                                                                value: [1, 2, 3, 4, 5, 6, 7]),
-                                remind: obj.remindRoutine,
-                                period: obj.period,
-                                doneCount: obj.doneCount)
+            MapperService.shared.routineRealmToRoutine(routineRealm: obj)
         })
     }
     
@@ -40,16 +32,7 @@ class RoutineService {
         do {
             let realm = try Realm()
             try realm.write {
-                let obj = RoutineModelRealm()
-                obj.idRoutine = routine.idRoutine
-                obj.name = routine.nameRoutine
-                obj.dayStart = routine.dayStart
-                obj.targetRoutine = routine.targetRoutine
-                obj.repeatRoutine = routine.repeatRoutine
-                for i in routine.remindRoutine {
-                    obj.remindRoutine.append(i)
-                }
-                obj.doneCount = routine.doneCount
+                let obj = MapperService.shared.routineToRoutineRealm(routine: routine)
                 realm.add(obj)
                 completion?(obj)
             }

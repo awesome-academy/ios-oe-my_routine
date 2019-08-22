@@ -46,7 +46,7 @@ class MapperService {
     }
     
     func daysOfWeekToBoolCheck(days: [DayOfWeek]) -> [Bool] {
-        var checkSelect = [false, false, false, false, false, false, false]
+        var checkSelect = Array.init(repeating: false, count: 7)
         for i in days {
             checkSelect[i.value] = true
         }

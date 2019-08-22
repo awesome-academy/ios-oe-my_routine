@@ -9,7 +9,7 @@
 class RepeatOptionController: UIViewController {
     
     // MARK: - Variables
-    var checkSelect = [true, true, true, true, true, true, true]
+    var checkSelect = Array.init(repeating: true, count: 7)
    
     // MARK: - Outlets
     @IBOutlet weak var repeatOptionTbv: UITableView!

@@ -59,14 +59,14 @@ class CreateRoutineController: UIViewController {
     
     // MARK: - SupportMethod
     func receiveNotification() {
-        NotificationCenter.default.addObserver(self, selector: #selector(updateRepeat(notifi:)),
+        NotificationCenter.default.addObserver(self, selector: #selector(updateRepeat(notification:)),
                                                name: NSNotification.Name(rawValue: "Repeat"),
                                                object: nil)
         
     }
     
-    @objc func updateRepeat(notifi: Notification) {
-        if let mess = notifi.userInfo, let msg = mess["message"] {
+    @objc func updateRepeat(notification: Notification) {
+        if let mess = notification.userInfo, let msg = mess["message"] {
             let repeatRoutine = MapperService.shared.convertAnyToObject(any: msg,
                                                                         typeOpject: [DayOfWeek].self) ?? []
             routine.repeatRoutine = repeatRoutine

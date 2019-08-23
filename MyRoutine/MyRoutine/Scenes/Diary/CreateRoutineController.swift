@@ -16,7 +16,7 @@ class CreateRoutineController: UIViewController {
     
     // MARK: - Outlets
     @IBOutlet weak var suggestCollectionView: UICollectionView!
-    @IBOutlet weak var settingTableView: UITableView!
+    @IBOutlet weak var stateRoutineTableView: UITableView!
     @IBOutlet weak var nameRoutineTf: UITextField!
 
     // MARK: - View Life Cycles
@@ -25,12 +25,18 @@ class CreateRoutineController: UIViewController {
         setUp()
     }
     
+    // MARK: - Denit
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     // MARK: - Setup
     func setUp() {
         nameRoutineTf.delegate = self
         nameRoutineTf.returnKeyType = .done
         setUpCollectionView()
         setUpTableView()
+        receiveNotification()
     }
     
     func setUpCollectionView() {
@@ -46,11 +52,38 @@ class CreateRoutineController: UIViewController {
     }
     
     func setUpTableView() {
-        settingTableView.dataSource = self
-        settingTableView.delegate = self
-        settingTableView.register(cellType: RoutineComponentCell.self)
+        stateRoutineTableView.dataSource = self
+        stateRoutineTableView.delegate = self
+        stateRoutineTableView.register(cellType: RoutineComponentCell.self)
     }
     
+    // MARK: - SupportMethod
+    func receiveNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(updateRepeat(notification:)),
+                                               name: NSNotification.Name(rawValue: "Repeat"),
+                                               object: nil)
+        
+    }
+    
+    @objc func updateRepeat(notification: Notification) {
+        if let mess = notification.userInfo, let msg = mess["message"] {
+            let repeatRoutine = MapperService.shared.convertAnyToObject(any: msg,
+                                                                        typeOpject: [DayOfWeek].self) ?? []
+            routine.repeatRoutine = repeatRoutine
+            state[0] = changeRepeatState(daysOfWeek: repeatRoutine)
+            stateRoutineTableView.reloadData()
+        }
+    }
+    
+    func changeRepeatState(daysOfWeek: [DayOfWeek]) -> String {
+        if daysOfWeek.count == 7 {
+            return "Hàng ngày"
+        } else {
+            return daysOfWeek.map { $0.shortTitle }
+                             .reduce("", { $0 + " " + $1 })
+        }
+    }
+
 }
 
 // MARK: - CollectionView
@@ -91,6 +124,17 @@ extension CreateRoutineController: UITableViewDataSource {
 extension CreateRoutineController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return view.height / 13
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            let controller = RepeatOptionController.instantiate()
+            controller.checkSelect = MapperService.shared.daysOfWeekToBoolCheck(days: routine.repeatRoutine)
+            navigationController?.pushViewController(controller, animated: true)
+        default:
+            return
+        }
     }
 }
 

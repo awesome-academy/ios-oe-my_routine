@@ -21,4 +21,5 @@ extension Date {
     func getStringHour() -> String {
         return self.getStrDateFormat(format: "HH:mm")
     }
+
 }

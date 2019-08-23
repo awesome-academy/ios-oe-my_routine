@@ -13,7 +13,7 @@ class Constants {
     static let defaultComponents = ["Lặp lại", "Ngày bắt đầu", "Mục tiêu thực hiện", "Nhắc nhở", "Thời gian trong ngày"]
     static let iconCategory = [ #imageLiteral(resourceName: "repeat"), #imageLiteral(resourceName: "calendar"), #imageLiteral(resourceName: "target"), #imageLiteral(resourceName: "remind"), #imageLiteral(resourceName: "time")]
     static let defaultNewRoutine = ["Hàng ngày", "Hôm nay", "1 lần / ngày", "09:00", "Mọi lúc"]
-    static let allWeek: [DayOfWeek] = [.Monday, .Tuesday, .Wednesday,
-                                       .Thursday, .Friday, .Saturday, .Sunday]
-    
+    static let allWeek: [DayOfWeek] = [.Sunday, .Monday, .Tuesday, .Wednesday,
+                                       .Thursday, .Friday, .Saturday]
+
 }

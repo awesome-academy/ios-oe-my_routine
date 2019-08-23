@@ -31,6 +31,9 @@
 		058A3DCC22F496D400AB00F2 /* RoutineService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A3DCB22F496D400AB00F2 /* RoutineService.swift */; };
 		0599454E230A73210050830E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0599454D230A73210050830E /* Constants.swift */; };
 		05994552230C35D30050830E /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05994551230C35D30050830E /* RoundedButton.swift */; };
+		05994575230C4B620050830E /* SelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05994573230C4B620050830E /* SelectionCell.swift */; };
+		05994576230C4B620050830E /* SelectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05994574230C4B620050830E /* SelectionCell.xib */; };
+		05994578230C4CC60050830E /* RepeatOptionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05994577230C4CC60050830E /* RepeatOptionController.swift */; };
 		05B23D3322F1678000E8140F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B23D3222F1678000E8140F /* AppDelegate.swift */; };
 		05B23D3A22F1678100E8140F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05B23D3922F1678100E8140F /* Assets.xcassets */; };
 		05B23D3D22F1678100E8140F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05B23D3B22F1678100E8140F /* LaunchScreen.storyboard */; };
@@ -66,6 +69,9 @@
 		058A3DCB22F496D400AB00F2 /* RoutineService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineService.swift; sourceTree = "<group>"; };
 		0599454D230A73210050830E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		05994551230C35D30050830E /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		05994573230C4B620050830E /* SelectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionCell.swift; sourceTree = "<group>"; };
+		05994574230C4B620050830E /* SelectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectionCell.xib; sourceTree = "<group>"; };
+		05994577230C4CC60050830E /* RepeatOptionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatOptionController.swift; sourceTree = "<group>"; };
 		05B23D2F22F1678000E8140F /* MyRoutine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyRoutine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05B23D3222F1678000E8140F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05B23D3922F1678100E8140F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,12 +111,10 @@
 		058A3DBE22F48A1200AB00F2 /* Diary */ = {
 			isa = PBXGroup;
 			children = (
-				0537C5402306815500454618 /* RoutineComponentCell.swift */,
-				0537C5412306815500454618 /* RoutineComponentCell.xib */,
-				0537C5422306815500454618 /* SuggestionViewCell.swift */,
-				0537C53F2306815500454618 /* SuggestionViewCell.xib */,
+				05994572230C4B160050830E /* Cell */,
 				058A3DA522F2796200AB00F2 /* DiaryController.swift */,
 				0537C53B23066A6600454618 /* CreateRoutineController.swift */,
+				05994577230C4CC60050830E /* RepeatOptionController.swift */,
 			);
 			path = Diary;
 			sourceTree = "<group>";
@@ -146,6 +150,19 @@
 				0537C547230799DB00454618 /* View */,
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		05994572230C4B160050830E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				05994573230C4B620050830E /* SelectionCell.swift */,
+				05994574230C4B620050830E /* SelectionCell.xib */,
+				0537C5402306815500454618 /* RoutineComponentCell.swift */,
+				0537C5412306815500454618 /* RoutineComponentCell.xib */,
+				0537C5422306815500454618 /* SuggestionViewCell.swift */,
+				0537C53F2306815500454618 /* SuggestionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		05B23D2622F1678000E8140F = {
@@ -372,6 +389,7 @@
 				058A3DA022F2787E00AB00F2 /* Diary.storyboard in Resources */,
 				058A3DAC22F27EF200AB00F2 /* Setting.storyboard in Resources */,
 				0537C5432306815600454618 /* SuggestionViewCell.xib in Resources */,
+				05994576230C4B620050830E /* SelectionCell.xib in Resources */,
 				0537C5452306815600454618 /* RoutineComponentCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,10 +474,13 @@
 				0537C536230657BB00454618 /* List+.swift in Sources */,
 				0537C54B230799DB00454618 /* RoundedView.swift in Sources */,
 				0537C5462306815600454618 /* SuggestionViewCell.swift in Sources */,
+				05994578230C4CC60050830E /* RepeatOptionController.swift in Sources */,
 				05994552230C35D30050830E /* RoundedButton.swift in Sources */,
 				058A3DC822F48E3100AB00F2 /* String+.swift in Sources */,
 				058A3DCA22F4942100AB00F2 /* RoutineModelRealm.swift in Sources */,
 				05B23D4B22F16B9A00E8140F /* Storyboards.swift in Sources */,
+				05994575230C4B620050830E /* SelectionCell.swift in Sources */,
+				0537C5342306568E00454618 /* TargetModel.swift in Sources */,
 				0537C53C23066A6600454618 /* CreateRoutineController.swift in Sources */,
 				058A3DC422F48AE000AB00F2 /* RealmService.swift in Sources */,
 				05DA76B9230D390200929FA3 /* Date+.swift in Sources */,

@@ -6,13 +6,11 @@
 //  Copyright © 2019 huy. All rights reserved.
 //
 
-import UIKit
-
-class RoutineDiaryCelll: UITableViewCell, NibReusable {
+final class RoutineDiaryCelll: UITableViewCell, NibReusable {
 
     @IBOutlet weak var nameRoutineLabel: UILabel!
     
-    func setUp(routine: RoutineModel) {
+    func setContentForCell(routine: RoutineModel) {
         nameRoutineLabel.text = routine.nameRoutine
     }
     

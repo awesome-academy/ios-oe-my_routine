@@ -77,7 +77,7 @@ extension DiaryController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: RoutineDiaryCelll = tableView.dequeueReusableCell(for: indexPath)
-        cell.setUp(routine: routine[indexPath.row])
+        cell.setContentForCell(routine: routine[indexPath.row])
         return cell
     }
 

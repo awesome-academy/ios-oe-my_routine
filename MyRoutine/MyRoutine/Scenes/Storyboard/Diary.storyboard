@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bV1-dA-jh8">
     <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -257,7 +257,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="89.666666666666671"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lặp lại" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIk-OD-1Mh">
-                                        <rect key="frame" x="176.33333333333334" y="50.666666666666664" width="61.333333333333343" height="23.999999999999993"/>
+                                        <rect key="frame" x="176.66666666666666" y="50.666666666666664" width="61" height="23.999999999999993"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -304,10 +304,201 @@
             </objects>
             <point key="canvasLocation" x="1733" y="110"/>
         </scene>
+        <!--Make Routine Controller-->
+        <scene sceneID="hlR-4s-fWh">
+            <objects>
+                <viewController storyboardIdentifier="MakeRoutineController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bV1-dA-jh8" customClass="MakeRoutineController" customModule="MyRoutine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9u6-gc-LIH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZGh-Rg-58O">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="102.33333333333333"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bek-8n-d3J">
+                                        <rect key="frame" x="12" y="56.666666666666657" width="84" height="30"/>
+                                        <state key="normal" title="Button" image="back"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Routine" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AgH-Wh-btf">
+                                        <rect key="frame" x="0.0" y="51" width="414" height="26"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21 tháng 8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bS-cm-lVY">
+                                        <rect key="frame" x="0.0" y="82" width="414" height="19"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="1bS-cm-lVY" firstAttribute="top" secondItem="AgH-Wh-btf" secondAttribute="bottom" constant="5" id="BQr-v8-uDo"/>
+                                    <constraint firstItem="AgH-Wh-btf" firstAttribute="centerX" secondItem="ZGh-Rg-58O" secondAttribute="centerX" id="Zrb-ty-5au"/>
+                                    <constraint firstItem="1bS-cm-lVY" firstAttribute="width" secondItem="ZGh-Rg-58O" secondAttribute="width" id="jIQ-IX-4di"/>
+                                    <constraint firstItem="AgH-Wh-btf" firstAttribute="width" secondItem="ZGh-Rg-58O" secondAttribute="width" id="jpj-ib-29T"/>
+                                    <constraint firstItem="1bS-cm-lVY" firstAttribute="centerX" secondItem="AgH-Wh-btf" secondAttribute="centerX" id="mU3-ep-vFa"/>
+                                    <constraint firstItem="bek-8n-d3J" firstAttribute="centerY" secondItem="ZGh-Rg-58O" secondAttribute="centerY" multiplier="1.4" id="qTP-zd-4xV"/>
+                                    <constraint firstItem="AgH-Wh-btf" firstAttribute="centerY" secondItem="ZGh-Rg-58O" secondAttribute="centerY" multiplier="1.25" id="tfN-uf-sRL"/>
+                                    <constraint firstItem="bek-8n-d3J" firstAttribute="leading" secondItem="ZGh-Rg-58O" secondAttribute="leading" constant="12" id="xUF-KN-Tq9"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aOk-Nl-65g" customClass="MBCircularProgressBarView">
+                                <rect key="frame" x="34.666666666666657" y="176.33333333333337" width="345" height="345"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aOk-Nl-65g" secondAttribute="height" id="fOh-zC-UkE"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progressAngle">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progressLineWidth">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="emptyLineWidth">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="emptyLineColor">
+                                        <color key="value" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
+                                        <color key="value" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fontColor">
+                                        <color key="value" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="emptyLineStrokeColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="progressStrokeColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showUnitString" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="unitFontSize">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="valueFontName" value="Helvetica Neue"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="valueFontSize">
+                                        <real key="value" value="80"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAD-NT-VyQ">
+                                <rect key="frame" x="261.33333333333331" y="560.33333333333337" width="57" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="HXZ-0Q-lhT"/>
+                                    <constraint firstAttribute="width" constant="57" id="RUU-Et-ehY"/>
+                                </constraints>
+                                <state key="normal" image="subtract"/>
+                                <connections>
+                                    <action selector="hanldeSubtractButton:" destination="bV1-dA-jh8" eventType="touchUpInside" id="xsq-7X-yY0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Fh-su-r1n">
+                                <rect key="frame" x="95.666666666666671" y="560.33333333333337" width="57.000000000000014" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="57" id="UI5-h2-p1O"/>
+                                    <constraint firstAttribute="height" constant="57" id="q7g-a8-XaJ"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="add2"/>
+                                <connections>
+                                    <action selector="handleAddButton:" destination="bV1-dA-jh8" eventType="touchUpInside" id="72K-CR-AYN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PYk-nq-V61" customClass="RoundedButton" customModule="MyRoutine" customModuleProvider="target">
+                                <rect key="frame" x="88.666666666666671" y="672.33333333333337" width="236.66666666666663" height="59.666666666666629"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Hoàn thành">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="handleFInishButton:" destination="bV1-dA-jh8" eventType="touchUpInside" id="ekl-au-yiy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SfH-P6-HUw" customClass="RoundedButton" customModule="MyRoutine" customModuleProvider="target">
+                                <rect key="frame" x="88.666666666666671" y="744.66666666666663" width="236.66666666666663" height="59.666666666666629"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Hoàn tác">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="handleUndoButton:" destination="bV1-dA-jh8" eventType="touchUpInside" id="t7F-Ww-WZN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mục tiêu:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEj-p2-9tL">
+                                <rect key="frame" x="316" y="130.33333333333334" width="64" height="19"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hy9-45-ngo">
+                                <rect key="frame" x="385" y="120.33333333333331" width="14" height="31"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="26"/>
+                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SfH-P6-HUw" firstAttribute="width" secondItem="PYk-nq-V61" secondAttribute="width" id="1GC-pC-Ha7"/>
+                            <constraint firstItem="UAD-NT-VyQ" firstAttribute="centerX" secondItem="lWH-vy-o81" secondAttribute="centerX" multiplier="1.4" id="2yx-pV-WsK"/>
+                            <constraint firstItem="8Fh-su-r1n" firstAttribute="centerY" secondItem="lWH-vy-o81" secondAttribute="centerY" multiplier="1.3" id="4ia-1O-t5x"/>
+                            <constraint firstItem="SfH-P6-HUw" firstAttribute="centerX" secondItem="lWH-vy-o81" secondAttribute="centerX" id="5LG-Gg-7Hz"/>
+                            <constraint firstItem="lWH-vy-o81" firstAttribute="trailing" secondItem="Hy9-45-ngo" secondAttribute="trailing" constant="15" id="5hG-Rj-gIE"/>
+                            <constraint firstItem="PYk-nq-V61" firstAttribute="centerX" secondItem="lWH-vy-o81" secondAttribute="centerX" id="7G7-KY-XSs"/>
+                            <constraint firstItem="aOk-Nl-65g" firstAttribute="centerY" secondItem="lWH-vy-o81" secondAttribute="centerY" multiplier="0.77" id="85P-6j-iEn"/>
+                            <constraint firstItem="aOk-Nl-65g" firstAttribute="width" secondItem="9u6-gc-LIH" secondAttribute="width" multiplier="5/6" id="8MX-hC-0Xf"/>
+                            <constraint firstItem="UEj-p2-9tL" firstAttribute="firstBaseline" secondItem="Hy9-45-ngo" secondAttribute="firstBaseline" id="8g8-yd-mCo"/>
+                            <constraint firstItem="SfH-P6-HUw" firstAttribute="centerY" secondItem="lWH-vy-o81" secondAttribute="centerY" multiplier="1.71" id="AiE-to-gbM"/>
+                            <constraint firstItem="aOk-Nl-65g" firstAttribute="centerX" secondItem="lWH-vy-o81" secondAttribute="centerX" id="AwC-Ic-k0I"/>
+                            <constraint firstItem="ZGh-Rg-58O" firstAttribute="height" secondItem="9u6-gc-LIH" secondAttribute="height" multiplier="1/8.75" id="ELk-P1-E1I"/>
+                            <constraint firstItem="lWH-vy-o81" firstAttribute="trailing" secondItem="ZGh-Rg-58O" secondAttribute="trailing" id="JDT-b3-WqE"/>
+                            <constraint firstItem="SfH-P6-HUw" firstAttribute="height" secondItem="PYk-nq-V61" secondAttribute="height" id="MC9-D1-eqx"/>
+                            <constraint firstItem="PYk-nq-V61" firstAttribute="height" secondItem="9u6-gc-LIH" secondAttribute="height" multiplier="1/15" id="MSJ-v8-p71"/>
+                            <constraint firstItem="PYk-nq-V61" firstAttribute="width" secondItem="9u6-gc-LIH" secondAttribute="width" multiplier="1/1.75" id="Wiz-rR-h9P"/>
+                            <constraint firstItem="Hy9-45-ngo" firstAttribute="leading" secondItem="UEj-p2-9tL" secondAttribute="trailing" constant="5" id="bX5-Nz-b4E"/>
+                            <constraint firstItem="ZGh-Rg-58O" firstAttribute="leading" secondItem="lWH-vy-o81" secondAttribute="leading" id="bu1-gB-fLe"/>
+                            <constraint firstItem="8Fh-su-r1n" firstAttribute="centerX" secondItem="lWH-vy-o81" secondAttribute="centerX" multiplier="0.6" id="dEG-zr-bIM"/>
+                            <constraint firstItem="Hy9-45-ngo" firstAttribute="centerY" secondItem="lWH-vy-o81" secondAttribute="centerY" multiplier="0.3" id="dU4-Ol-6ZC"/>
+                            <constraint firstItem="ZGh-Rg-58O" firstAttribute="top" secondItem="9u6-gc-LIH" secondAttribute="top" id="e56-xd-B6l"/>
+                            <constraint firstItem="UAD-NT-VyQ" firstAttribute="centerY" secondItem="lWH-vy-o81" secondAttribute="centerY" multiplier="1.3" id="k3t-xe-Pfe"/>
+                            <constraint firstItem="PYk-nq-V61" firstAttribute="centerY" secondItem="lWH-vy-o81" secondAttribute="centerY" multiplier="1.55" id="rHh-dF-uNv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lWH-vy-o81"/>
+                    </view>
+                    <connections>
+                        <outlet property="maxValueLabel" destination="Hy9-45-ngo" id="uOo-nA-N4h"/>
+                        <outlet property="progessBarView" destination="aOk-Nl-65g" id="YqO-Y6-wha"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o6t-Sr-Rtl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2444.9275362318845" y="109.82142857142857"/>
+        </scene>
     </scenes>
     <resources>
         <image name="add" width="96" height="96"/>
+        <image name="add2" width="100" height="100"/>
         <image name="back" width="30" height="30"/>
         <image name="iconDiary" width="30" height="30"/>
+        <image name="subtract" width="100" height="100"/>
     </resources>
 </document>

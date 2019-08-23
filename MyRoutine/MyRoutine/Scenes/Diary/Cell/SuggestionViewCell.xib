@@ -90,7 +90,7 @@
                 <outlet property="iconView" destination="1Y0-ot-Yhb" id="riD-fx-waT"/>
                 <outlet property="suggestLabel" destination="S9v-4R-Lwr" id="rPR-DO-wPv"/>
             </connections>
-            <point key="canvasLocation" x="236.95652173913047" y="92.075892857142847"/>
+            <point key="canvasLocation" x="75" y="101"/>
         </collectionViewCell>
     </objects>
 </document>

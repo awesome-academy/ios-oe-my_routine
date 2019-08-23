@@ -79,7 +79,7 @@ class CreateRoutineController: UIViewController {
         if daysOfWeek.count == 7 {
             return "Hàng ngày"
         } else {
-            return daysOfWeek.map { Date.getWeekDayShort(day: $0.value) }
+            return daysOfWeek.map { $0.shortTitle }
                              .reduce("", { $0 + " " + $1 })
         }
     }

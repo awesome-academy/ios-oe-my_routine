@@ -45,7 +45,7 @@ extension RepeatOptionController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: SelectionCell = tableView.dequeueReusableCell(for: indexPath)
-        cell.setOption(option: Date.getWeekDay(day: Constants.allWeek[indexPath.row].value),
+        cell.setTitleAndStateOption(option: Constants.allWeek[indexPath.row].title,
                        choose: checkSelect[indexPath.row])
         return cell
     }

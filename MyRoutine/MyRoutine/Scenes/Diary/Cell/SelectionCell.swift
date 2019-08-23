@@ -18,7 +18,7 @@ class SelectionCell: UITableViewCell, NibReusable {
         self.selectionStyle = .none
     }
 
-    func setOption(option: String, choose: Bool) {
+    func setTitleAndStateOption(option: String, choose: Bool) {
         lblOption.text = option
         imageCheck.isHidden = !choose
     }

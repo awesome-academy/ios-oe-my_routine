@@ -8,19 +8,20 @@
 
 import MBCircularProgressBar
 
-class MakeRoutineController: UIViewController {
-    
-    // MARK: - Variables
-    var maxValue: CGFloat = 10
-    var doneCount: CGFloat = 0
+final class MakeRoutineController: UIViewController {
     
     // MARK: - Outlets
     @IBOutlet weak var maxValueLabel: UILabel!
     @IBOutlet weak var progessBarView: MBCircularProgressBarView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpProgessBar()
     }
+    
+    // MARK: - Variables
+    var maxValue: CGFloat = 10
+    var doneCount: CGFloat = 0
     
     // MARK: - Setup
     func setUpProgessBar() {
@@ -38,6 +39,7 @@ class MakeRoutineController: UIViewController {
             }
         }
     }
+    
     @IBAction func hanldeSubtractButton(_ sender: Any) {
         if doneCount > 0 {
             doneCount -= 1
@@ -47,7 +49,7 @@ class MakeRoutineController: UIViewController {
         }
     }
     
-    @IBAction func handleFInishButton(_ sender: Any) {
+    @IBAction func handleFinishButton(_ sender: Any) {
         UIView.animate(withDuration: 0.3) {
             self.progessBarView.value = self.maxValue
         }

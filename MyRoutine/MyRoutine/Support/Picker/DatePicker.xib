@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_5" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -41,13 +37,13 @@
                                     <locale key="locale" localeIdentifier="vi"/>
                                 </datePicker>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ngày bắt đầu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pU8-cc-U5l">
-                                    <rect key="frame" x="148.66666666666666" y="10" width="116.66666666666666" height="24"/>
+                                    <rect key="frame" x="148.5" y="10" width="117" height="24"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qk2-Fq-3kw">
-                                    <rect key="frame" x="15" y="7" width="31" height="32"/>
+                                    <rect key="frame" x="15" y="7.5" width="31" height="32"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                     <state key="normal" title="Huỷ">
                                         <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -57,7 +53,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Up-16-PFF">
-                                    <rect key="frame" x="358" y="7" width="41" height="32"/>
+                                    <rect key="frame" x="358" y="7.5" width="41" height="32"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                     <state key="normal" title="Chọn">
                                         <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -103,8 +99,8 @@
             <connections>
                 <outlet property="blurView" destination="Keo-vF-gyp" id="tZp-1N-hNJ"/>
                 <outlet property="containerView" destination="7YY-sE-98X" id="FeS-q5-XIv"/>
-                <outlet property="lblTitle" destination="pU8-cc-U5l" id="gy4-vY-w0u"/>
                 <outlet property="pickerView" destination="Lo3-NU-s6r" id="pzs-bl-Xm3"/>
+                <outlet property="titleLabel" destination="pU8-cc-U5l" id="gy4-vY-w0u"/>
             </connections>
             <point key="canvasLocation" x="47.826086956521742" y="43.526785714285715"/>
         </view>

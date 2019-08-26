@@ -6,7 +6,7 @@
 //  Copyright © 2019 huy. All rights reserved.
 //
 
-class PickerViewControl {
+final class PickerViewControl {
     
     // MARK: Method
     static func showDatePicker(type: UIDatePicker.Mode,

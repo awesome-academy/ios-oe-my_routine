@@ -6,7 +6,7 @@
 //  Copyright © 2019 huy. All rights reserved.
 //
 
-class DatePicker: UIView, NibLoadable {
+final class DatePicker: UIView, NibLoadable {
     
     // MARK: - Closures
     var didSelectText: ((Date) -> Void)?
@@ -15,7 +15,7 @@ class DatePicker: UIView, NibLoadable {
     @IBOutlet weak var blurView: UIVisualEffectView!
     @IBOutlet weak var pickerView: UIDatePicker!
     @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     
     // MARK: - Init
     override func awakeFromNib() {
@@ -36,7 +36,7 @@ class DatePicker: UIView, NibLoadable {
     func setupPickerView(_ type: UIDatePicker.Mode, title: String) {
         pickerView.datePickerMode = type
         pickerView.alpha = 0
-        lblTitle.text = title
+        titleLabel.text = title
         self.addTapGesture(blurView)
     }
     
@@ -54,7 +54,7 @@ class DatePicker: UIView, NibLoadable {
         })
     }
     
-    func addTapGesture(_ inView: UIView) {
+    private func addTapGesture(_ inView: UIView) {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(DatePicker.hidePickerView))
         inView.addGestureRecognizer(tapGesture)
     }

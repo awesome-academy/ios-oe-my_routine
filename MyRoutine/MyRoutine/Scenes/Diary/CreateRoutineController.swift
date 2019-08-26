@@ -132,6 +132,15 @@ extension CreateRoutineController: UITableViewDelegate {
             let controller = RepeatOptionController.instantiate()
             controller.checkSelect = MapperService.shared.daysOfWeekToBoolCheck(days: routine.repeatRoutine)
             navigationController?.pushViewController(controller, animated: true)
+        case 1:
+            PickerViewControl.showDatePicker(type: .date,
+                                             title: "Ngày bắt đầu") {[weak self] dateChange in
+                if let date = dateChange?.getStringDate() {
+                    self?.state[1] = date == Date().getStringDate() ? "Hôm nay" : date
+                    self?.routine.dayStart = date
+                    self?.stateRoutineTableView.reloadData()
+                }
+            }
         default:
             return
         }

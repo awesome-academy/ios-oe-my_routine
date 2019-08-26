@@ -41,6 +41,10 @@
 		05DA76B7230D361100929FA3 /* MapperService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA76B6230D361100929FA3 /* MapperService.swift */; };
 		05DA76B9230D390200929FA3 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA76B8230D390200929FA3 /* Date+.swift */; };
 		05DA76BB230D7A6200929FA3 /* DayOfWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA76BA230D7A6200929FA3 /* DayOfWeek.swift */; };
+		05DA76D3230FB4A700929FA3 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA76D1230FB4A700929FA3 /* DatePicker.swift */; };
+		05DA76D4230FB4A700929FA3 /* DatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05DA76D2230FB4A700929FA3 /* DatePicker.xib */; };
+		05DA76D6230FB4D500929FA3 /* SystemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA76D5230FB4D400929FA3 /* SystemInfo.swift */; };
+		05DA76D8230FB63700929FA3 /* PickerViewControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA76D7230FB63700929FA3 /* PickerViewControl.swift */; };
 		6FFBB7FB7B5E42CB9207EE70 /* Pods_MyRoutine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 358C4E0060BD992129D1A5B5 /* Pods_MyRoutine.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +86,10 @@
 		05DA76B6230D361100929FA3 /* MapperService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperService.swift; sourceTree = "<group>"; };
 		05DA76B8230D390200929FA3 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		05DA76BA230D7A6200929FA3 /* DayOfWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayOfWeek.swift; sourceTree = "<group>"; };
+		05DA76D1230FB4A700929FA3 /* DatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
+		05DA76D2230FB4A700929FA3 /* DatePicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePicker.xib; sourceTree = "<group>"; };
+		05DA76D5230FB4D400929FA3 /* SystemInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemInfo.swift; sourceTree = "<group>"; };
+		05DA76D7230FB63700929FA3 /* PickerViewControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewControl.swift; sourceTree = "<group>"; };
 		358C4E0060BD992129D1A5B5 /* Pods_MyRoutine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyRoutine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D8B598E586CF566BAA5F1E3 /* Pods-MyRoutine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRoutine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyRoutine/Pods-MyRoutine.debug.xcconfig"; sourceTree = "<group>"; };
 		BA59DF1CAEF1699CF2953C6A /* Pods-MyRoutine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRoutine.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyRoutine/Pods-MyRoutine.release.xcconfig"; sourceTree = "<group>"; };
@@ -138,8 +146,10 @@
 		0599454B230A72FA0050830E /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				05DA76D0230FB48E00929FA3 /* Picker */,
 				0599454C230A73050050830E /* Custom */,
 				0599454D230A73210050830E /* Constants.swift */,
+				05DA76D5230FB4D400929FA3 /* SystemInfo.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -304,6 +314,16 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		05DA76D0230FB48E00929FA3 /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				05DA76D7230FB63700929FA3 /* PickerViewControl.swift */,
+				05DA76D2230FB4A700929FA3 /* DatePicker.xib */,
+				05DA76D1230FB4A700929FA3 /* DatePicker.swift */,
+			);
+			path = Picker;
+			sourceTree = "<group>";
+		};
 		46F722ABA6C7CCDA2E8F7DA0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -385,6 +405,7 @@
 				058A3D9A22F276DA00AB00F2 /* TabBar.storyboard in Resources */,
 				05B23D3D22F1678100E8140F /* LaunchScreen.storyboard in Resources */,
 				05B23D3A22F1678100E8140F /* Assets.xcassets in Resources */,
+				05DA76D4230FB4A700929FA3 /* DatePicker.xib in Resources */,
 				058A3DA222F278C500AB00F2 /* StatisticAll.storyboard in Resources */,
 				058A3DA022F2787E00AB00F2 /* Diary.storyboard in Resources */,
 				058A3DAC22F27EF200AB00F2 /* Setting.storyboard in Resources */,
@@ -470,20 +491,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				058A3DA822F2797C00AB00F2 /* StatisticAllController.swift in Sources */,
+				05DA76D6230FB4D500929FA3 /* SystemInfo.swift in Sources */,
 				0599454E230A73210050830E /* Constants.swift in Sources */,
 				0537C536230657BB00454618 /* List+.swift in Sources */,
 				0537C54B230799DB00454618 /* RoundedView.swift in Sources */,
 				0537C5462306815600454618 /* SuggestionViewCell.swift in Sources */,
 				05994578230C4CC60050830E /* RepeatOptionController.swift in Sources */,
 				05994552230C35D30050830E /* RoundedButton.swift in Sources */,
+				05DA76D3230FB4A700929FA3 /* DatePicker.swift in Sources */,
 				058A3DC822F48E3100AB00F2 /* String+.swift in Sources */,
 				058A3DCA22F4942100AB00F2 /* RoutineModelRealm.swift in Sources */,
 				05B23D4B22F16B9A00E8140F /* Storyboards.swift in Sources */,
 				05994575230C4B620050830E /* SelectionCell.swift in Sources */,
-				0537C5342306568E00454618 /* TargetModel.swift in Sources */,
 				0537C53C23066A6600454618 /* CreateRoutineController.swift in Sources */,
 				058A3DC422F48AE000AB00F2 /* RealmService.swift in Sources */,
 				05DA76B9230D390200929FA3 /* Date+.swift in Sources */,
+				05DA76D8230FB63700929FA3 /* PickerViewControl.swift in Sources */,
 				058A3D9E22F2773B00AB00F2 /* TabBarController.swift in Sources */,
 				0537C5442306815600454618 /* RoutineComponentCell.swift in Sources */,
 				0537C53E2306811F00454618 /* UIView+.swift in Sources */,

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DatePicker" customModule="MyRoutine" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CWS-gI-i6j">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <subviews>
+                        <visualEffectView opaque="NO" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Keo-vF-gyp">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="vks-b8-aqN">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </view>
+                            <blurEffect style="dark"/>
+                        </visualEffectView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7YY-sE-98X">
+                            <rect key="frame" x="0.0" y="484" width="414" height="252"/>
+                            <subviews>
+                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Lo3-NU-s6r">
+                                    <rect key="frame" x="0.0" y="37" width="414" height="215"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="215" id="CwV-Hr-muY"/>
+                                    </constraints>
+                                    <date key="date" timeIntervalSinceReferenceDate="586945056.89655995">
+                                        <!--2019-08-08 08:17:36 +0000-->
+                                    </date>
+                                    <locale key="locale" localeIdentifier="vi"/>
+                                </datePicker>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ngày bắt đầu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pU8-cc-U5l">
+                                    <rect key="frame" x="148.5" y="10" width="117" height="24"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qk2-Fq-3kw">
+                                    <rect key="frame" x="15" y="7.5" width="31" height="32"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                    <state key="normal" title="Huỷ">
+                                        <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnCancel:" destination="iN0-l3-epB" eventType="touchUpInside" id="VbO-0v-Ptl"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Up-16-PFF">
+                                    <rect key="frame" x="358" y="7.5" width="41" height="32"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                    <state key="normal" title="Chọn">
+                                        <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnChoose:" destination="iN0-l3-epB" eventType="touchUpInside" id="rP1-rw-GLT"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="pU8-cc-U5l" firstAttribute="top" secondItem="7YY-sE-98X" secondAttribute="top" constant="10" id="0vY-Gy-jR5"/>
+                                <constraint firstItem="Qk2-Fq-3kw" firstAttribute="firstBaseline" secondItem="pU8-cc-U5l" secondAttribute="firstBaseline" id="23p-8E-oOq"/>
+                                <constraint firstItem="Lo3-NU-s6r" firstAttribute="top" secondItem="pU8-cc-U5l" secondAttribute="bottom" constant="3" id="2Ly-oX-Hw0"/>
+                                <constraint firstItem="Lo3-NU-s6r" firstAttribute="leading" secondItem="7YY-sE-98X" secondAttribute="leading" id="90D-cP-rQS"/>
+                                <constraint firstAttribute="trailing" secondItem="0Up-16-PFF" secondAttribute="trailing" constant="15" id="DPm-gT-jwl"/>
+                                <constraint firstAttribute="trailing" secondItem="Lo3-NU-s6r" secondAttribute="trailing" id="J2e-E0-DPZ"/>
+                                <constraint firstItem="Qk2-Fq-3kw" firstAttribute="leading" secondItem="7YY-sE-98X" secondAttribute="leading" constant="15" id="LG7-lh-ZMQ"/>
+                                <constraint firstAttribute="bottom" secondItem="Lo3-NU-s6r" secondAttribute="bottom" id="Syf-KM-fDR"/>
+                                <constraint firstItem="0Up-16-PFF" firstAttribute="firstBaseline" secondItem="pU8-cc-U5l" secondAttribute="firstBaseline" id="blq-68-NdB"/>
+                                <constraint firstItem="pU8-cc-U5l" firstAttribute="centerX" secondItem="7YY-sE-98X" secondAttribute="centerX" id="jCA-sL-Jrx"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Keo-vF-gyp" firstAttribute="top" secondItem="CWS-gI-i6j" secondAttribute="top" id="1G0-Af-Gxl"/>
+                        <constraint firstAttribute="bottom" secondItem="Keo-vF-gyp" secondAttribute="bottom" id="FGh-TH-ipF"/>
+                        <constraint firstAttribute="bottom" secondItem="7YY-sE-98X" secondAttribute="bottom" id="RaE-J8-9IV"/>
+                        <constraint firstItem="Keo-vF-gyp" firstAttribute="leading" secondItem="CWS-gI-i6j" secondAttribute="leading" id="Ves-iR-OKg"/>
+                        <constraint firstAttribute="trailing" secondItem="Keo-vF-gyp" secondAttribute="trailing" id="eq1-kA-l2i"/>
+                        <constraint firstAttribute="trailing" secondItem="7YY-sE-98X" secondAttribute="trailing" id="iDk-Z7-qzc"/>
+                        <constraint firstItem="7YY-sE-98X" firstAttribute="leading" secondItem="CWS-gI-i6j" secondAttribute="leading" id="x10-WJ-eZ5"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="CWS-gI-i6j" secondAttribute="trailing" id="SWM-M3-gCZ"/>
+                <constraint firstAttribute="bottom" secondItem="CWS-gI-i6j" secondAttribute="bottom" id="adl-Fc-dtn"/>
+                <constraint firstItem="CWS-gI-i6j" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="d9p-B4-A5d"/>
+                <constraint firstItem="CWS-gI-i6j" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="xjx-su-Jx3"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="blurView" destination="Keo-vF-gyp" id="tZp-1N-hNJ"/>
+                <outlet property="containerView" destination="7YY-sE-98X" id="FeS-q5-XIv"/>
+                <outlet property="pickerView" destination="Lo3-NU-s6r" id="pzs-bl-Xm3"/>
+                <outlet property="titleLabel" destination="pU8-cc-U5l" id="gy4-vY-w0u"/>
+            </connections>
+            <point key="canvasLocation" x="47.826086956521742" y="43.526785714285715"/>
+        </view>
+    </objects>
+</document>

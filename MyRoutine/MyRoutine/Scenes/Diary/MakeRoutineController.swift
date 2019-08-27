@@ -15,13 +15,10 @@ final class MakeRoutineController: UIViewController {
     @IBOutlet weak var progessBarView: MBCircularProgressBarView!
     
     // MARK: - Variables
-    
-    let durationLowSpeed = 0.1
+    let durationLowSpeed = 0.2
     let durationHighSpeed = 0.4
     var completion = CompletionModel(targetTime: 10, doneCount: 0)
-    var maxValue: CGFloat = 10
-    var doneCount: CGFloat = 0
-    
+  
     // MARK: - View Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()

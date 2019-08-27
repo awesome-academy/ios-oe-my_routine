@@ -167,6 +167,19 @@ extension CreateRoutineController: UITableViewDelegate {
             let controller = RemindRoutineController.instantiate()
             controller.reminds = routine.remindRoutine
             navigationController?.pushViewController(controller, animated: true)
+        case .targetCell:
+            AlertViewControl.showInputAlert(title: "Số lần",
+                                             message: "Số lần thực hiện trong ngày",
+                                             cancelButtonTitle: "Huỷ",
+                                             inputType: .numberPad,
+                                             placeHolder: "Nhập giá trị",
+                                             saveButtonTitle: "Xong") {[weak self] (inputValue) in
+                if inputValue != "" {
+                    self?.state[2] = inputValue + " lần / ngày"
+                    self?.routine.targetRoutine = inputValue.int
+                    self?.stateRoutineTableView.reloadData()
+                }
+            }
         default:
             return
         }

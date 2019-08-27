@@ -26,6 +26,8 @@
 		0561CC6C23181CDE00AD13D2 /* RemindCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561CC6823181CDE00AD13D2 /* RemindCell.swift */; };
 		0561CC6D23181CDE00AD13D2 /* AddRemindCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561CC6923181CDE00AD13D2 /* AddRemindCell.swift */; };
 		0561CC6F2318296D00AD13D2 /* RemindRoutineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561CC6E2318296D00AD13D2 /* RemindRoutineController.swift */; };
+		05439B4D2314FE4900210D79 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05439B4C2314FE4900210D79 /* UIViewController+.swift */; };
+		0561CC63231679DE00AD13D2 /* AlertViewControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561CC62231679DE00AD13D2 /* AlertViewControl.swift */; };
 		058A3D9A22F276DA00AB00F2 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058A3D9922F276DA00AB00F2 /* TabBar.storyboard */; };
 		058A3D9E22F2773B00AB00F2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A3D9D22F2773B00AB00F2 /* TabBarController.swift */; };
 		058A3DA022F2787E00AB00F2 /* Diary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058A3D9F22F2787E00AB00F2 /* Diary.storyboard */; };
@@ -81,6 +83,8 @@
 		0561CC6823181CDE00AD13D2 /* RemindCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindCell.swift; sourceTree = "<group>"; };
 		0561CC6923181CDE00AD13D2 /* AddRemindCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRemindCell.swift; sourceTree = "<group>"; };
 		0561CC6E2318296D00AD13D2 /* RemindRoutineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindRoutineController.swift; sourceTree = "<group>"; };
+		05439B4C2314FE4900210D79 /* UIViewController+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		0561CC62231679DE00AD13D2 /* AlertViewControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewControl.swift; sourceTree = "<group>"; };
 		058A3D9922F276DA00AB00F2 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		058A3D9D22F2773B00AB00F2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		058A3D9F22F2787E00AB00F2 /* Diary.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Diary.storyboard; sourceTree = "<group>"; };
@@ -146,6 +150,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		0561CC61231679A900AD13D2 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				0561CC62231679DE00AD13D2 /* AlertViewControl.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 		058A3DBE22F48A1200AB00F2 /* Diary */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +190,7 @@
 		0599454B230A72FA0050830E /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				0561CC61231679A900AD13D2 /* Alert */,
 				05DA76D0230FB48E00929FA3 /* Picker */,
 				0599454C230A73050050830E /* Custom */,
 				0599454D230A73210050830E /* Constants.swift */,
@@ -264,6 +277,7 @@
 				058A3DC722F48E3100AB00F2 /* String+.swift */,
 				0537C53D2306811F00454618 /* UIView+.swift */,
 				05DA76B8230D390200929FA3 /* Date+.swift */,
+				05439B4C2314FE4900210D79 /* UIViewController+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -545,6 +559,7 @@
 				058A3DA822F2797C00AB00F2 /* StatisticAllController.swift in Sources */,
 				05DA76D6230FB4D500929FA3 /* SystemInfo.swift in Sources */,
 				05DA76C2230E99A100929FA3 /* DateCell.swift in Sources */,
+				05439B4D2314FE4900210D79 /* UIViewController+.swift in Sources */,
 				0599454E230A73210050830E /* Constants.swift in Sources */,
 				0537C536230657BB00454618 /* List+.swift in Sources */,
 				0537C54B230799DB00454618 /* RoundedView.swift in Sources */,
@@ -575,6 +590,7 @@
 				058A3DCC22F496D400AB00F2 /* RoutineService.swift in Sources */,
 				05439B502315096500210D79 /* DatePicker.swift in Sources */,
 				0537C5302306568000454618 /* RemindModel.swift in Sources */,
+				0561CC63231679DE00AD13D2 /* AlertViewControl.swift in Sources */,
 				058A3DA622F2796200AB00F2 /* DiaryController.swift in Sources */,
 				05DA76BB230D7A6200929FA3 /* DayOfWeek.swift in Sources */,
 				05DA76B7230D361100929FA3 /* MapperService.swift in Sources */,

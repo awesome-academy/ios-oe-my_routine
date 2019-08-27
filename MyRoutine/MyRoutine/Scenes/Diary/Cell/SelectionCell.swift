@@ -6,7 +6,7 @@
 //  Copyright © 2019 huy. All rights reserved.
 //
 
-class SelectionCell: UITableViewCell, NibReusable {
+final class SelectionCell: UITableViewCell, NibReusable {
     
     // MARK: - Outlets
     @IBOutlet weak var imageCheck: UIImageView!

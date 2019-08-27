@@ -31,8 +31,6 @@ enum DayOfWeek: Int {
             return "Thứ Bảy"
         case .Sunday:
             return "Chủ Nhật"
-        default:
-            return ""
         }
     }
     var shortTitle: String {
@@ -51,8 +49,6 @@ enum DayOfWeek: Int {
             return "Th 7"
         case .Sunday:
             return "CN"
-        default:
-            return ""
         }
     }
 }

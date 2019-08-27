@@ -16,6 +16,10 @@
 		0537C5452306815600454618 /* RoutineComponentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0537C5412306815500454618 /* RoutineComponentCell.xib */; };
 		0537C5462306815600454618 /* SuggestionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C5422306815500454618 /* SuggestionViewCell.swift */; };
 		0537C54B230799DB00454618 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C549230799DB00454618 /* RoundedView.swift */; };
+		05439B4E2315095100210D79 /* PickerViewControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA76D7230FB63700929FA3 /* PickerViewControl.swift */; };
+		05439B4F2315096200210D79 /* DatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05DA76D2230FB4A700929FA3 /* DatePicker.xib */; };
+		05439B502315096500210D79 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA76D1230FB4A700929FA3 /* DatePicker.swift */; };
+		05439B512315097600210D79 /* SystemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA76D5230FB4D400929FA3 /* SystemInfo.swift */; };
 		058A3D9A22F276DA00AB00F2 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058A3D9922F276DA00AB00F2 /* TabBar.storyboard */; };
 		058A3D9E22F2773B00AB00F2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A3D9D22F2773B00AB00F2 /* TabBarController.swift */; };
 		058A3DA022F2787E00AB00F2 /* Diary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058A3D9F22F2787E00AB00F2 /* Diary.storyboard */; };
@@ -41,6 +45,10 @@
 		05DA76B7230D361100929FA3 /* MapperService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA76B6230D361100929FA3 /* MapperService.swift */; };
 		05DA76B9230D390200929FA3 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA76B8230D390200929FA3 /* Date+.swift */; };
 		05DA76BB230D7A6200929FA3 /* DayOfWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA76BA230D7A6200929FA3 /* DayOfWeek.swift */; };
+		05DA76C2230E99A100929FA3 /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA76C0230E99A100929FA3 /* DateCell.swift */; };
+		05DA76C3230E99A100929FA3 /* DateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05DA76C1230E99A100929FA3 /* DateCell.xib */; };
+		05DA76C6230EDE5F00929FA3 /* RoutineDiaryCelll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA76C4230EDE5F00929FA3 /* RoutineDiaryCelll.swift */; };
+		05DA76C7230EDE5F00929FA3 /* RoutineDiaryCelll.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05DA76C5230EDE5F00929FA3 /* RoutineDiaryCelll.xib */; };
 		05DA76D3230FB4A700929FA3 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA76D1230FB4A700929FA3 /* DatePicker.swift */; };
 		05DA76D4230FB4A700929FA3 /* DatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05DA76D2230FB4A700929FA3 /* DatePicker.xib */; };
 		05DA76D6230FB4D500929FA3 /* SystemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA76D5230FB4D400929FA3 /* SystemInfo.swift */; };
@@ -88,6 +96,10 @@
 		05DA76B6230D361100929FA3 /* MapperService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperService.swift; sourceTree = "<group>"; };
 		05DA76B8230D390200929FA3 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		05DA76BA230D7A6200929FA3 /* DayOfWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayOfWeek.swift; sourceTree = "<group>"; };
+		05DA76C0230E99A100929FA3 /* DateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
+		05DA76C1230E99A100929FA3 /* DateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateCell.xib; sourceTree = "<group>"; };
+		05DA76C4230EDE5F00929FA3 /* RoutineDiaryCelll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineDiaryCelll.swift; sourceTree = "<group>"; };
+		05DA76C5230EDE5F00929FA3 /* RoutineDiaryCelll.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoutineDiaryCelll.xib; sourceTree = "<group>"; };
 		05DA76D1230FB4A700929FA3 /* DatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
 		05DA76D2230FB4A700929FA3 /* DatePicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePicker.xib; sourceTree = "<group>"; };
 		05DA76D5230FB4D400929FA3 /* SystemInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemInfo.swift; sourceTree = "<group>"; };
@@ -176,6 +188,10 @@
 				0537C5412306815500454618 /* RoutineComponentCell.xib */,
 				0537C5422306815500454618 /* SuggestionViewCell.swift */,
 				0537C53F2306815500454618 /* SuggestionViewCell.xib */,
+				05DA76C4230EDE5F00929FA3 /* RoutineDiaryCelll.swift */,
+				05DA76C5230EDE5F00929FA3 /* RoutineDiaryCelll.xib */,
+				05DA76C0230E99A100929FA3 /* DateCell.swift */,
+				05DA76C1230E99A100929FA3 /* DateCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -414,8 +430,11 @@
 				05DA76D4230FB4A700929FA3 /* DatePicker.xib in Resources */,
 				058A3DA222F278C500AB00F2 /* StatisticAll.storyboard in Resources */,
 				058A3DA022F2787E00AB00F2 /* Diary.storyboard in Resources */,
+				05DA76C3230E99A100929FA3 /* DateCell.xib in Resources */,
 				058A3DAC22F27EF200AB00F2 /* Setting.storyboard in Resources */,
+				05439B4F2315096200210D79 /* DatePicker.xib in Resources */,
 				0537C5432306815600454618 /* SuggestionViewCell.xib in Resources */,
+				05DA76C7230EDE5F00929FA3 /* RoutineDiaryCelll.xib in Resources */,
 				05994576230C4B620050830E /* SelectionCell.xib in Resources */,
 				0537C5452306815600454618 /* RoutineComponentCell.xib in Resources */,
 			);
@@ -476,6 +495,7 @@
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
+				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -485,6 +505,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -500,6 +521,7 @@
 			files = (
 				058A3DA822F2797C00AB00F2 /* StatisticAllController.swift in Sources */,
 				05DA76D6230FB4D500929FA3 /* SystemInfo.swift in Sources */,
+				05DA76C2230E99A100929FA3 /* DateCell.swift in Sources */,
 				0599454E230A73210050830E /* Constants.swift in Sources */,
 				0537C536230657BB00454618 /* List+.swift in Sources */,
 				0537C54B230799DB00454618 /* RoundedView.swift in Sources */,
@@ -517,16 +539,20 @@
 				05DA76D8230FB63700929FA3 /* PickerViewControl.swift in Sources */,
 				05DA76F8230FD0FD00929FA3 /* MakeRoutineController.swift in Sources */,
 				058A3D9E22F2773B00AB00F2 /* TabBarController.swift in Sources */,
+				05439B4E2315095100210D79 /* PickerViewControl.swift in Sources */,
+				05DA76C6230EDE5F00929FA3 /* RoutineDiaryCelll.swift in Sources */,
 				0537C5442306815600454618 /* RoutineComponentCell.swift in Sources */,
 				0537C53E2306811F00454618 /* UIView+.swift in Sources */,
 				058A3DC622F48B2A00AB00F2 /* RoutineModel.swift in Sources */,
 				058A3DCC22F496D400AB00F2 /* RoutineService.swift in Sources */,
+				05439B502315096500210D79 /* DatePicker.swift in Sources */,
 				0537C5302306568000454618 /* RemindModel.swift in Sources */,
 				058A3DA622F2796200AB00F2 /* DiaryController.swift in Sources */,
 				05DA76BB230D7A6200929FA3 /* DayOfWeek.swift in Sources */,
 				05DA76B7230D361100929FA3 /* MapperService.swift in Sources */,
 				05DA76FA2313D5B800929FA3 /* CompletionModel.swift in Sources */,
 				05B23D3322F1678000E8140F /* AppDelegate.swift in Sources */,
+				05439B512315097600210D79 /* SystemInfo.swift in Sources */,
 				058A3DAA22F2798C00AB00F2 /* SettingController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

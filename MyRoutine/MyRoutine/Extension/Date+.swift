@@ -8,6 +8,11 @@
 
 extension Date {
     
+    static let currentCalendar = Calendar(identifier: .gregorian)
+    var weekday: Int {
+        return Date.currentCalendar.component(.weekday, from: self)
+    }
+    
     func getStrDateFormat(format: String) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = format
@@ -21,5 +26,5 @@ extension Date {
     func getStringHour() -> String {
         return self.getStrDateFormat(format: "HH:mm")
     }
-
+    
 }

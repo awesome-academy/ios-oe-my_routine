@@ -7,6 +7,7 @@ target 'MyRoutine' do
   pod 'RealmSwift'
   pod 'Reusable', '~> 4.0.2'
   pod "MBCircularProgressBar"
+  pod 'Then'
   # Pods for MyRoutine
 
 end

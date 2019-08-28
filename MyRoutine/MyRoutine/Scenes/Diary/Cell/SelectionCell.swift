@@ -6,7 +6,7 @@
 //  Copyright © 2019 huy. All rights reserved.
 //
 
-class SelectionCell: UITableViewCell, NibReusable {
+final class SelectionCell: UITableViewCell, NibReusable {
     
     // MARK: - Outlets
     @IBOutlet weak var imageCheck: UIImageView!
@@ -18,8 +18,8 @@ class SelectionCell: UITableViewCell, NibReusable {
         self.selectionStyle = .none
     }
 
-    func setTitleAndStateOption(option: String, choose: Bool) {
+    func setTitleAndStateOption(option: String, isSelected: Bool) {
         lblOption.text = option
-        imageCheck.isHidden = !choose
+        imageCheck.isHidden = !isSelected
     }
 }

@@ -20,6 +20,8 @@
 		05439B4F2315096200210D79 /* DatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05DA76D2230FB4A700929FA3 /* DatePicker.xib */; };
 		05439B502315096500210D79 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA76D1230FB4A700929FA3 /* DatePicker.swift */; };
 		05439B512315097600210D79 /* SystemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA76D5230FB4D400929FA3 /* SystemInfo.swift */; };
+		05439B5323164BB600210D79 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05439B5223164BB600210D79 /* Config.swift */; };
+		05439B5523164DE200210D79 /* DateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05439B5423164DE200210D79 /* DateService.swift */; };
 		058A3D9A22F276DA00AB00F2 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058A3D9922F276DA00AB00F2 /* TabBar.storyboard */; };
 		058A3D9E22F2773B00AB00F2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A3D9D22F2773B00AB00F2 /* TabBarController.swift */; };
 		058A3DA022F2787E00AB00F2 /* Diary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058A3D9F22F2787E00AB00F2 /* Diary.storyboard */; };
@@ -68,11 +70,13 @@
 		0537C5412306815500454618 /* RoutineComponentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoutineComponentCell.xib; sourceTree = "<group>"; };
 		0537C5422306815500454618 /* SuggestionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionViewCell.swift; sourceTree = "<group>"; };
 		0537C549230799DB00454618 /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		05439B5223164BB600210D79 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		05439B5423164DE200210D79 /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateService.swift; sourceTree = "<group>"; };
 		058A3D9922F276DA00AB00F2 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		058A3D9D22F2773B00AB00F2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		058A3D9F22F2787E00AB00F2 /* Diary.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Diary.storyboard; sourceTree = "<group>"; };
 		058A3DA122F278C500AB00F2 /* StatisticAll.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StatisticAll.storyboard; sourceTree = "<group>"; };
-		058A3DA522F2796200AB00F2 /* DiaryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryController.swift; sourceTree = "<group>"; };
+		058A3DA522F2796200AB00F2 /* DiaryController.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = DiaryController.swift; sourceTree = "<group>"; };
 		058A3DA722F2797C00AB00F2 /* StatisticAllController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticAllController.swift; sourceTree = "<group>"; };
 		058A3DA922F2798C00AB00F2 /* SettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
 		058A3DAB22F27EF200AB00F2 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 				0599454C230A73050050830E /* Custom */,
 				0599454D230A73210050830E /* Constants.swift */,
 				05DA76D5230FB4D400929FA3 /* SystemInfo.swift */,
+				05439B5223164BB600210D79 /* Config.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -316,6 +321,7 @@
 				058A3DC322F48AE000AB00F2 /* RealmService.swift */,
 				058A3DCB22F496D400AB00F2 /* RoutineService.swift */,
 				05DA76B6230D361100929FA3 /* MapperService.swift */,
+				05439B5423164DE200210D79 /* DateService.swift */,
 			);
 			name = Local;
 			sourceTree = "<group>";
@@ -536,6 +542,7 @@
 				0537C53C23066A6600454618 /* CreateRoutineController.swift in Sources */,
 				058A3DC422F48AE000AB00F2 /* RealmService.swift in Sources */,
 				05DA76B9230D390200929FA3 /* Date+.swift in Sources */,
+				05439B5523164DE200210D79 /* DateService.swift in Sources */,
 				05DA76D8230FB63700929FA3 /* PickerViewControl.swift in Sources */,
 				05DA76F8230FD0FD00929FA3 /* MakeRoutineController.swift in Sources */,
 				058A3D9E22F2773B00AB00F2 /* TabBarController.swift in Sources */,
@@ -548,6 +555,7 @@
 				05439B502315096500210D79 /* DatePicker.swift in Sources */,
 				0537C5302306568000454618 /* RemindModel.swift in Sources */,
 				058A3DA622F2796200AB00F2 /* DiaryController.swift in Sources */,
+				05439B5323164BB600210D79 /* Config.swift in Sources */,
 				05DA76BB230D7A6200929FA3 /* DayOfWeek.swift in Sources */,
 				05DA76B7230D361100929FA3 /* MapperService.swift in Sources */,
 				05DA76FA2313D5B800929FA3 /* CompletionModel.swift in Sources */,

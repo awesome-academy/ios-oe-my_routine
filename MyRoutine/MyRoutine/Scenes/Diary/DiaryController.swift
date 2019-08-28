@@ -10,10 +10,10 @@ class DiaryController: UIViewController {
     
     // MARK: - Variables
     var routine = [RoutineModel]()
-    let dateArray =  Date.returnArrayOfDate(number: 14).map {
+    let dateArray =  DateService.shared.getArrayOfDate(numberOfDate: Config.numberOfDates).map {
         $0.getStrDateFormat(format: "dd")
     }
-    let weekDays =  Date.returnArrayOfDate(number: 14).map {
+    let weekDays =  DateService.shared.getArrayOfDate(numberOfDate: Config.numberOfDates).map {
         DayOfWeek(rawValue: $0.weekday)?.shortTitle
     }
     
@@ -30,9 +30,10 @@ class DiaryController: UIViewController {
     
     // MARK: - Actions
     @IBAction func handleButtonCreate(_ sender: Any) {
-        let controller = UINavigationController()
-        controller.navigationBar.isHidden = true
-        controller.viewControllers = [CreateRoutineController.instantiate()]
+        let controller = UINavigationController().then {
+            $0.navigationBar.isHidden = true
+            $0.viewControllers = [CreateRoutineController.instantiate()]
+        }
         self.present(controller, animated: true, completion: nil)
     }
     
@@ -55,15 +56,17 @@ class DiaryController: UIViewController {
     }
     
     func setUpTableView() {
-        routineTableView.dataSource = self
-        routineTableView.delegate = self
-        routineTableView.register(cellType: RoutineDiaryCelll.self)
+        routineTableView.do {
+            $0.dataSource = self
+            $0.delegate = self
+            $0.register(cellType: RoutineDiaryCelll.self)
+        }
     }
 }
 
 extension DiaryController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 14
+        return Config.numberOfDates
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -91,7 +94,7 @@ extension DiaryController: UITableViewDataSource {
 
 extension DiaryController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return view.height / 10
+        return 85
     }
 }
 

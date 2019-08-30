@@ -6,7 +6,10 @@
 //  Copyright © 2019 huy. All rights reserved.
 //
 
-class CreateRoutineController: UIViewController {
+final class CreateRoutineController: UIViewController {
+    
+    // MARK: - Constants
+    static let numberRowInStateRoutineTableView: CGFloat = 13
     
     // MARK: - Variables
     var state = Constants.defaultNewRoutine
@@ -141,7 +144,7 @@ extension CreateRoutineController: UITableViewDataSource {
 
 extension CreateRoutineController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return Config.heightForRowInStateRoutineTableView
+        return view.height / CreateRoutineController.numberRowInStateRoutineTableView
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

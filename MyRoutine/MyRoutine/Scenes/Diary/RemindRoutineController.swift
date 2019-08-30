@@ -8,6 +8,11 @@
 
 final class RemindRoutineController: UIViewController {
     
+    // MARK: - Constants
+    static let numberOfSection = 2
+    static let heightForHeader: CGFloat = 12
+    static let numberOfRow: CGFloat = 13
+    
     // MARK: - Outlets
     @IBOutlet private weak var editButton: UIButton!
     @IBOutlet private weak var remindTableView: UITableView!
@@ -53,7 +58,7 @@ final class RemindRoutineController: UIViewController {
 
 extension RemindRoutineController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return Config.numberOfSectionRemindTableView
+        return RemindRoutineController.numberOfSection
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -92,11 +97,11 @@ extension RemindRoutineController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return Config.heightForHeaderRemindTableView
+        return RemindRoutineController.heightForHeader
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return Config.heightForRowRemindTableView
+        return view.height / RemindRoutineController.numberOfRow
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

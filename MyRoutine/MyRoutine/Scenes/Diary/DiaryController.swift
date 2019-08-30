@@ -6,14 +6,17 @@
 //  Copyright © 2019 huy. All rights reserved.
 //
 
-class DiaryController: UIViewController {
-    
+final class DiaryController: UIViewController {
+   
+   // MARK: - Constants
+   static let numberOfDates = 14
+   
     // MARK: - Variables
     var routine = [RoutineModel]()
-    let dateArray =  DateService.shared.getArrayOfDate(numberOfDate: Config.numberOfDates).map {
+    let dateArray =  DateService.shared.getArrayOfDate(numberOfDate: DiaryController.numberOfDates).map {
         $0.getStrDateFormat(format: "dd")
     }
-    let weekDays =  DateService.shared.getArrayOfDate(numberOfDate: Config.numberOfDates).map {
+    let weekDays =  DateService.shared.getArrayOfDate(numberOfDate: DiaryController.numberOfDates).map {
         DayOfWeek(rawValue: $0.weekday)?.shortTitle
     }
     
@@ -66,7 +69,7 @@ class DiaryController: UIViewController {
 
 extension DiaryController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Config.numberOfDates
+        return DiaryController.numberOfDates
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

@@ -174,7 +174,7 @@ extension CreateRoutineController: UITableViewDelegate {
                                              inputType: .numberPad,
                                              placeHolder: "Nhập giá trị",
                                              saveButtonTitle: "Xong") {[weak self] (inputValue) in
-                if inputValue != "" {
+                if !inputValue.isEmpty {
                     self?.state[2] = inputValue + " lần / ngày"
                     self?.routine.targetRoutine = inputValue.int
                     self?.stateRoutineTableView.reloadData()

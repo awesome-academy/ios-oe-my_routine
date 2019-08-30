@@ -6,7 +6,10 @@
 //  Copyright © 2019 huy. All rights reserved.
 //
 
-class CreateRoutineController: UIViewController {
+final class CreateRoutineController: UIViewController {
+    
+    // MARK: - Constants
+    static let numberRowInStateRoutineTableView: CGFloat = 13
     
     // MARK: - Variables
     var state = Constants.defaultNewRoutine
@@ -62,6 +65,9 @@ class CreateRoutineController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(updateRepeat(notification:)),
                                                name: NSNotification.Name(rawValue: "Repeat"),
                                                object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateRemind(notification:)),
+                                               name: NSNotification.Name("Remind"),
+                                               object: nil)
         
     }
     
@@ -75,8 +81,23 @@ class CreateRoutineController: UIViewController {
         }
     }
     
+    @objc func updateRemind(notification: Notification) {
+        if let mess = notification.userInfo, let msg = mess["message"] {
+            let remindRoutine = MapperService.shared.convertAnyToObject(any: msg,
+                                                                        typeOpject: [RemindModel].self) ?? []
+            routine.remindRoutine = remindRoutine
+            let checkRemind = remindRoutine.filter { $0.state }
+            switch checkRemind.count {
+            case 0: state[3] = "Tắt"
+            case 1: state[3] = checkRemind[0].timeString
+            default: state[3] = "\(checkRemind.count) lần / ngày"
+            }
+            stateRoutineTableView.reloadData()
+        }
+    }
+    
     func changeRepeatState(daysOfWeek: [DayOfWeek]) -> String {
-        if daysOfWeek.count == 7 {
+        if daysOfWeek.count == Constants.numberDayOnWeek {
             return "Hàng ngày"
         } else {
             return daysOfWeek.map { $0.shortTitle }
@@ -123,16 +144,17 @@ extension CreateRoutineController: UITableViewDataSource {
 
 extension CreateRoutineController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return view.height / 13
+        return view.height / CreateRoutineController.numberRowInStateRoutineTableView
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch indexPath.row {
-        case 0:
+        guard let typeCell = CellStateRoutineTableView(rawValue: indexPath.row) else { return }
+        switch typeCell {
+        case .repeatCell:
             let controller = RepeatOptionController.instantiate()
             controller.checkSelect = MapperService.shared.daysOfWeekToBoolCheck(days: routine.repeatRoutine)
             navigationController?.pushViewController(controller, animated: true)
-        case 1:
+        case .dayStartCell:
             PickerViewControl.showDatePicker(type: .date,
                                              title: "Ngày bắt đầu") {[weak self] dateChange in
                 if let date = dateChange?.getStringDate() {
@@ -141,6 +163,10 @@ extension CreateRoutineController: UITableViewDelegate {
                     self?.stateRoutineTableView.reloadData()
                 }
             }
+        case .remindCell:
+            let controller = RemindRoutineController.instantiate()
+            controller.reminds = routine.remindRoutine
+            navigationController?.pushViewController(controller, animated: true)
         default:
             return
         }

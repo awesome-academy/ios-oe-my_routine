@@ -12,8 +12,8 @@ class RepeatOptionController: UIViewController {
     var checkSelect = Array.init(repeating: true, count: 7)
    
     // MARK: - Outlets
-    @IBOutlet weak var repeatOptionTbv: UITableView!
-    
+    @IBOutlet private weak var repeatOptionTableView: UITableView!
+
     // MARK: - View Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +22,9 @@ class RepeatOptionController: UIViewController {
     
     // MARK: - Set Up
     func setUpTableView() {
-        repeatOptionTbv.dataSource = self
-        repeatOptionTbv.delegate = self
-        repeatOptionTbv.register(cellType: SelectionCell.self)
+        repeatOptionTableView.dataSource = self
+        repeatOptionTableView.delegate = self
+        repeatOptionTableView.register(cellType: SelectionCell.self)
     }
 
     // MARK: - Actions
@@ -55,7 +55,7 @@ extension RepeatOptionController: UITableViewDataSource {
 extension RepeatOptionController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         checkSelect[indexPath.row] = !checkSelect[indexPath.row]
-        repeatOptionTbv.reloadData()
+        repeatOptionTableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

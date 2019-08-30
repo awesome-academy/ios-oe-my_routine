@@ -53,15 +53,20 @@ final class RemindRoutineController: UIViewController {
 
 extension RemindRoutineController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return Config.numberOfSectionRemindTableView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return section == 0 ? reminds.count : 1
+        guard let typeCell = CellRemindTableView(rawValue: section) else { return 0 }
+        return typeCell == .remind ? reminds.count : 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0 {
+        guard let typeCell = CellRemindTableView(rawValue: indexPath.section) else {
+            return UITableViewCell()
+        }
+        switch typeCell {
+        case .remind:
             let cell: RemindCell = tableView.dequeueReusableCell(for: indexPath)
             cell.do {
                 $0.setRemindContent(timeRemind: reminds[indexPath.row].timeString,
@@ -71,7 +76,7 @@ extension RemindRoutineController: UITableViewDataSource {
                 }
             }
             return cell
-        } else {
+        case .addRemind:
             let cell: AddRemindCell = tableView.dequeueReusableCell(for: indexPath)
             return cell
         }
@@ -87,11 +92,11 @@ extension RemindRoutineController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 12
+        return Config.heightForHeaderRemindTableView
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return view.height / 13
+        return Config.heightForRowRemindTableView
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

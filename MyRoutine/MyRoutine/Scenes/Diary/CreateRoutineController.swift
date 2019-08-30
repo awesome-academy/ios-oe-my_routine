@@ -94,7 +94,7 @@ class CreateRoutineController: UIViewController {
     }
     
     func changeRepeatState(daysOfWeek: [DayOfWeek]) -> String {
-        if daysOfWeek.count == 7 {
+        if daysOfWeek.count == Constants.numberDayOnWeek {
             return "Hàng ngày"
         } else {
             return daysOfWeek.map { $0.shortTitle }
@@ -141,16 +141,17 @@ extension CreateRoutineController: UITableViewDataSource {
 
 extension CreateRoutineController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return view.height / 13
+        return Config.heightForRowInStateRoutineTableView
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch indexPath.row {
-        case 0:
+        guard let typeCell = CellStateRoutineTableView(rawValue: indexPath.row) else { return }
+        switch typeCell {
+        case .repeatCell:
             let controller = RepeatOptionController.instantiate()
             controller.checkSelect = MapperService.shared.daysOfWeekToBoolCheck(days: routine.repeatRoutine)
             navigationController?.pushViewController(controller, animated: true)
-        case 1:
+        case .dayStartCell:
             PickerViewControl.showDatePicker(type: .date,
                                              title: "Ngày bắt đầu") {[weak self] dateChange in
                 if let date = dateChange?.getStringDate() {
@@ -159,7 +160,7 @@ extension CreateRoutineController: UITableViewDelegate {
                     self?.stateRoutineTableView.reloadData()
                 }
             }
-        case 3:
+        case .remindCell:
             let controller = RemindRoutineController.instantiate()
             controller.reminds = routine.remindRoutine
             navigationController?.pushViewController(controller, animated: true)

@@ -62,6 +62,9 @@ class CreateRoutineController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(updateRepeat(notification:)),
                                                name: NSNotification.Name(rawValue: "Repeat"),
                                                object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateRemind(notification:)),
+                                               name: NSNotification.Name("Remind"),
+                                               object: nil)
         
     }
     
@@ -71,6 +74,21 @@ class CreateRoutineController: UIViewController {
                                                                         typeOpject: [DayOfWeek].self) ?? []
             routine.repeatRoutine = repeatRoutine
             state[0] = changeRepeatState(daysOfWeek: repeatRoutine)
+            stateRoutineTableView.reloadData()
+        }
+    }
+    
+    @objc func updateRemind(notification: Notification) {
+        if let mess = notification.userInfo, let msg = mess["message"] {
+            let remindRoutine = MapperService.shared.convertAnyToObject(any: msg,
+                                                                        typeOpject: [RemindModel].self) ?? []
+            routine.remindRoutine = remindRoutine
+            let check = remindRoutine.filter { $0.state }.count
+            switch check {
+            case 0: state[3] = "Tắt"
+            case 1: state[3] = remindRoutine[0].timeString
+            default: state[3] = "\(check) lần / ngày"
+            }
             stateRoutineTableView.reloadData()
         }
     }
@@ -141,6 +159,10 @@ extension CreateRoutineController: UITableViewDelegate {
                     self?.stateRoutineTableView.reloadData()
                 }
             }
+        case 3:
+            let controller = RemindRoutineController.instantiate()
+            controller.reminds = routine.remindRoutine
+            navigationController?.pushViewController(controller, animated: true)
         default:
             return
         }

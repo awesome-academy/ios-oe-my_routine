@@ -13,7 +13,7 @@ class RepeatOptionController: UIViewController {
    
     // MARK: - Outlets
     @IBOutlet weak var repeatOptionTbv: UITableView!
-    
+
     // MARK: - View Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()

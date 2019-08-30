@@ -9,8 +9,8 @@
 final class RemindCell: UITableViewCell, NibReusable {
     
     // MARK: - Outlets
-    @IBOutlet weak var lblTime: UILabel!
-    @IBOutlet weak var switchTime: UISwitch!
+    @IBOutlet private weak var timeLabel: UILabel!
+    @IBOutlet private weak var stateSwitch: UISwitch!
     
     // Closure
     var didChangeSwitch: ((Bool) -> Void)?
@@ -21,11 +21,11 @@ final class RemindCell: UITableViewCell, NibReusable {
     }
     
     @IBAction func switchChanged(_ sender: Any) {
-        didChangeSwitch?(switchTime.isOn)
+        didChangeSwitch?(stateSwitch.isOn)
     }
     
     func setRemindContent(timeRemind: String, switchOn: Bool) {
-        lblTime.text = timeRemind
-        switchTime.setOn(switchOn, animated: true)
+        timeLabel.text = timeRemind
+        stateSwitch.setOn(switchOn, animated: true)
     }
 }

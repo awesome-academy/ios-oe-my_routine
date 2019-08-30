@@ -83,11 +83,11 @@ class CreateRoutineController: UIViewController {
             let remindRoutine = MapperService.shared.convertAnyToObject(any: msg,
                                                                         typeOpject: [RemindModel].self) ?? []
             routine.remindRoutine = remindRoutine
-            let check = remindRoutine.filter { $0.state }.count
-            switch check {
+            let checkRemind = remindRoutine.filter { $0.state }
+            switch checkRemind.count {
             case 0: state[3] = "Tắt"
-            case 1: state[3] = remindRoutine[0].timeString
-            default: state[3] = "\(check) lần / ngày"
+            case 1: state[3] = checkRemind[0].timeString
+            default: state[3] = "\(checkRemind.count) lần / ngày"
             }
             stateRoutineTableView.reloadData()
         }

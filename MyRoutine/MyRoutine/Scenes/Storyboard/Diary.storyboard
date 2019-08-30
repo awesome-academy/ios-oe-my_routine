@@ -384,7 +384,7 @@
                         <viewLayoutGuide key="safeArea" id="mMT-m7-IDe"/>
                     </view>
                     <connections>
-                        <outlet property="repeatOptionTbv" destination="cG6-i0-nhE" id="7ht-bu-Hma"/>
+                        <outlet property="repeatOptionTableView" destination="cG6-i0-nhE" id="7ht-bu-Hma"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ahf-RE-jxl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -644,7 +644,7 @@
                         <viewLayoutGuide key="safeArea" id="kzL-DL-giP"/>
                     </view>
                     <connections>
-                        <outlet property="editButtonOutlet" destination="GB4-76-vF8" id="N0A-H4-eF6"/>
+                        <outlet property="editButton" destination="GB4-76-vF8" id="zFr-hp-aby"/>
                         <outlet property="remindTableView" destination="lRP-WA-HrP" id="VGt-xs-VIW"/>
                     </connections>
                 </viewController>

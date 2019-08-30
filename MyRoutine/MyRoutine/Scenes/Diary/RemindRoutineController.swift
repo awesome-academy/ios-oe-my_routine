@@ -9,8 +9,8 @@
 final class RemindRoutineController: UIViewController {
     
     // MARK: - Outlets
-    @IBOutlet weak var editButtonOutlet: UIButton!
-    @IBOutlet weak var remindTableView: UITableView!
+    @IBOutlet private weak var editButton: UIButton!
+    @IBOutlet private weak var remindTableView: UITableView!
     
     // MARK: - Variables
     var reminds = [RemindModel]()
@@ -39,8 +39,10 @@ final class RemindRoutineController: UIViewController {
     }
     
     @IBAction func handleEditButton(_ sender: Any) {
-        editButtonOutlet.do {
-            $0.setTitleColor(remindTableView.isEditing ? #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1) : #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1),
+        editButton.do {
+            $0.setTitleColor(remindTableView.isEditing ?
+                UIColor(red: 255 / 255, green: 38 / 255, blue: 0 / 255, alpha: 1) :
+                UIColor(red: 149 / 255, green: 210 / 255, blue: 107 / 255, alpha: 1),
                              for: .normal)
             $0.setTitle(remindTableView.isEditing ? "Xoá" : "Xong",
                         for: .normal)
@@ -62,7 +64,8 @@ extension RemindRoutineController: UITableViewDataSource {
         if indexPath.section == 0 {
             let cell: RemindCell = tableView.dequeueReusableCell(for: indexPath)
             cell.do {
-                $0.setRemindContent(timeRemind: reminds[indexPath.row].timeString, switchOn: reminds[indexPath.row].state)
+                $0.setRemindContent(timeRemind: reminds[indexPath.row].timeString,
+                                    switchOn: reminds[indexPath.row].state)
                 $0.didChangeSwitch = {[weak self] changeState in
                     self?.reminds[indexPath.row].state = changeState
                 }
@@ -94,13 +97,12 @@ extension RemindRoutineController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         PickerViewControl.showDatePicker(type: .time,
                                          title: indexPath.section == 0 ? "Sửa" : "Thêm nhắc nhở") {[weak self] hourPicker in
-            if let hour = hourPicker {
-                if indexPath.section == 0 {
-                    self?.reminds[indexPath.row].timeString = hour.getStringHour()
-                } else {
-                    self?.reminds.append(RemindModel(timeString: hour.getStringHour(),
-                                                     state: true))
-                }
+            guard let hour = hourPicker else { return }
+            if indexPath.section == 0 {
+                self?.reminds[indexPath.row].timeString = hour.getStringHour()
+            } else {
+                self?.reminds.append(RemindModel(timeString: hour.getStringHour(),
+                                                 state: true))
             }
             self?.remindTableView.reloadData()
         }

@@ -65,11 +65,12 @@ final class CreateRoutineController: UIViewController {
     
     // MARK: - Actions
     @IBAction func handleAddRoutineButton(_ sender: Any) {
-        if nameRoutineTf.text == "" {
+        if nameRoutineTf.text!.isEmpty {
             AlertViewControl.showQuickSystemAlert(title: "Đã xảy ra lỗi",
                                                   message: "Không được để trống tên",
                                                   cancelButtonTitle: "Ok")
         } else {
+            routine.nameRoutine = nameRoutineTf.text!
             RoutineService.shared.saveRoutinetoDB(routine) { routine in
                 if routine == nil {
                     AlertViewControl.showQuickSystemAlert(title: "Đã xảy ra lỗi",
@@ -100,40 +101,39 @@ final class CreateRoutineController: UIViewController {
     }
     
     @objc func updatePeriod(notification: Notification) {
-        if let mess = notification.userInfo, let msg = mess["message"] {
-            guard let periodRoutine = MapperService.shared.convertAnyToObject(any: msg,
-                                                                        typeOpject: PeriodDay.self) else {
-                                                                            return
-            }
-            routine.periodRoutine = periodRoutine.value
-            state[4] = periodRoutine.title
-            stateRoutineTableView.reloadData()
+        guard let mess = notification.userInfo, let msg = mess["message"],
+              let periodRoutine = MapperService.shared.convertAnyToObject(any: msg,
+                                                                          typeOpject: PeriodDay.self) else {
+            return
         }
+        routine.periodRoutine = periodRoutine.value
+        state[4] = periodRoutine.title
+        stateRoutineTableView.reloadData()
+        
     }
     
     @objc func updateRepeat(notification: Notification) {
-        if let mess = notification.userInfo, let msg = mess["message"] {
-            let repeatRoutine = MapperService.shared.convertAnyToObject(any: msg,
-                                                                        typeOpject: [DayOfWeek].self) ?? []
-            routine.repeatRoutine = repeatRoutine
-            state[0] = changeRepeatState(daysOfWeek: repeatRoutine)
-            stateRoutineTableView.reloadData()
-        }
+        guard let mess = notification.userInfo, let msg = mess["message"] else { return }
+        let repeatRoutine = MapperService.shared.convertAnyToObject(any: msg,
+                                                                    typeOpject: [DayOfWeek].self) ?? []
+        routine.repeatRoutine = repeatRoutine
+        state[0] = changeRepeatState(daysOfWeek: repeatRoutine)
+        stateRoutineTableView.reloadData()
+        
     }
     
     @objc func updateRemind(notification: Notification) {
-        if let mess = notification.userInfo, let msg = mess["message"] {
-            let remindRoutine = MapperService.shared.convertAnyToObject(any: msg,
-                                                                        typeOpject: [RemindModel].self) ?? []
-            routine.remindRoutine = remindRoutine
-            let checkRemind = remindRoutine.filter { $0.state }
-            switch checkRemind.count {
-            case 0: state[3] = "Tắt"
-            case 1: state[3] = checkRemind[0].timeString
-            default: state[3] = "\(checkRemind.count) lần / ngày"
-            }
-            stateRoutineTableView.reloadData()
+        guard let mess = notification.userInfo, let msg = mess["message"] else { return }
+        let remindRoutine = MapperService.shared.convertAnyToObject(any: msg,
+                                                                    typeOpject: [RemindModel].self) ?? []
+        routine.remindRoutine = remindRoutine
+        let checkRemind = remindRoutine.filter { $0.state }
+        switch checkRemind.count {
+        case 0: state[3] = "Tắt"
+        case 1: state[3] = checkRemind[0].timeString
+        default: state[3] = "\(checkRemind.count) lần / ngày"
         }
+        stateRoutineTableView.reloadData()
     }
     
     func changeRepeatState(daysOfWeek: [DayOfWeek]) -> String {

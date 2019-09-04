@@ -31,7 +31,7 @@ class MapperMakeRoutine {
     }
     
     func makeRoutineRealmToMakeRoutine(_ makeRoutineRealm: MakeRoutineRealm) -> MakeRoutine {
-        let routine = RoutineService.shared.getRoutineByID(ID: makeRoutineRealm.routineID) ??
+        let routine = RoutineDatabase.shared.getRoutineByID(ID: makeRoutineRealm.routineID) ??
             RoutineModel.defautInit()
         let completion = CompletionModel(targetTime: Float(routine.targetRoutine),
                                          doneCount: 0)

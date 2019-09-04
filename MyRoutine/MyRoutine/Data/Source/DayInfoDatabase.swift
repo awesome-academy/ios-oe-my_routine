@@ -6,10 +6,10 @@
 //  Copyright © 2019 huy. All rights reserved.
 //
 
-class DayInfoService {
+class DayInfoDatabase {
     
     // MARK: - Singleton
-    static let shared = DayInfoService()
+    static let shared = DayInfoDatabase()
     
     // MARK: - Method
     func getAllDayInfo() -> [DayInfo] {

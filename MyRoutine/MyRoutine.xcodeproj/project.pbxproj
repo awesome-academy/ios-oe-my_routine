@@ -16,6 +16,7 @@
 		0537C5452306815600454618 /* RoutineComponentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0537C5412306815500454618 /* RoutineComponentCell.xib */; };
 		0537C5462306815600454618 /* SuggestionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C5422306815500454618 /* SuggestionViewCell.swift */; };
 		0537C54B230799DB00454618 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C549230799DB00454618 /* RoundedView.swift */; };
+		05439B4D2314FE4900210D79 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05439B4C2314FE4900210D79 /* UIViewController+.swift */; };
 		05439B4E2315095100210D79 /* PickerViewControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA76D7230FB63700929FA3 /* PickerViewControl.swift */; };
 		05439B4F2315096200210D79 /* DatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05DA76D2230FB4A700929FA3 /* DatePicker.xib */; };
 		05439B502315096500210D79 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA76D1230FB4A700929FA3 /* DatePicker.swift */; };
@@ -23,14 +24,13 @@
 		05439B5523164DE200210D79 /* DateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05439B5423164DE200210D79 /* DateService.swift */; };
 		05579ACF231F935800FF4BD3 /* MakeRoutine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05579ACE231F935800FF4BD3 /* MakeRoutine.swift */; };
 		05579AD1231F93BE00FF4BD3 /* DayInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05579AD0231F93BE00FF4BD3 /* DayInfo.swift */; };
-		05579AD3231F941E00FF4BD3 /* DayInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05579AD2231F941E00FF4BD3 /* DayInfoService.swift */; };
+		05579AD3231F941E00FF4BD3 /* DayInfoDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05579AD2231F941E00FF4BD3 /* DayInfoDatabase.swift */; };
+		0561CC63231679DE00AD13D2 /* AlertViewControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561CC62231679DE00AD13D2 /* AlertViewControl.swift */; };
 		0561CC6A23181CDE00AD13D2 /* RemindCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0561CC6623181CDD00AD13D2 /* RemindCell.xib */; };
 		0561CC6B23181CDE00AD13D2 /* AddRemindCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0561CC6723181CDD00AD13D2 /* AddRemindCell.xib */; };
 		0561CC6C23181CDE00AD13D2 /* RemindCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561CC6823181CDE00AD13D2 /* RemindCell.swift */; };
 		0561CC6D23181CDE00AD13D2 /* AddRemindCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561CC6923181CDE00AD13D2 /* AddRemindCell.swift */; };
 		0561CC6F2318296D00AD13D2 /* RemindRoutineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561CC6E2318296D00AD13D2 /* RemindRoutineController.swift */; };
-		05439B4D2314FE4900210D79 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05439B4C2314FE4900210D79 /* UIViewController+.swift */; };
-		0561CC63231679DE00AD13D2 /* AlertViewControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561CC62231679DE00AD13D2 /* AlertViewControl.swift */; };
 		058A3D9A22F276DA00AB00F2 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058A3D9922F276DA00AB00F2 /* TabBar.storyboard */; };
 		058A3D9E22F2773B00AB00F2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A3D9D22F2773B00AB00F2 /* TabBarController.swift */; };
 		058A3DA022F2787E00AB00F2 /* Diary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058A3D9F22F2787E00AB00F2 /* Diary.storyboard */; };
@@ -43,9 +43,11 @@
 		058A3DC622F48B2A00AB00F2 /* RoutineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A3DC522F48B2A00AB00F2 /* RoutineModel.swift */; };
 		058A3DC822F48E3100AB00F2 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A3DC722F48E3100AB00F2 /* String+.swift */; };
 		058A3DCA22F4942100AB00F2 /* RoutineModelRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A3DC922F4942100AB00F2 /* RoutineModelRealm.swift */; };
-		058A3DCC22F496D400AB00F2 /* RoutineService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A3DCB22F496D400AB00F2 /* RoutineService.swift */; };
+		058A3DCC22F496D400AB00F2 /* RoutineDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A3DCB22F496D400AB00F2 /* RoutineDatabase.swift */; };
 		059248E22318B382000E54C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 059248E12318B382000E54C2 /* Assets.xcassets */; };
 		059248E62318F3A2000E54C2 /* EnumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059248E52318F3A2000E54C2 /* EnumCell.swift */; };
+		059248E823191E2E000E54C2 /* DayPeriodController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059248E723191E2E000E54C2 /* DayPeriodController.swift */; };
+		059248EA23192AA7000E54C2 /* PeriodDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059248E923192AA7000E54C2 /* PeriodDay.swift */; };
 		0599454E230A73210050830E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0599454D230A73210050830E /* Constants.swift */; };
 		05994552230C35D30050830E /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05994551230C35D30050830E /* RoundedButton.swift */; };
 		05994575230C4B620050830E /* SelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05994573230C4B620050830E /* SelectionCell.swift */; };
@@ -80,17 +82,17 @@
 		0537C5412306815500454618 /* RoutineComponentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoutineComponentCell.xib; sourceTree = "<group>"; };
 		0537C5422306815500454618 /* SuggestionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionViewCell.swift; sourceTree = "<group>"; };
 		0537C549230799DB00454618 /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		05439B4C2314FE4900210D79 /* UIViewController+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		05439B5423164DE200210D79 /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateService.swift; sourceTree = "<group>"; };
 		05579ACE231F935800FF4BD3 /* MakeRoutine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeRoutine.swift; sourceTree = "<group>"; };
 		05579AD0231F93BE00FF4BD3 /* DayInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayInfo.swift; sourceTree = "<group>"; };
-		05579AD2231F941E00FF4BD3 /* DayInfoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayInfoService.swift; sourceTree = "<group>"; };
+		05579AD2231F941E00FF4BD3 /* DayInfoDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayInfoDatabase.swift; sourceTree = "<group>"; };
+		0561CC62231679DE00AD13D2 /* AlertViewControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewControl.swift; sourceTree = "<group>"; };
 		0561CC6623181CDD00AD13D2 /* RemindCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RemindCell.xib; sourceTree = "<group>"; };
 		0561CC6723181CDD00AD13D2 /* AddRemindCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddRemindCell.xib; sourceTree = "<group>"; };
 		0561CC6823181CDE00AD13D2 /* RemindCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindCell.swift; sourceTree = "<group>"; };
 		0561CC6923181CDE00AD13D2 /* AddRemindCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRemindCell.swift; sourceTree = "<group>"; };
 		0561CC6E2318296D00AD13D2 /* RemindRoutineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindRoutineController.swift; sourceTree = "<group>"; };
-		05439B4C2314FE4900210D79 /* UIViewController+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
-		0561CC62231679DE00AD13D2 /* AlertViewControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewControl.swift; sourceTree = "<group>"; };
 		058A3D9922F276DA00AB00F2 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		058A3D9D22F2773B00AB00F2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		058A3D9F22F2787E00AB00F2 /* Diary.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Diary.storyboard; sourceTree = "<group>"; };
@@ -103,9 +105,11 @@
 		058A3DC522F48B2A00AB00F2 /* RoutineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RoutineModel.swift; path = MyRoutine/Data/Source/RoutineModel.swift; sourceTree = SOURCE_ROOT; };
 		058A3DC722F48E3100AB00F2 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "String+.swift"; path = "MyRoutine/Data/Source/String+.swift"; sourceTree = SOURCE_ROOT; };
 		058A3DC922F4942100AB00F2 /* RoutineModelRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineModelRealm.swift; sourceTree = "<group>"; };
-		058A3DCB22F496D400AB00F2 /* RoutineService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineService.swift; sourceTree = "<group>"; };
+		058A3DCB22F496D400AB00F2 /* RoutineDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineDatabase.swift; sourceTree = "<group>"; };
 		059248E12318B382000E54C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		059248E52318F3A2000E54C2 /* EnumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumCell.swift; sourceTree = "<group>"; };
+		059248E723191E2E000E54C2 /* DayPeriodController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPeriodController.swift; sourceTree = "<group>"; };
+		059248E923192AA7000E54C2 /* PeriodDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodDay.swift; sourceTree = "<group>"; };
 		0599454D230A73210050830E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		05994551230C35D30050830E /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		05994573230C4B620050830E /* SelectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionCell.swift; sourceTree = "<group>"; };
@@ -173,6 +177,7 @@
 				05994577230C4CC60050830E /* RepeatOptionController.swift */,
 				05DA76F7230FD0FD00929FA3 /* MakeRoutineController.swift */,
 				0561CC6E2318296D00AD13D2 /* RemindRoutineController.swift */,
+				059248E723191E2E000E54C2 /* DayPeriodController.swift */,
 			);
 			path = Diary;
 			sourceTree = "<group>";
@@ -340,6 +345,7 @@
 				05DA76F92313D5B800929FA3 /* CompletionModel.swift */,
 				05579ACE231F935800FF4BD3 /* MakeRoutine.swift */,
 				05579AD0231F93BE00FF4BD3 /* DayInfo.swift */,
+				059248E923192AA7000E54C2 /* PeriodDay.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -356,10 +362,10 @@
 			isa = PBXGroup;
 			children = (
 				058A3DC322F48AE000AB00F2 /* RealmService.swift */,
-				058A3DCB22F496D400AB00F2 /* RoutineService.swift */,
+				058A3DCB22F496D400AB00F2 /* RoutineDatabase.swift */,
 				05DA76B6230D361100929FA3 /* MapperService.swift */,
 				05439B5423164DE200210D79 /* DateService.swift */,
-				05579AD2231F941E00FF4BD3 /* DayInfoService.swift */,
+				05579AD2231F941E00FF4BD3 /* DayInfoDatabase.swift */,
 			);
 			name = Local;
 			sourceTree = "<group>";
@@ -578,7 +584,7 @@
 				05994578230C4CC60050830E /* RepeatOptionController.swift in Sources */,
 				059248E62318F3A2000E54C2 /* EnumCell.swift in Sources */,
 				05994552230C35D30050830E /* RoundedButton.swift in Sources */,
-				05579AD3231F941E00FF4BD3 /* DayInfoService.swift in Sources */,
+				05579AD3231F941E00FF4BD3 /* DayInfoDatabase.swift in Sources */,
 				05DA76D3230FB4A700929FA3 /* DatePicker.swift in Sources */,
 				0561CC6F2318296D00AD13D2 /* RemindRoutineController.swift in Sources */,
 				058A3DC822F48E3100AB00F2 /* String+.swift in Sources */,
@@ -589,16 +595,18 @@
 				0537C53C23066A6600454618 /* CreateRoutineController.swift in Sources */,
 				058A3DC422F48AE000AB00F2 /* RealmService.swift in Sources */,
 				05DA76B9230D390200929FA3 /* Date+.swift in Sources */,
+				059248E823191E2E000E54C2 /* DayPeriodController.swift in Sources */,
 				05439B5523164DE200210D79 /* DateService.swift in Sources */,
 				05DA76D8230FB63700929FA3 /* PickerViewControl.swift in Sources */,
 				05DA76F8230FD0FD00929FA3 /* MakeRoutineController.swift in Sources */,
 				058A3D9E22F2773B00AB00F2 /* TabBarController.swift in Sources */,
+				059248EA23192AA7000E54C2 /* PeriodDay.swift in Sources */,
 				05439B4E2315095100210D79 /* PickerViewControl.swift in Sources */,
 				05DA76C6230EDE5F00929FA3 /* RoutineDiaryCelll.swift in Sources */,
 				0537C5442306815600454618 /* RoutineComponentCell.swift in Sources */,
 				0537C53E2306811F00454618 /* UIView+.swift in Sources */,
 				058A3DC622F48B2A00AB00F2 /* RoutineModel.swift in Sources */,
-				058A3DCC22F496D400AB00F2 /* RoutineService.swift in Sources */,
+				058A3DCC22F496D400AB00F2 /* RoutineDatabase.swift in Sources */,
 				05439B502315096500210D79 /* DatePicker.swift in Sources */,
 				0537C5302306568000454618 /* RemindModel.swift in Sources */,
 				0561CC63231679DE00AD13D2 /* AlertViewControl.swift in Sources */,

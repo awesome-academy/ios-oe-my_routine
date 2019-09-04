@@ -8,19 +8,17 @@
 
 final class CreateRoutineController: UIViewController {
     
+    // MARK: - Outlets
+    @IBOutlet private weak var suggestCollectionView: UICollectionView!
+    @IBOutlet private weak var stateRoutineTableView: UITableView!
+    @IBOutlet private weak var nameRoutineTf: UITextField!
+    
     // MARK: - Constants
-    static let numberRowInStateRoutineTableView: CGFloat = 13
+    static let numberRowInView: CGFloat = 13
     
     // MARK: - Variables
     var state = Constants.defaultNewRoutine
-    var repeatDay = Constants.allWeek
-    var repeatWeek = 1
     var routine =  RoutineModel.defautInit()
-    
-    // MARK: - Outlets
-    @IBOutlet weak var suggestCollectionView: UICollectionView!
-    @IBOutlet weak var stateRoutineTableView: UITableView!
-    @IBOutlet weak var nameRoutineTf: UITextField!
 
     // MARK: - View Life Cycles
     override func viewDidLoad() {
@@ -43,21 +41,49 @@ final class CreateRoutineController: UIViewController {
     }
     
     func setUpCollectionView() {
-        let layout = UICollectionViewFlowLayout()
-        let itemWidth = suggestCollectionView.witdh * 2 / 5
-        let itemHeight = suggestCollectionView.height
-        layout.itemSize = CGSize(width: itemWidth, height: itemHeight)
-        layout.scrollDirection = .horizontal
-        suggestCollectionView.collectionViewLayout = layout
-        suggestCollectionView.dataSource = self
-        suggestCollectionView.delegate = self
-        suggestCollectionView.register(cellType: SuggestionViewCell.self)
+        let layout = UICollectionViewFlowLayout().then {
+            let itemWidth = suggestCollectionView.witdh * 2 / 5
+            let itemHeight = suggestCollectionView.height
+            $0.itemSize = CGSize(width: itemWidth, height: itemHeight)
+            $0.scrollDirection = .horizontal
+        }
+        suggestCollectionView.do {
+            $0.collectionViewLayout = layout
+            $0.dataSource = self
+            $0.delegate = self
+            $0.register(cellType: SuggestionViewCell.self)
+        }
     }
     
     func setUpTableView() {
-        stateRoutineTableView.dataSource = self
-        stateRoutineTableView.delegate = self
-        stateRoutineTableView.register(cellType: RoutineComponentCell.self)
+        stateRoutineTableView.do {
+            $0.dataSource = self
+            $0.delegate = self
+            $0.register(cellType: RoutineComponentCell.self)
+        }
+    }
+    
+    // MARK: - Actions
+    @IBAction func handleAddRoutineButton(_ sender: Any) {
+        if nameRoutineTf.text!.isEmpty {
+            AlertViewControl.showQuickSystemAlert(title: "Đã xảy ra lỗi",
+                                                  message: "Không được để trống tên",
+                                                  cancelButtonTitle: "Ok")
+        } else {
+            routine.nameRoutine = nameRoutineTf.text!
+            RoutineDatabase.shared.saveRoutinetoDB(routine) { routine in
+                if routine == nil {
+                    AlertViewControl.showQuickSystemAlert(title: "Đã xảy ra lỗi",
+                                                          message: nil,
+                                                          cancelButtonTitle: "Ok")
+                }
+            }
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func handleCancelButton(_ sender: Any) {
+         self.dismiss(animated: true, completion: nil)
     }
     
     // MARK: - SupportMethod
@@ -68,32 +94,46 @@ final class CreateRoutineController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(updateRemind(notification:)),
                                                name: NSNotification.Name("Remind"),
                                                object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(updatePeriod(notification:)),
+                                               name: NSNotification.Name(rawValue: "Period"),
+                                               object: nil)
+    }
+    
+    @objc func updatePeriod(notification: Notification) {
+        guard let mess = notification.userInfo, let msg = mess["message"],
+              let periodRoutine = MapperService.shared.convertAnyToObject(any: msg,
+                                                                          typeOpject: PeriodDay.self) else {
+            return
+        }
+        routine.periodRoutine = periodRoutine.value
+        state[4] = periodRoutine.title
+        stateRoutineTableView.reloadData()
         
     }
     
     @objc func updateRepeat(notification: Notification) {
-        if let mess = notification.userInfo, let msg = mess["message"] {
-            let repeatRoutine = MapperService.shared.convertAnyToObject(any: msg,
-                                                                        typeOpject: [DayOfWeek].self) ?? []
-            routine.repeatRoutine = repeatRoutine
-            state[0] = changeRepeatState(daysOfWeek: repeatRoutine)
-            stateRoutineTableView.reloadData()
-        }
+        guard let mess = notification.userInfo, let msg = mess["message"] else { return }
+        let repeatRoutine = MapperService.shared.convertAnyToObject(any: msg,
+                                                                    typeOpject: [DayOfWeek].self) ?? []
+        routine.repeatRoutine = repeatRoutine
+        state[0] = changeRepeatState(daysOfWeek: repeatRoutine)
+        stateRoutineTableView.reloadData()
+        
     }
     
     @objc func updateRemind(notification: Notification) {
-        if let mess = notification.userInfo, let msg = mess["message"] {
-            let remindRoutine = MapperService.shared.convertAnyToObject(any: msg,
-                                                                        typeOpject: [RemindModel].self) ?? []
-            routine.remindRoutine = remindRoutine
-            let checkRemind = remindRoutine.filter { $0.state }
-            switch checkRemind.count {
-            case 0: state[3] = "Tắt"
-            case 1: state[3] = checkRemind[0].timeString
-            default: state[3] = "\(checkRemind.count) lần / ngày"
-            }
-            stateRoutineTableView.reloadData()
+        guard let mess = notification.userInfo, let msg = mess["message"] else { return }
+        let remindRoutine = MapperService.shared.convertAnyToObject(any: msg,
+                                                                    typeOpject: [RemindModel].self) ?? []
+        routine.remindRoutine = remindRoutine
+        let checkRemind = remindRoutine.filter { $0.state }
+        switch checkRemind.count {
+        case 0: state[3] = "Tắt"
+        case 1: state[3] = checkRemind[0].timeString
+        default: state[3] = "\(checkRemind.count) lần / ngày"
         }
+        stateRoutineTableView.reloadData()
     }
     
     func changeRepeatState(daysOfWeek: [DayOfWeek]) -> String {
@@ -144,7 +184,7 @@ extension CreateRoutineController: UITableViewDataSource {
 
 extension CreateRoutineController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return view.height / CreateRoutineController.numberRowInStateRoutineTableView
+        return view.height / CreateRoutineController.numberRowInView 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -157,9 +197,10 @@ extension CreateRoutineController: UITableViewDelegate {
         case .dayStartCell:
             PickerViewControl.showDatePicker(type: .date,
                                              title: "Ngày bắt đầu") {[weak self] dateChange in
-                if let date = dateChange?.getStringDate() {
-                    self?.state[1] = date == Date().getStringDate() ? "Hôm nay" : date
-                    self?.routine.dayStart = date
+                if let date = dateChange {
+                    let dateStr = date.getStringDate()
+                    self?.state[1] = dateStr == Date().getStringDate() ? "Hôm nay" : dateStr
+                    self?.routine.dayStart = date.getStrDateFormat(format: Constants.dateFormat)
                     self?.stateRoutineTableView.reloadData()
                 }
             }
@@ -180,8 +221,10 @@ extension CreateRoutineController: UITableViewDelegate {
                     self?.stateRoutineTableView.reloadData()
                 }
             }
-        default:
-            return
+        case .periodCell:
+            let controller = DayPeriodController.instantiate()
+            controller.periodRoutine = PeriodDay(rawValue: routine.periodRoutine) ?? PeriodDay.Morning
+            navigationController?.pushViewController(controller, animated: true)
         }
     }
 }

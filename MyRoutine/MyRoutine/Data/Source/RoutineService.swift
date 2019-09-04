@@ -19,6 +19,15 @@ class RoutineService {
         })
     }
     
+    func getRoutineByID(ID: String) -> RoutineModel? {
+        let list = RealmService.shared.load(listOf: RoutineModelRealm.self,
+                                            filter: "idRoutine == '\(ID)'")
+        if !list.isEmpty {
+            return MapperService.shared.routineRealmToRoutine(routineRealm: list[0])
+        }
+        return nil
+    }
+    
     func removeAllRoutine() {
         do {
             let realm = try Realm()

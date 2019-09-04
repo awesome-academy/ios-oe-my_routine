@@ -15,7 +15,7 @@ class RoutineService {
     func getAllRoutine() -> [RoutineModel] {
         let list = RealmService.shared.load(listOf: RoutineModelRealm.self)
         return list.map({ (obj) in
-            MapperService.shared.routineRealmToRoutine(routineRealm: obj)
+            MapperRoutine.shared.routineRealmToRoutine(routineRealm: obj)
         })
     }
     
@@ -23,7 +23,7 @@ class RoutineService {
         let list = RealmService.shared.load(listOf: RoutineModelRealm.self,
                                             filter: "idRoutine == '\(ID)'")
         if !list.isEmpty {
-            return MapperService.shared.routineRealmToRoutine(routineRealm: list[0])
+            return MapperRoutine.shared.routineRealmToRoutine(routineRealm: list[0])
         }
         return nil
     }
@@ -41,7 +41,7 @@ class RoutineService {
         do {
             let realm = try Realm()
             try realm.write {
-                let obj = MapperService.shared.routineToRoutineRealm(routine: routine)
+                let obj = MapperRoutine.shared.routineToRoutineRealm(routine: routine)
                 realm.add(obj)
                 completion?(obj)
             }

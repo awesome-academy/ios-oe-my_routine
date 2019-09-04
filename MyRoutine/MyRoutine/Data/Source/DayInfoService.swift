@@ -15,7 +15,7 @@ class DayInfoService {
     func getAllDayInfo() -> [DayInfo] {
         let list = RealmService.shared.load(listOf: DayInfoRealm.self)
         return list.map {
-            return MapperService.shared.dayInfoRealmToDayInfo($0)
+            return MapperDayInfo.shared.dayInfoRealmToDayInfo($0)
         }
     }
     
@@ -23,7 +23,7 @@ class DayInfoService {
         let list = RealmService.shared.load(listOf: DayInfoRealm.self,
                                             filter: "date = '\(dateStr)'")
         if !list.isEmpty {
-            return MapperService.shared.dayInfoRealmToDayInfo(list[0])
+            return MapperDayInfo.shared.dayInfoRealmToDayInfo(list[0])
         }
         return nil
     }
@@ -32,7 +32,7 @@ class DayInfoService {
         do {
             let realm = try Realm()
             try realm.write {
-                let obj = MapperService.shared.dayInfoToRealm(dayInfo)
+                let obj = MapperDayInfo.shared.dayInfoToRealm(dayInfo)
                 realm.add(obj)
                 completion?(obj)
             }

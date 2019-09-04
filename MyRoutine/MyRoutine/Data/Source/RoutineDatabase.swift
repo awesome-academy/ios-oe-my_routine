@@ -6,10 +6,10 @@
 //  Copyright © 2019 huy. All rights reserved.
 //
 
-class RoutineService {
+class RoutineDatabase {
     
     // MARK: - Singleton
-    static let shared = RoutineService()
+    static let shared = RoutineDatabase()
     
     // MARK: - Supporting function
     func getAllRoutine() -> [RoutineModel] {

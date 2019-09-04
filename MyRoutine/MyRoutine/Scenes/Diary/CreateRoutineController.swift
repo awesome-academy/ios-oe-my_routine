@@ -71,7 +71,7 @@ final class CreateRoutineController: UIViewController {
                                                   cancelButtonTitle: "Ok")
         } else {
             routine.nameRoutine = nameRoutineTf.text!
-            RoutineService.shared.saveRoutinetoDB(routine) { routine in
+            RoutineDatabase.shared.saveRoutinetoDB(routine) { routine in
                 if routine == nil {
                     AlertViewControl.showQuickSystemAlert(title: "Đã xảy ra lỗi",
                                                           message: nil,

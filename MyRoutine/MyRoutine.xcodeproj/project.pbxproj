@@ -24,7 +24,7 @@
 		05439B5523164DE200210D79 /* DateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05439B5423164DE200210D79 /* DateService.swift */; };
 		05579ACF231F935800FF4BD3 /* MakeRoutine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05579ACE231F935800FF4BD3 /* MakeRoutine.swift */; };
 		05579AD1231F93BE00FF4BD3 /* DayInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05579AD0231F93BE00FF4BD3 /* DayInfo.swift */; };
-		05579AD3231F941E00FF4BD3 /* DayInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05579AD2231F941E00FF4BD3 /* DayInfoService.swift */; };
+		05579AD3231F941E00FF4BD3 /* DayInfoDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05579AD2231F941E00FF4BD3 /* DayInfoDatabase.swift */; };
 		0561CC63231679DE00AD13D2 /* AlertViewControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561CC62231679DE00AD13D2 /* AlertViewControl.swift */; };
 		0561CC6A23181CDE00AD13D2 /* RemindCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0561CC6623181CDD00AD13D2 /* RemindCell.xib */; };
 		0561CC6B23181CDE00AD13D2 /* AddRemindCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0561CC6723181CDD00AD13D2 /* AddRemindCell.xib */; };
@@ -43,7 +43,7 @@
 		058A3DC622F48B2A00AB00F2 /* RoutineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A3DC522F48B2A00AB00F2 /* RoutineModel.swift */; };
 		058A3DC822F48E3100AB00F2 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A3DC722F48E3100AB00F2 /* String+.swift */; };
 		058A3DCA22F4942100AB00F2 /* RoutineModelRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A3DC922F4942100AB00F2 /* RoutineModelRealm.swift */; };
-		058A3DCC22F496D400AB00F2 /* RoutineService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A3DCB22F496D400AB00F2 /* RoutineService.swift */; };
+		058A3DCC22F496D400AB00F2 /* RoutineDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A3DCB22F496D400AB00F2 /* RoutineDatabase.swift */; };
 		059248E22318B382000E54C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 059248E12318B382000E54C2 /* Assets.xcassets */; };
 		059248E62318F3A2000E54C2 /* EnumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059248E52318F3A2000E54C2 /* EnumCell.swift */; };
 		059248E823191E2E000E54C2 /* DayPeriodController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059248E723191E2E000E54C2 /* DayPeriodController.swift */; };
@@ -86,7 +86,7 @@
 		05439B5423164DE200210D79 /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateService.swift; sourceTree = "<group>"; };
 		05579ACE231F935800FF4BD3 /* MakeRoutine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeRoutine.swift; sourceTree = "<group>"; };
 		05579AD0231F93BE00FF4BD3 /* DayInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayInfo.swift; sourceTree = "<group>"; };
-		05579AD2231F941E00FF4BD3 /* DayInfoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayInfoService.swift; sourceTree = "<group>"; };
+		05579AD2231F941E00FF4BD3 /* DayInfoDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayInfoDatabase.swift; sourceTree = "<group>"; };
 		0561CC62231679DE00AD13D2 /* AlertViewControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewControl.swift; sourceTree = "<group>"; };
 		0561CC6623181CDD00AD13D2 /* RemindCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RemindCell.xib; sourceTree = "<group>"; };
 		0561CC6723181CDD00AD13D2 /* AddRemindCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddRemindCell.xib; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 		058A3DC522F48B2A00AB00F2 /* RoutineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RoutineModel.swift; path = MyRoutine/Data/Source/RoutineModel.swift; sourceTree = SOURCE_ROOT; };
 		058A3DC722F48E3100AB00F2 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "String+.swift"; path = "MyRoutine/Data/Source/String+.swift"; sourceTree = SOURCE_ROOT; };
 		058A3DC922F4942100AB00F2 /* RoutineModelRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineModelRealm.swift; sourceTree = "<group>"; };
-		058A3DCB22F496D400AB00F2 /* RoutineService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineService.swift; sourceTree = "<group>"; };
+		058A3DCB22F496D400AB00F2 /* RoutineDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineDatabase.swift; sourceTree = "<group>"; };
 		059248E12318B382000E54C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		059248E52318F3A2000E54C2 /* EnumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumCell.swift; sourceTree = "<group>"; };
 		059248E723191E2E000E54C2 /* DayPeriodController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPeriodController.swift; sourceTree = "<group>"; };
@@ -362,10 +362,10 @@
 			isa = PBXGroup;
 			children = (
 				058A3DC322F48AE000AB00F2 /* RealmService.swift */,
-				058A3DCB22F496D400AB00F2 /* RoutineService.swift */,
+				058A3DCB22F496D400AB00F2 /* RoutineDatabase.swift */,
 				05DA76B6230D361100929FA3 /* MapperService.swift */,
 				05439B5423164DE200210D79 /* DateService.swift */,
-				05579AD2231F941E00FF4BD3 /* DayInfoService.swift */,
+				05579AD2231F941E00FF4BD3 /* DayInfoDatabase.swift */,
 			);
 			name = Local;
 			sourceTree = "<group>";
@@ -584,7 +584,7 @@
 				05994578230C4CC60050830E /* RepeatOptionController.swift in Sources */,
 				059248E62318F3A2000E54C2 /* EnumCell.swift in Sources */,
 				05994552230C35D30050830E /* RoundedButton.swift in Sources */,
-				05579AD3231F941E00FF4BD3 /* DayInfoService.swift in Sources */,
+				05579AD3231F941E00FF4BD3 /* DayInfoDatabase.swift in Sources */,
 				05DA76D3230FB4A700929FA3 /* DatePicker.swift in Sources */,
 				0561CC6F2318296D00AD13D2 /* RemindRoutineController.swift in Sources */,
 				058A3DC822F48E3100AB00F2 /* String+.swift in Sources */,
@@ -606,7 +606,7 @@
 				0537C5442306815600454618 /* RoutineComponentCell.swift in Sources */,
 				0537C53E2306811F00454618 /* UIView+.swift in Sources */,
 				058A3DC622F48B2A00AB00F2 /* RoutineModel.swift in Sources */,
-				058A3DCC22F496D400AB00F2 /* RoutineService.swift in Sources */,
+				058A3DCC22F496D400AB00F2 /* RoutineDatabase.swift in Sources */,
 				05439B502315096500210D79 /* DatePicker.swift in Sources */,
 				0537C5302306568000454618 /* RemindModel.swift in Sources */,
 				0561CC63231679DE00AD13D2 /* AlertViewControl.swift in Sources */,

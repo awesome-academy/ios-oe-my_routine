@@ -6,9 +6,15 @@
 //  Copyright © 2019 huy. All rights reserved.
 //
 
+typealias CompletionRoutine = (routineNumber: Int, routineDone: Int)
+
 struct DayInfo {
     var date: String
     var makeRoutines: [MakeRoutine]
+    var completion: CompletionRoutine {
+        return (makeRoutines.count,
+                makeRoutines.filter { $0.completion.percentDone == 1 }.count)
+    }
 }
 
 class DayInfoRealm: Object {

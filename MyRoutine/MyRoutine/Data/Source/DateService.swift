@@ -25,8 +25,9 @@ class DateService {
     ///
     func getArrayOfDate(numberOfDate: Int) -> [Date] {
         var result = [Date]()
+        let today = Date().getFullDateString().getDate(format: Constants.dateFullFormat)
         for i in 0 ..< numberOfDate {
-            result.append(Date().addingTimeInterval(TimeInterval((i - numberOfDate + 2)*86400)))
+            result.append(today.addingTimeInterval(TimeInterval((i - numberOfDate + 2)*86400)))
         }
         return result
     }

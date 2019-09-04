@@ -20,11 +20,20 @@ extension Date {
     }
     
     func getStringDate() -> String {
-        return self.getStrDateFormat(format: "dd/MM/YYYY")
+        return getStrDateFormat(format: "dd/MM/YYYY")
     }
     
     func getStringHour() -> String {
-        return self.getStrDateFormat(format: "HH:mm")
+        return getStrDateFormat(format: "HH:mm")
     }
     
+    func getFullDateString() -> String {
+        return getStrDateFormat(format: Constants.dateFormat) + " -000"
+    }
+    
+    func getShortVNDateString() -> String {
+        let day = Date.currentCalendar.component(.day, from: self)
+        let month = Date.currentCalendar.component(.month, from: self)
+        return "\(day) tháng \(month)"
+    }
 }

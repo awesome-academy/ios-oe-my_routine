@@ -21,6 +21,9 @@
 		05439B502315096500210D79 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA76D1230FB4A700929FA3 /* DatePicker.swift */; };
 		05439B512315097600210D79 /* SystemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA76D5230FB4D400929FA3 /* SystemInfo.swift */; };
 		05439B5523164DE200210D79 /* DateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05439B5423164DE200210D79 /* DateService.swift */; };
+		05579ACF231F935800FF4BD3 /* MakeRoutine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05579ACE231F935800FF4BD3 /* MakeRoutine.swift */; };
+		05579AD1231F93BE00FF4BD3 /* DayInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05579AD0231F93BE00FF4BD3 /* DayInfo.swift */; };
+		05579AD3231F941E00FF4BD3 /* DayInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05579AD2231F941E00FF4BD3 /* DayInfoService.swift */; };
 		0561CC6A23181CDE00AD13D2 /* RemindCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0561CC6623181CDD00AD13D2 /* RemindCell.xib */; };
 		0561CC6B23181CDE00AD13D2 /* AddRemindCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0561CC6723181CDD00AD13D2 /* AddRemindCell.xib */; };
 		0561CC6C23181CDE00AD13D2 /* RemindCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561CC6823181CDE00AD13D2 /* RemindCell.swift */; };
@@ -78,6 +81,9 @@
 		0537C5422306815500454618 /* SuggestionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionViewCell.swift; sourceTree = "<group>"; };
 		0537C549230799DB00454618 /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		05439B5423164DE200210D79 /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateService.swift; sourceTree = "<group>"; };
+		05579ACE231F935800FF4BD3 /* MakeRoutine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeRoutine.swift; sourceTree = "<group>"; };
+		05579AD0231F93BE00FF4BD3 /* DayInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayInfo.swift; sourceTree = "<group>"; };
+		05579AD2231F941E00FF4BD3 /* DayInfoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayInfoService.swift; sourceTree = "<group>"; };
 		0561CC6623181CDD00AD13D2 /* RemindCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RemindCell.xib; sourceTree = "<group>"; };
 		0561CC6723181CDD00AD13D2 /* AddRemindCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddRemindCell.xib; sourceTree = "<group>"; };
 		0561CC6823181CDE00AD13D2 /* RemindCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindCell.swift; sourceTree = "<group>"; };
@@ -332,6 +338,8 @@
 				058A3DC922F4942100AB00F2 /* RoutineModelRealm.swift */,
 				05DA76BA230D7A6200929FA3 /* DayOfWeek.swift */,
 				05DA76F92313D5B800929FA3 /* CompletionModel.swift */,
+				05579ACE231F935800FF4BD3 /* MakeRoutine.swift */,
+				05579AD0231F93BE00FF4BD3 /* DayInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -351,6 +359,7 @@
 				058A3DCB22F496D400AB00F2 /* RoutineService.swift */,
 				05DA76B6230D361100929FA3 /* MapperService.swift */,
 				05439B5423164DE200210D79 /* DateService.swift */,
+				05579AD2231F941E00FF4BD3 /* DayInfoService.swift */,
 			);
 			name = Local;
 			sourceTree = "<group>";
@@ -562,12 +571,14 @@
 				05439B4D2314FE4900210D79 /* UIViewController+.swift in Sources */,
 				0599454E230A73210050830E /* Constants.swift in Sources */,
 				0537C536230657BB00454618 /* List+.swift in Sources */,
+				05579ACF231F935800FF4BD3 /* MakeRoutine.swift in Sources */,
 				0537C54B230799DB00454618 /* RoundedView.swift in Sources */,
 				0561CC6C23181CDE00AD13D2 /* RemindCell.swift in Sources */,
 				0537C5462306815600454618 /* SuggestionViewCell.swift in Sources */,
 				05994578230C4CC60050830E /* RepeatOptionController.swift in Sources */,
 				059248E62318F3A2000E54C2 /* EnumCell.swift in Sources */,
 				05994552230C35D30050830E /* RoundedButton.swift in Sources */,
+				05579AD3231F941E00FF4BD3 /* DayInfoService.swift in Sources */,
 				05DA76D3230FB4A700929FA3 /* DatePicker.swift in Sources */,
 				0561CC6F2318296D00AD13D2 /* RemindRoutineController.swift in Sources */,
 				058A3DC822F48E3100AB00F2 /* String+.swift in Sources */,
@@ -593,6 +604,7 @@
 				0561CC63231679DE00AD13D2 /* AlertViewControl.swift in Sources */,
 				058A3DA622F2796200AB00F2 /* DiaryController.swift in Sources */,
 				05DA76BB230D7A6200929FA3 /* DayOfWeek.swift in Sources */,
+				05579AD1231F93BE00FF4BD3 /* DayInfo.swift in Sources */,
 				05DA76B7230D361100929FA3 /* MapperService.swift in Sources */,
 				05DA76FA2313D5B800929FA3 /* CompletionModel.swift in Sources */,
 				05B23D3322F1678000E8140F /* AppDelegate.swift in Sources */,

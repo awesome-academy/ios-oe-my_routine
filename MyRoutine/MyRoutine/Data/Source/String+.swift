@@ -12,4 +12,9 @@ extension String {
         return Int(self) ?? -1
     }
     
+    func getDate(format: String) -> Date {
+        let formatter = DateFormatter()
+        formatter.dateFormat = format 
+        return formatter.date(from: self) ?? Date()
+    }
 }

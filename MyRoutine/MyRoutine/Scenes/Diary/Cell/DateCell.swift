@@ -20,8 +20,6 @@ final class DateCell: UICollectionViewCell, NibReusable {
     func setDateForCell(date: String, weekDay: String, choose: Bool) {
         dateLabel.text = date
         weekDayLabel.text = weekDay
-        weekDayLabel.textColor = choose ? #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1) : #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        dateLabel.textColor = choose ? #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1) : #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         roundedview.isHidden = !choose
     }
 }

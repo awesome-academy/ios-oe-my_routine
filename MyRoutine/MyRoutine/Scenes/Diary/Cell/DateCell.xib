@@ -30,24 +30,24 @@
                                 <color key="value" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                <color key="value" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="value" red="0.95294117649999999" green="0.68235294120000001" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                <real key="value" value="5"/>
+                                <real key="value" value="7"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jNE-mS-RqQ" customClass="RoundedView" customModule="MyRoutine" customModuleProvider="target">
-                        <rect key="frame" x="2" y="2" width="168" height="148"/>
+                        <rect key="frame" x="3.5" y="3.5" width="165" height="145"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Gi-kr-aOL">
-                                <rect key="frame" x="63" y="118" width="42" height="20"/>
+                                <rect key="frame" x="61.5" y="115" width="42" height="20"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TM6-pF-UqR">
-                                <rect key="frame" x="69" y="10" width="30.5" height="15.5"/>
+                                <rect key="frame" x="67.5" y="10" width="30.5" height="15.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
                                 <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -80,12 +80,12 @@
             <constraints>
                 <constraint firstItem="Ncm-5F-Idi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="1IM-e9-Iz1"/>
                 <constraint firstItem="Ncm-5F-Idi" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="4Vu-6o-3Fd"/>
-                <constraint firstItem="jNE-mS-RqQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="7JK-qf-L97"/>
-                <constraint firstAttribute="bottom" secondItem="jNE-mS-RqQ" secondAttribute="bottom" constant="2" id="I70-vy-PSa"/>
+                <constraint firstItem="jNE-mS-RqQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="3.5" id="7JK-qf-L97"/>
+                <constraint firstAttribute="bottom" secondItem="jNE-mS-RqQ" secondAttribute="bottom" constant="3.5" id="I70-vy-PSa"/>
                 <constraint firstAttribute="trailing" secondItem="Ncm-5F-Idi" secondAttribute="trailing" id="ltV-Jn-eKb"/>
-                <constraint firstItem="jNE-mS-RqQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="oMo-wQ-5BA"/>
+                <constraint firstItem="jNE-mS-RqQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="3.5" id="oMo-wQ-5BA"/>
                 <constraint firstAttribute="bottom" secondItem="Ncm-5F-Idi" secondAttribute="bottom" id="p6X-BY-Kmo"/>
-                <constraint firstAttribute="trailing" secondItem="jNE-mS-RqQ" secondAttribute="trailing" constant="2" id="t98-cV-CMg"/>
+                <constraint firstAttribute="trailing" secondItem="jNE-mS-RqQ" secondAttribute="trailing" constant="3.5" id="t98-cV-CMg"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="172" height="152"/>

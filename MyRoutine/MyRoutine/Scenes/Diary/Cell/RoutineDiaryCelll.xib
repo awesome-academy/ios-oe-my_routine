@@ -20,7 +20,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Học swift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbA-s1-1Bg">
-                        <rect key="frame" x="45" y="8.5" width="78.5" height="21.5"/>
+                        <rect key="frame" x="47" y="7" width="78.5" height="21.5"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -41,7 +41,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 %" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxd-Yg-FWC">
-                        <rect key="frame" x="45" y="29.5" width="32" height="17"/>
+                        <rect key="frame" x="47" y="29.5" width="32" height="17"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -53,11 +53,27 @@
                             <constraint firstAttribute="height" constant="1" id="qK6-8H-tWH"/>
                         </constraints>
                     </view>
+                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3GB-l7-q3S">
+                        <rect key="frame" x="232" y="16" width="100" height="3"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="LTf-sb-4d8"/>
+                            <constraint firstAttribute="height" constant="3" id="a1h-q6-UQU"/>
+                        </constraints>
+                        <color key="progressTintColor" red="0.8862745098" green="0.73333333329999995" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="trackTintColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </progressView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 / 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQ7-X7-BYE">
+                        <rect key="frame" x="303.5" y="29.5" width="28.5" height="17"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
+                    <constraint firstItem="eQ7-X7-BYE" firstAttribute="trailing" secondItem="3GB-l7-q3S" secondAttribute="trailing" id="8nc-96-mzb"/>
                     <constraint firstItem="0hc-G9-4dy" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="9wU-WT-DX5"/>
-                    <constraint firstItem="hbA-s1-1Bg" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" multiplier="0.7" id="AR6-le-JeX"/>
+                    <constraint firstItem="hbA-s1-1Bg" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" multiplier="0.65" id="AR6-le-JeX"/>
                     <constraint firstItem="ciX-Am-49X" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Dnl-Ue-oqf"/>
                     <constraint firstItem="lxd-Yg-FWC" firstAttribute="leading" secondItem="hbA-s1-1Bg" secondAttribute="leading" id="Eve-Zr-FUW"/>
                     <constraint firstAttribute="bottom" secondItem="bEy-q1-NAT" secondAttribute="bottom" constant="2" id="NTy-cG-LnX"/>
@@ -65,13 +81,20 @@
                     <constraint firstItem="lxd-Yg-FWC" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" multiplier="1.4" id="QtV-ZU-7BA"/>
                     <constraint firstAttribute="trailing" secondItem="bEy-q1-NAT" secondAttribute="trailing" id="VC5-RQ-po0"/>
                     <constraint firstItem="bEy-q1-NAT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="45" id="eVB-8n-Qyu"/>
+                    <constraint firstItem="eQ7-X7-BYE" firstAttribute="centerY" secondItem="lxd-Yg-FWC" secondAttribute="centerY" id="fDP-mZ-Al1"/>
                     <constraint firstAttribute="trailing" secondItem="0hc-G9-4dy" secondAttribute="trailing" constant="12" id="fUX-po-OcO"/>
-                    <constraint firstItem="hbA-s1-1Bg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="45" id="lm5-iV-dFj"/>
+                    <constraint firstItem="hbA-s1-1Bg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="47" id="lm5-iV-dFj"/>
+                    <constraint firstItem="3GB-l7-q3S" firstAttribute="centerY" secondItem="hbA-s1-1Bg" secondAttribute="centerY" id="nfN-Zi-VgG"/>
+                    <constraint firstAttribute="trailing" secondItem="3GB-l7-q3S" secondAttribute="trailing" constant="43" id="yv5-ov-ucO"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="completeImage" destination="ciX-Am-49X" id="OKS-Oy-F0F"/>
+                <outlet property="doneTimesLabel" destination="eQ7-X7-BYE" id="qOd-5f-hv6"/>
                 <outlet property="nameRoutineLabel" destination="hbA-s1-1Bg" id="gcR-xU-wi6"/>
+                <outlet property="percentLabel" destination="lxd-Yg-FWC" id="x67-UU-2FF"/>
+                <outlet property="progessBar" destination="3GB-l7-q3S" id="myI-b0-IZW"/>
             </connections>
             <point key="canvasLocation" x="173.18840579710147" y="114.84375"/>
         </tableViewCell>

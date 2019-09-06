@@ -31,6 +31,7 @@
 		0561CC6C23181CDE00AD13D2 /* RemindCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561CC6823181CDE00AD13D2 /* RemindCell.swift */; };
 		0561CC6D23181CDE00AD13D2 /* AddRemindCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561CC6923181CDE00AD13D2 /* AddRemindCell.swift */; };
 		0561CC6F2318296D00AD13D2 /* RemindRoutineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561CC6E2318296D00AD13D2 /* RemindRoutineController.swift */; };
+		057A7C2123223570001263FF /* DateFomat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057A7C2023223570001263FF /* DateFomat.swift */; };
 		058A3D9A22F276DA00AB00F2 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058A3D9922F276DA00AB00F2 /* TabBar.storyboard */; };
 		058A3D9E22F2773B00AB00F2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A3D9D22F2773B00AB00F2 /* TabBarController.swift */; };
 		058A3DA022F2787E00AB00F2 /* Diary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058A3D9F22F2787E00AB00F2 /* Diary.storyboard */; };
@@ -93,6 +94,7 @@
 		0561CC6823181CDE00AD13D2 /* RemindCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindCell.swift; sourceTree = "<group>"; };
 		0561CC6923181CDE00AD13D2 /* AddRemindCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRemindCell.swift; sourceTree = "<group>"; };
 		0561CC6E2318296D00AD13D2 /* RemindRoutineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindRoutineController.swift; sourceTree = "<group>"; };
+		057A7C2023223570001263FF /* DateFomat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFomat.swift; sourceTree = "<group>"; };
 		058A3D9922F276DA00AB00F2 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		058A3D9D22F2773B00AB00F2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		058A3D9F22F2787E00AB00F2 /* Diary.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Diary.storyboard; sourceTree = "<group>"; };
@@ -346,6 +348,7 @@
 				05579ACE231F935800FF4BD3 /* MakeRoutine.swift */,
 				05579AD0231F93BE00FF4BD3 /* DayInfo.swift */,
 				059248E923192AA7000E54C2 /* PeriodDay.swift */,
+				057A7C2023223570001263FF /* DateFomat.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -586,6 +589,7 @@
 				05994552230C35D30050830E /* RoundedButton.swift in Sources */,
 				05579AD3231F941E00FF4BD3 /* DayInfoDatabase.swift in Sources */,
 				05DA76D3230FB4A700929FA3 /* DatePicker.swift in Sources */,
+				057A7C2123223570001263FF /* DateFomat.swift in Sources */,
 				0561CC6F2318296D00AD13D2 /* RemindRoutineController.swift in Sources */,
 				058A3DC822F48E3100AB00F2 /* String+.swift in Sources */,
 				058A3DCA22F4942100AB00F2 /* RoutineModelRealm.swift in Sources */,

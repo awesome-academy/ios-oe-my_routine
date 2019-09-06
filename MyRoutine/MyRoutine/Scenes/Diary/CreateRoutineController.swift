@@ -200,7 +200,7 @@ extension CreateRoutineController: UITableViewDelegate {
                 if let date = dateChange {
                     let dateStr = date.getStringDate()
                     self?.state[1] = dateStr == Date().getStringDate() ? "Hôm nay" : dateStr
-                    self?.routine.dayStart = date.getStrDateFormat(format: Constants.dateFormat)
+                    self?.routine.dayStart = date.getFullDateString()
                     self?.stateRoutineTableView.reloadData()
                 }
             }

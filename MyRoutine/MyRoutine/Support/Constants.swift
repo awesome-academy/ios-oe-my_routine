@@ -16,6 +16,5 @@ class Constants {
     static let allWeek: [DayOfWeek] = [.Sunday, .Monday, .Tuesday, .Wednesday,
                                        .Thursday, .Friday, .Saturday]
     static let numberDayOnWeek = 7
-    static let dateFormat = "YYYY/MM/dd"
-
+    static let freeDayStatus = "Tận hưởng một ngày nghỉ nhé !"
 }

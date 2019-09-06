@@ -9,6 +9,9 @@
 struct MakeRoutine {
     var routine: RoutineModel
     var completion: CompletionModel
+    var isComplete: Bool {
+        return completion.currentProgess == 1
+    }
 }
 
 class MakeRoutineRealm: Object {

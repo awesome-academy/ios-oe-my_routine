@@ -9,7 +9,7 @@
 struct CompletionModel {
     var targetTime: Float
     var doneCount: Float
-    var percentDone: Float {
+    var currentProgess: Float {
         return Float(doneCount / targetTime)
     }
     

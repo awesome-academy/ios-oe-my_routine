@@ -16,13 +16,13 @@ final class RoutineDiaryCelll: UITableViewCell, NibReusable {
     
     func setContentForCell(makeRoutine: MakeRoutine) {
         let doneCount = Int(makeRoutine.completion.doneCount)
-        let percentDone = Int(makeRoutine.completion.percentDone)
+        let percentDone = Int(makeRoutine.completion.currentProgess)
         let targetTime = Int(makeRoutine.completion.targetTime)
         nameRoutineLabel.text = makeRoutine.routine.nameRoutine
         doneTimesLabel.text = "\(doneCount) / \(targetTime)"
         percentLabel.text = "\(percentDone) %"
-        progessBar.progress = makeRoutine.completion.percentDone
-        completeImage.image = makeRoutine.completion.percentDone == 1 ? #imageLiteral(resourceName: "approve") : #imageLiteral(resourceName: "notdone")
+        progessBar.progress = makeRoutine.completion.currentProgess
+        completeImage.image = makeRoutine.completion.currentProgess == 1 ? #imageLiteral(resourceName: "approve") : #imageLiteral(resourceName: "notdone")
     }
     
 }

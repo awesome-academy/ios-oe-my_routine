@@ -13,16 +13,16 @@ final class DiaryController: UIViewController {
     static let dates = DateService.shared.getArrayOfDate(numberOfDate: DiaryController.numberOfDates)
    
     // MARK: - Variables
-    var dayInfo: DayInfo?
-    var routine = [RoutineModel]()
-    var chooseDate = DiaryController.numberOfDates - 2
-    let dateNumber = DiaryController.dates.map {
+    private var dayInfo: DayInfo?
+    private var routine = [RoutineModel]()
+    private var chooseDate = DiaryController.numberOfDates - 2
+    private let dateNumber = DiaryController.dates.map {
         $0.getStrDateFormat(format: "dd")
     }
-    let weekDays = DiaryController.dates.map {
+    private let weekDays = DiaryController.dates.map {
         DayOfWeek(rawValue: $0.weekday)?.shortTitle
     }
-    let dateString = DiaryController.dates.map {
+    private let dateString = DiaryController.dates.map {
         $0.getFullDateString()
     }
     
@@ -86,9 +86,9 @@ final class DiaryController: UIViewController {
    
    private func getRoutineForDay(dateStr: String) -> [RoutineModel] {
       var routines = [RoutineModel]()
-      let date = dateStr.getDate(format: Constants.dateFullFormat)
+      let date = dateStr.getDate(format: DateFormat.fullDateFormat.rawValue)
       for rou in RoutineDatabase.shared.getAllRoutine() {
-         if rou.dayStart.getDate(format: Constants.dateFullFormat) <= date {
+         if rou.dayStart.getDate(format: DateFormat.fullDateFormat.rawValue) <= date {
             for day in rou.repeatRoutine where day.value == date.weekday {
                routines.append(rou)
                break

@@ -22,7 +22,7 @@ struct RoutineModel {
     static func defautInit() -> RoutineModel {
         return RoutineModel(idRoutine: Date().getStrDateFormat(format: "yyyyMMddHHmmss"),
                             nameRoutine: "NewRoutine",
-                            dayStart: Date().getStrDateFormat(format: Constants.dateFormat),
+                            dayStart: Date().getStrDateFormat(format: DateFormat.fullDateFormat.rawValue),
                             repeatRoutine: Constants.allWeek,
                             targetRoutine: 1,
                             remindRoutine: [RemindModel(timeString: "09:00", state: true)],

@@ -20,15 +20,15 @@ extension Date {
     }
     
     func getStringDate() -> String {
-        return getStrDateFormat(format: "dd/MM/YYYY")
+        return getStrDateFormat(format: DateFormat.displayDateFormat.rawValue)
     }
     
     func getStringHour() -> String {
-        return getStrDateFormat(format: "HH:mm")
+        return getStrDateFormat(format: DateFormat.hourFormat.rawValue)
     }
     
     func getFullDateString() -> String {
-        return getStrDateFormat(format: Constants.dateFormat) + " -000"
+        return getStrDateFormat(format: DateFormat.shortDateFormat.rawValue) + " -000"
     }
     
     func getShortVNDateString() -> String {

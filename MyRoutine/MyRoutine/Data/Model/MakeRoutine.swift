@@ -37,7 +37,7 @@ class MapperMakeRoutine {
         let routine = RoutineDatabase.shared.getRoutineByID(ID: makeRoutineRealm.routineID) ??
             RoutineModel.defautInit()
         let completion = CompletionModel(targetTime: Float(routine.targetRoutine),
-                                         doneCount: 0)
+                                         doneCount: Float(makeRoutineRealm.doneTimes))
         return MakeRoutine(routine: routine, completion: completion)
     }
 }

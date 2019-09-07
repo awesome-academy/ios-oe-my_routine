@@ -49,4 +49,18 @@ class DayInfoDatabase {
             }
         } catch { }
     }
+    
+    func updateDayInfo(dateStr: String, updateDayInfo: DayInfo,
+                       completion: ((DayInfo?) -> Void)? = nil) {
+        do {
+            let realm = try Realm()
+            try realm.write {
+                let update = MapperDayInfo.shared.dayInfoToRealm(updateDayInfo)
+                realm.add(update, update: true)
+                completion?(updateDayInfo)
+            }
+        } catch {
+            completion?(nil)
+        }
+    }
 }

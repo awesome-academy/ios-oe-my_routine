@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Nhật ký-->
+        <!--Diary Controller-->
         <scene sceneID="wn9-yw-CkI">
             <objects>
                 <viewController storyboardIdentifier="Diary" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fQh-Uj-jcm" customClass="DiaryController" customModule="MyRoutine" customModuleProvider="target" sceneMemberID="viewController">
@@ -185,7 +185,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="osw-Yb-cd8"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Nhật ký" image="iconDiary" id="SHX-TU-68a"/>
+                    <navigationItem key="navigationItem" id="aFM-Dz-6tK"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="completionRoutineLabel" destination="Jbi-oA-cUI" id="kM1-Lo-u6D"/>
@@ -198,7 +198,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tTa-sx-9bM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="149.27536231884059" y="111.83035714285714"/>
+            <point key="canvasLocation" x="1059.4202898550725" y="111.83035714285714"/>
         </scene>
         <!--Create Routine Controller-->
         <scene sceneID="euU-Kv-PyR">
@@ -364,7 +364,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cSc-QH-Mmm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="971" y="113"/>
+            <point key="canvasLocation" x="1879.7101449275365" y="112.5"/>
         </scene>
         <!--Repeat Option Controller-->
         <scene sceneID="uDH-hQ-mLp">
@@ -423,7 +423,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ahf-RE-jxl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1733" y="110"/>
+            <point key="canvasLocation" x="2642.0289855072465" y="109.82142857142857"/>
         </scene>
         <!--Make Routine Controller-->
         <scene sceneID="hlR-4s-fWh">
@@ -439,6 +439,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bek-8n-d3J">
                                         <rect key="frame" x="12" y="56.666666666666657" width="84" height="30"/>
                                         <state key="normal" title="Button" image="back"/>
+                                        <connections>
+                                            <action selector="handleBackButton:" destination="bV1-dA-jh8" eventType="touchUpInside" id="5sQ-dO-1rQ"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Routine" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AgH-Wh-btf">
                                         <rect key="frame" x="0.0" y="51" width="414" height="26"/>
@@ -606,13 +609,15 @@
                         <viewLayoutGuide key="safeArea" id="lWH-vy-o81"/>
                     </view>
                     <connections>
+                        <outlet property="dateLabel" destination="1bS-cm-lVY" id="ciu-aw-N2f"/>
                         <outlet property="maxValueLabel" destination="Hy9-45-ngo" id="uOo-nA-N4h"/>
                         <outlet property="progessBarView" destination="aOk-Nl-65g" id="YqO-Y6-wha"/>
+                        <outlet property="routineNameLabel" destination="AgH-Wh-btf" id="kii-6N-uvs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o6t-Sr-Rtl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2444.9275362318845" y="109.82142857142857"/>
+            <point key="canvasLocation" x="3355.072463768116" y="109.82142857142857"/>
         </scene>
         <!--Remind Routine Controller-->
         <scene sceneID="mCi-FV-R8P">
@@ -684,7 +689,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2lH-E9-e6T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3194" y="99"/>
+            <point key="canvasLocation" x="4102.898550724638" y="98.4375"/>
         </scene>
         <!--Day Period Controller-->
         <scene sceneID="FBN-WM-omY">
@@ -743,7 +748,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hKX-SQ-tfy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3833" y="98"/>
+            <point key="canvasLocation" x="4742.0289855072469" y="97.767857142857139"/>
+        </scene>
+        <!--Nhật ký-->
+        <scene sceneID="8pF-RN-tZZ">
+            <objects>
+                <navigationController storyboardIdentifier="Navigation" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="YzY-JQ-eJ6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Nhật ký" image="iconDiary" id="SHX-TU-68a"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nni-gJ-Zlm">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fQh-Uj-jcm" kind="relationship" relationship="rootViewController" id="wOd-n8-ZFb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6lr-tD-2hJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="149.27536231884059" y="111.83035714285714"/>
         </scene>
     </scenes>
     <resources>

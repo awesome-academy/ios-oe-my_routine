@@ -20,7 +20,7 @@ final class RoutineDiaryCelll: UITableViewCell, NibReusable {
         let targetTime = Int(makeRoutine.completion.targetTime)
         nameRoutineLabel.text = makeRoutine.routine.nameRoutine
         doneTimesLabel.text = "\(doneCount) / \(targetTime)"
-        percentLabel.text = "\(percentDone) %"
+        percentLabel.text = "\(percentDone * 100) %"
         progessBar.progress = makeRoutine.completion.currentProgess
         completeImage.image = makeRoutine.completion.currentProgess == 1 ? #imageLiteral(resourceName: "approve") : #imageLiteral(resourceName: "notdone")
     }

@@ -25,6 +25,9 @@ struct DayInfo {
 class DayInfoRealm: Object {
     @objc dynamic var date = ""
     let makeRoutines = List<MakeRoutineRealm>()
+    override static func primaryKey() -> String? {
+        return "date"
+    }
 }
 
 class MapperDayInfo {

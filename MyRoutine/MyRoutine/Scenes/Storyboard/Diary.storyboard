@@ -609,10 +609,13 @@
                         <viewLayoutGuide key="safeArea" id="lWH-vy-o81"/>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="8Fh-su-r1n" id="U0V-ax-vZl"/>
                         <outlet property="dateLabel" destination="1bS-cm-lVY" id="ciu-aw-N2f"/>
+                        <outlet property="finishButton" destination="PYk-nq-V61" id="kKD-4O-JFk"/>
                         <outlet property="maxValueLabel" destination="Hy9-45-ngo" id="uOo-nA-N4h"/>
                         <outlet property="progessBarView" destination="aOk-Nl-65g" id="YqO-Y6-wha"/>
                         <outlet property="routineNameLabel" destination="AgH-Wh-btf" id="kii-6N-uvs"/>
+                        <outlet property="subtractButton" destination="UAD-NT-VyQ" id="UeB-1g-mpM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o6t-Sr-Rtl" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -11,6 +11,9 @@ import MBCircularProgressBar
 final class MakeRoutineController: UIViewController {
     
     // MARK: - Outlets
+    @IBOutlet private weak var subtractButton: UIButton!
+    @IBOutlet private weak var finishButton: RoundedButton!
+    @IBOutlet private weak var addButton: UIButton!
     @IBOutlet private weak var dateLabel: UILabel!
     @IBOutlet private weak var routineNameLabel: UILabel!
     @IBOutlet private weak var maxValueLabel: UILabel!
@@ -49,27 +52,37 @@ final class MakeRoutineController: UIViewController {
         }
     }
     
+    private func disableAddButton(completion: CompletionModel) {
+        addButton.isEnabled = !(completion.doneCount == completion.targetTime)
+        finishButton.isHidden = completion.doneCount == completion.targetTime
+        subtractButton.isEnabled = !(completion.doneCount == 0)
+    }
+    
     // MARK: - Actions
     @IBAction func handleAddButton(_ sender: Any) {
         if makeRoutine.completion.increseDoneCount(add: 1) {
              updateCountIntoView(duration: durationLowSpeed, value: makeRoutine.completion.doneCount)
         }
+        disableAddButton(completion: makeRoutine.completion)
     }
     
     @IBAction func hanldeSubtractButton(_ sender: Any) {
         if makeRoutine.completion.increseDoneCount(add: -1) {
             updateCountIntoView(duration: durationLowSpeed, value: makeRoutine.completion.doneCount)
         }
+        disableAddButton(completion: makeRoutine.completion)
     }
     
     @IBAction func handleFinishButton(_ sender: Any) {
         makeRoutine.completion.doneCount = makeRoutine.completion.targetTime
         updateCountIntoView(duration: durationHighSpeed, value: makeRoutine.completion.doneCount)
+        disableAddButton(completion: makeRoutine.completion)
     }
     
     @IBAction func handleUndoButton(_ sender: Any) {
         makeRoutine.completion.doneCount = 0
         updateCountIntoView(duration: durationHighSpeed, value: makeRoutine.completion.doneCount)
+        disableAddButton(completion: makeRoutine.completion)
     }
     
     @IBAction func handleBackButton(_ sender: Any) {

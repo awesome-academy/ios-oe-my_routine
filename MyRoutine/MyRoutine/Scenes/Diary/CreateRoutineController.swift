@@ -76,8 +76,12 @@ final class CreateRoutineController: UIViewController {
                     AlertViewControl.showQuickSystemAlert(title: "Đã xảy ra lỗi",
                                                           message: nil,
                                                           cancelButtonTitle: "Ok")
+                    return
                 }
             }
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "updateDayInfo"),
+                                            object: nil,
+                                            userInfo: ["message": routine])
             self.dismiss(animated: true, completion: nil)
         }
     }

@@ -16,6 +16,7 @@ final class DiaryController: UIViewController {
     private var dayInfo: DayInfo?
     private var routine = [RoutineModel]()
     private var chooseDate = DiaryController.numberOfDates - 2
+    private var indexRoutine = 0
     private let dateNumber = DiaryController.dates.map {
         $0.getStrDateFormat(format: "dd")
     }
@@ -33,7 +34,12 @@ final class DiaryController: UIViewController {
     @IBOutlet private weak var dateLabel: UILabel!
     @IBOutlet private weak var completionRoutineProgessBar: UIProgressView!
     @IBOutlet private weak var completionRoutineLabel: UILabel!
-    
+   
+    // MARK: - Denit
+    deinit {
+       NotificationCenter.default.removeObserver(self)
+    }
+   
    // MARK: - View Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +47,7 @@ final class DiaryController: UIViewController {
         setUpCollectionView()
         setUpTableView()
         updateView()
+        receiveNotification()
     }
    
     override func viewDidLayoutSubviews() {
@@ -84,15 +91,21 @@ final class DiaryController: UIViewController {
         }
     }
    
+   private func routineForDay(routine: RoutineModel, dateStr: String) -> Bool {
+      let date = dateStr.getDate(format: DateFormat.fullDateFormat.rawValue)
+      if routine.dayStart.getDate(format: DateFormat.fullDateFormat.rawValue) <= date {
+         for day in routine.repeatRoutine where day.value == date.weekday {
+            return true
+         }
+      }
+      return false
+   }
+   
    private func getRoutineForDay(dateStr: String) -> [RoutineModel] {
       var routines = [RoutineModel]()
-      let date = dateStr.getDate(format: DateFormat.fullDateFormat.rawValue)
       for rou in RoutineDatabase.shared.getAllRoutine() {
-         if rou.dayStart.getDate(format: DateFormat.fullDateFormat.rawValue) <= date {
-            for day in rou.repeatRoutine where day.value == date.weekday {
-               routines.append(rou)
-               break
-            }
+         if routineForDay(routine: rou, dateStr: dateStr) {
+            routines.append(rou)
          }
       }
       return routines
@@ -123,11 +136,56 @@ final class DiaryController: UIViewController {
          completionRoutineProgessBar.progress = 0
       } else {
          completionRoutineLabel.text = "\(dayInfo.completion.routineDone) / \(dayInfo.completion.routineNumber) thói quen được hoàn thành"
-         completionRoutineProgessBar.progress = Float(dayInfo.completion.routineDone / dayInfo.completion.routineNumber)
+         completionRoutineProgessBar.progress = Float(dayInfo.completion.routineDone) / Float(dayInfo.completion.routineNumber)
       }
       emptyStateView.isHidden = !dayInfo.makeRoutines.isEmpty
       dateCollectionView.reloadData()
       routineTableView.reloadData()
+   }
+   
+   private func receiveNotification() {
+      NotificationCenter.default.addObserver(self,
+                                             selector: #selector(updateMakeRoutine(notification:)),
+                                             name: NSNotification.Name(rawValue: "updateMakeRoutine"),
+                                             object: nil)
+      NotificationCenter.default.addObserver(self,
+                                             selector: #selector(updateDayInfo(notification:)),
+                                             name: NSNotification.Name(rawValue: "updateDayInfo"),
+                                             object: nil)
+   }
+   
+   @objc func updateMakeRoutine(notification: Notification) {
+      guard let mess = notification.userInfo,
+         let msg = mess["message"],
+         let makeRoutines = MapperService.shared.convertAnyToObject(any: msg, typeOpject: MakeRoutine.self),
+         let dayIf = dayInfo else { return }
+      var updateNewDayInfo = dayIf
+      updateNewDayInfo.makeRoutines[indexRoutine] = makeRoutines
+      DayInfoDatabase.shared.updateDayInfo(dateStr: dayIf.date,
+                                           updateDayInfo: updateNewDayInfo) {[weak self] newDayInfo in
+         self?.dayInfo = newDayInfo
+         self?.updateView()
+      }
+   }
+   
+   @objc func updateDayInfo(notification: Notification) {
+      guard let mess = notification.userInfo,
+         let msg = mess["message"],
+         let routine = MapperService.shared.convertAnyToObject(any: msg, typeOpject: RoutineModel.self) else { return }
+      for dayInfo in DayInfoDatabase.shared.getAllDayInfo() {
+         if routineForDay(routine: routine, dateStr: dayInfo.date) {
+            var newDayIf = dayInfo
+            let completion = CompletionModel(targetTime: Float(routine.targetRoutine),
+                                             doneCount: 0)
+            let makeRoutine = MakeRoutine(routine: routine,
+                                          completion: completion)
+            newDayIf.makeRoutines.append(makeRoutine)
+            DayInfoDatabase.shared.updateDayInfo(dateStr: dayInfo.date,
+                                                 updateDayInfo: newDayIf)
+         }
+      }
+      dayInfo = getDayInfo(dateStr: dateString[chooseDate])
+      updateView()
    }
 }
 
@@ -175,6 +233,17 @@ extension DiaryController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 85
     }
+   
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let makeRoutine = dayInfo?.makeRoutines[indexPath.row] else { return }
+        indexRoutine = indexPath.row
+        let controller = MakeRoutineController.instantiate().then {
+            $0.dateStr = DiaryController.dates[chooseDate].getShortVNDateString()
+            $0.makeRoutine = makeRoutine
+        }
+        navigationController?.pushViewController(controller, animated: true)
+    }
+   
 }
 
 extension DiaryController: StoryboardSceneBased {

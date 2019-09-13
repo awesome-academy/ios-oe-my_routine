@@ -33,10 +33,10 @@
             </objects>
             <point key="canvasLocation" x="-1072" y="-226"/>
         </scene>
-        <!--Diary-->
+        <!--Navigation-->
         <scene sceneID="BXN-n7-irq">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Diary" storyboardName="Diary" referencedIdentifier="Diary" id="lkV-MZ-KZO" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="Diary" storyboardName="Diary" referencedIdentifier="Navigation" id="lkV-MZ-KZO" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Nhật ký" image="iconDiary" id="vP2-pY-jgL">
                         <color key="badgeColor" red="0.95294117649999999" green="0.68235294120000001" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBarItem>

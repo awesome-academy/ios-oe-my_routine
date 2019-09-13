@@ -36,17 +36,17 @@ enum DayOfWeek: Int {
     var shortTitle: String {
         switch self {
         case .Monday:
-            return "Th 2"
+            return "Thứ 2"
         case .Tuesday:
-            return "Th 3"
+            return "Thứ 3"
         case .Wednesday:
-            return "Th 4"
+            return "Thứ 4"
         case .Thursday:
-            return "Th 5"
+            return "Thứ 5"
         case .Friday:
-            return "Th 6"
+            return "Thứ 6"
         case .Saturday:
-            return "Th 7"
+            return "Thứ 7"
         case .Sunday:
             return "CN"
         }

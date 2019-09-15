@@ -19,3 +19,13 @@ enum CellRemindTableView: Int {
     case addRemind = 1
 }
 
+enum CellSettingTableView: Int {
+    case manageRoutine = 0
+    case passwordMode = 1
+}
+
+enum CellSetUpPasswordTableView: Int {
+    case passWordMode = 0
+    case touchIDMode = 1
+    case changePassword = 2
+}

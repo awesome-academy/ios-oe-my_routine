@@ -55,10 +55,10 @@
             </objects>
             <point key="canvasLocation" x="-214" y="-226"/>
         </scene>
-        <!--Setting-->
+        <!--NavSetting-->
         <scene sceneID="HDq-kY-o4g">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Setting" storyboardName="Setting" referencedIdentifier="Setting" id="UZ7-Hh-EHR" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="Setting" storyboardName="Setting" referencedIdentifier="NavSetting" id="UZ7-Hh-EHR" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" image="iconSetting" id="fUz-dU-kxg"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1fI-B9-2FI" userLabel="First Responder" sceneMemberID="firstResponder"/>

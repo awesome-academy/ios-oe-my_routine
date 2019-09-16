@@ -45,6 +45,19 @@
 		058A3DC822F48E3100AB00F2 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A3DC722F48E3100AB00F2 /* String+.swift */; };
 		058A3DCA22F4942100AB00F2 /* RoutineModelRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A3DC922F4942100AB00F2 /* RoutineModelRealm.swift */; };
 		058A3DCC22F496D400AB00F2 /* RoutineDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A3DCB22F496D400AB00F2 /* RoutineDatabase.swift */; };
+		058B6475232E1DCA004F0BF0 /* ManageRoutineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 058B646D232E1DCA004F0BF0 /* ManageRoutineCell.xib */; };
+		058B6476232E1DCA004F0BF0 /* ChangePasswordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058B646E232E1DCA004F0BF0 /* ChangePasswordCell.swift */; };
+		058B6477232E1DCA004F0BF0 /* ChangePasswordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 058B646F232E1DCA004F0BF0 /* ChangePasswordCell.xib */; };
+		058B6478232E1DCA004F0BF0 /* SetUpPasswordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058B6470232E1DCA004F0BF0 /* SetUpPasswordCell.swift */; };
+		058B6479232E1DCA004F0BF0 /* PasswordSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 058B6471232E1DCA004F0BF0 /* PasswordSettingCell.xib */; };
+		058B647A232E1DCA004F0BF0 /* PasswordSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058B6472232E1DCA004F0BF0 /* PasswordSettingCell.swift */; };
+		058B647B232E1DCA004F0BF0 /* SetUpPasswordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 058B6473232E1DCA004F0BF0 /* SetUpPasswordCell.xib */; };
+		058B647C232E1DCA004F0BF0 /* ManageRoutineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058B6474232E1DCA004F0BF0 /* ManageRoutineCell.swift */; };
+		058B647E232E2299004F0BF0 /* SetUpPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058B647D232E2299004F0BF0 /* SetUpPasswordController.swift */; };
+		058B6480232E30EB004F0BF0 /* ManageRoutineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058B647F232E30EB004F0BF0 /* ManageRoutineController.swift */; };
+		058B6483232E31D9004F0BF0 /* EditRoutineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058B6481232E31D9004F0BF0 /* EditRoutineCell.swift */; };
+		058B6484232E31D9004F0BF0 /* EditRoutineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 058B6482232E31D9004F0BF0 /* EditRoutineCell.xib */; };
+		058B649B232F6BEA004F0BF0 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058B649A232F6BEA004F0BF0 /* UIColor+.swift */; };
 		059248E22318B382000E54C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 059248E12318B382000E54C2 /* Assets.xcassets */; };
 		059248E62318F3A2000E54C2 /* EnumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059248E52318F3A2000E54C2 /* EnumCell.swift */; };
 		059248E823191E2E000E54C2 /* DayPeriodController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059248E723191E2E000E54C2 /* DayPeriodController.swift */; };
@@ -108,6 +121,19 @@
 		058A3DC722F48E3100AB00F2 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "String+.swift"; path = "MyRoutine/Data/Source/String+.swift"; sourceTree = SOURCE_ROOT; };
 		058A3DC922F4942100AB00F2 /* RoutineModelRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineModelRealm.swift; sourceTree = "<group>"; };
 		058A3DCB22F496D400AB00F2 /* RoutineDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineDatabase.swift; sourceTree = "<group>"; };
+		058B646D232E1DCA004F0BF0 /* ManageRoutineCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ManageRoutineCell.xib; sourceTree = "<group>"; };
+		058B646E232E1DCA004F0BF0 /* ChangePasswordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordCell.swift; sourceTree = "<group>"; };
+		058B646F232E1DCA004F0BF0 /* ChangePasswordCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangePasswordCell.xib; sourceTree = "<group>"; };
+		058B6470232E1DCA004F0BF0 /* SetUpPasswordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetUpPasswordCell.swift; sourceTree = "<group>"; };
+		058B6471232E1DCA004F0BF0 /* PasswordSettingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasswordSettingCell.xib; sourceTree = "<group>"; };
+		058B6472232E1DCA004F0BF0 /* PasswordSettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordSettingCell.swift; sourceTree = "<group>"; };
+		058B6473232E1DCA004F0BF0 /* SetUpPasswordCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetUpPasswordCell.xib; sourceTree = "<group>"; };
+		058B6474232E1DCA004F0BF0 /* ManageRoutineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageRoutineCell.swift; sourceTree = "<group>"; };
+		058B647D232E2299004F0BF0 /* SetUpPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpPasswordController.swift; sourceTree = "<group>"; };
+		058B647F232E30EB004F0BF0 /* ManageRoutineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageRoutineController.swift; sourceTree = "<group>"; };
+		058B6481232E31D9004F0BF0 /* EditRoutineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRoutineCell.swift; sourceTree = "<group>"; };
+		058B6482232E31D9004F0BF0 /* EditRoutineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditRoutineCell.xib; sourceTree = "<group>"; };
+		058B649A232F6BEA004F0BF0 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		059248E12318B382000E54C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		059248E52318F3A2000E54C2 /* EnumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumCell.swift; sourceTree = "<group>"; };
 		059248E723191E2E000E54C2 /* DayPeriodController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPeriodController.swift; sourceTree = "<group>"; };
@@ -195,9 +221,29 @@
 		058A3DC022F48A5500AB00F2 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				058B646C232E1DCA004F0BF0 /* Cell */,
 				058A3DA922F2798C00AB00F2 /* SettingController.swift */,
+				058B647D232E2299004F0BF0 /* SetUpPasswordController.swift */,
+				058B647F232E30EB004F0BF0 /* ManageRoutineController.swift */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		058B646C232E1DCA004F0BF0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				058B646D232E1DCA004F0BF0 /* ManageRoutineCell.xib */,
+				058B646E232E1DCA004F0BF0 /* ChangePasswordCell.swift */,
+				058B646F232E1DCA004F0BF0 /* ChangePasswordCell.xib */,
+				058B6470232E1DCA004F0BF0 /* SetUpPasswordCell.swift */,
+				058B6471232E1DCA004F0BF0 /* PasswordSettingCell.xib */,
+				058B6472232E1DCA004F0BF0 /* PasswordSettingCell.swift */,
+				058B6473232E1DCA004F0BF0 /* SetUpPasswordCell.xib */,
+				058B6474232E1DCA004F0BF0 /* ManageRoutineCell.swift */,
+				058B6481232E31D9004F0BF0 /* EditRoutineCell.swift */,
+				058B6482232E31D9004F0BF0 /* EditRoutineCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		0599454B230A72FA0050830E /* Support */ = {
@@ -291,6 +337,7 @@
 				0537C53D2306811F00454618 /* UIView+.swift */,
 				05DA76B8230D390200929FA3 /* Date+.swift */,
 				05439B4C2314FE4900210D79 /* UIViewController+.swift */,
+				058B649A232F6BEA004F0BF0 /* UIColor+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -478,20 +525,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				0561CC6A23181CDE00AD13D2 /* RemindCell.xib in Resources */,
+				058B6477232E1DCA004F0BF0 /* ChangePasswordCell.xib in Resources */,
 				058A3D9A22F276DA00AB00F2 /* TabBar.storyboard in Resources */,
 				0561CC6B23181CDE00AD13D2 /* AddRemindCell.xib in Resources */,
+				058B647B232E1DCA004F0BF0 /* SetUpPasswordCell.xib in Resources */,
 				05B23D3D22F1678100E8140F /* LaunchScreen.storyboard in Resources */,
 				059248E22318B382000E54C2 /* Assets.xcassets in Resources */,
+				058B6475232E1DCA004F0BF0 /* ManageRoutineCell.xib in Resources */,
 				05DA76D4230FB4A700929FA3 /* DatePicker.xib in Resources */,
 				058A3DA222F278C500AB00F2 /* StatisticAll.storyboard in Resources */,
 				058A3DA022F2787E00AB00F2 /* Diary.storyboard in Resources */,
 				05DA76C3230E99A100929FA3 /* DateCell.xib in Resources */,
+				058B6484232E31D9004F0BF0 /* EditRoutineCell.xib in Resources */,
 				058A3DAC22F27EF200AB00F2 /* Setting.storyboard in Resources */,
 				05439B4F2315096200210D79 /* DatePicker.xib in Resources */,
 				0537C5432306815600454618 /* SuggestionViewCell.xib in Resources */,
 				05DA76C7230EDE5F00929FA3 /* RoutineDiaryCelll.xib in Resources */,
 				05994576230C4B620050830E /* SelectionCell.xib in Resources */,
 				0537C5452306815600454618 /* RoutineComponentCell.xib in Resources */,
+				058B6479232E1DCA004F0BF0 /* PasswordSettingCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,13 +626,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				058B6476232E1DCA004F0BF0 /* ChangePasswordCell.swift in Sources */,
 				058A3DA822F2797C00AB00F2 /* StatisticAllController.swift in Sources */,
 				05DA76D6230FB4D500929FA3 /* SystemInfo.swift in Sources */,
 				05DA76C2230E99A100929FA3 /* DateCell.swift in Sources */,
+				058B647A232E1DCA004F0BF0 /* PasswordSettingCell.swift in Sources */,
 				05439B4D2314FE4900210D79 /* UIViewController+.swift in Sources */,
 				0599454E230A73210050830E /* Constants.swift in Sources */,
 				0537C536230657BB00454618 /* List+.swift in Sources */,
 				05579ACF231F935800FF4BD3 /* MakeRoutine.swift in Sources */,
+				058B647E232E2299004F0BF0 /* SetUpPasswordController.swift in Sources */,
 				0537C54B230799DB00454618 /* RoundedView.swift in Sources */,
 				0561CC6C23181CDE00AD13D2 /* RemindCell.swift in Sources */,
 				0537C5462306815600454618 /* SuggestionViewCell.swift in Sources */,
@@ -596,8 +651,10 @@
 				0561CC6D23181CDE00AD13D2 /* AddRemindCell.swift in Sources */,
 				05B23D4B22F16B9A00E8140F /* Storyboards.swift in Sources */,
 				05994575230C4B620050830E /* SelectionCell.swift in Sources */,
+				058B6480232E30EB004F0BF0 /* ManageRoutineController.swift in Sources */,
 				0537C53C23066A6600454618 /* CreateRoutineController.swift in Sources */,
 				058A3DC422F48AE000AB00F2 /* RealmService.swift in Sources */,
+				058B6483232E31D9004F0BF0 /* EditRoutineCell.swift in Sources */,
 				05DA76B9230D390200929FA3 /* Date+.swift in Sources */,
 				059248E823191E2E000E54C2 /* DayPeriodController.swift in Sources */,
 				05439B5523164DE200210D79 /* DateService.swift in Sources */,
@@ -610,15 +667,18 @@
 				0537C5442306815600454618 /* RoutineComponentCell.swift in Sources */,
 				0537C53E2306811F00454618 /* UIView+.swift in Sources */,
 				058A3DC622F48B2A00AB00F2 /* RoutineModel.swift in Sources */,
+				058B649B232F6BEA004F0BF0 /* UIColor+.swift in Sources */,
 				058A3DCC22F496D400AB00F2 /* RoutineDatabase.swift in Sources */,
 				05439B502315096500210D79 /* DatePicker.swift in Sources */,
 				0537C5302306568000454618 /* RemindModel.swift in Sources */,
+				058B647C232E1DCA004F0BF0 /* ManageRoutineCell.swift in Sources */,
 				0561CC63231679DE00AD13D2 /* AlertViewControl.swift in Sources */,
 				058A3DA622F2796200AB00F2 /* DiaryController.swift in Sources */,
 				05DA76BB230D7A6200929FA3 /* DayOfWeek.swift in Sources */,
 				05579AD1231F93BE00FF4BD3 /* DayInfo.swift in Sources */,
 				05DA76B7230D361100929FA3 /* MapperService.swift in Sources */,
 				05DA76FA2313D5B800929FA3 /* CompletionModel.swift in Sources */,
+				058B6478232E1DCA004F0BF0 /* SetUpPasswordCell.swift in Sources */,
 				05B23D3322F1678000E8140F /* AppDelegate.swift in Sources */,
 				05439B512315097600210D79 /* SystemInfo.swift in Sources */,
 				058A3DAA22F2798C00AB00F2 /* SettingController.swift in Sources */,

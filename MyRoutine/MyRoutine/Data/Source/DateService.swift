@@ -32,6 +32,16 @@ class DateService {
         return result
     }
     
+    /// This function returns all days of Week include the day in parameter
+    ///
+    /// Usage:
+    ///
+    ///     println(DateService.shared.allDaysInWeek(dayInWeek: Date()) // [2019-09-16 00:00:00 +0000,
+    ///                                                 2019-09-17 00:00:00 +0000, ... 2019-09-22 00:00:00 +0000]
+    ///     with parameter is Date() - 2019-09-16 00:00:00 +0000 (Monday)
+    ///
+    /// - Parameter dayInWeek: A random Day.
+    ///
     func allDaysInWeek(dayInWeek: Date) -> [Date] {
         let gregorian = Calendar(identifier: .gregorian)
         guard let sunday = gregorian.date(from: gregorian.dateComponents([.yearForWeekOfYear, .weekOfYear],

@@ -57,6 +57,7 @@
 		058B6480232E30EB004F0BF0 /* ManageRoutineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058B647F232E30EB004F0BF0 /* ManageRoutineController.swift */; };
 		058B6483232E31D9004F0BF0 /* EditRoutineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058B6481232E31D9004F0BF0 /* EditRoutineCell.swift */; };
 		058B6484232E31D9004F0BF0 /* EditRoutineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 058B6482232E31D9004F0BF0 /* EditRoutineCell.xib */; };
+		058B649B232F6BEA004F0BF0 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058B649A232F6BEA004F0BF0 /* UIColor+.swift */; };
 		059248E22318B382000E54C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 059248E12318B382000E54C2 /* Assets.xcassets */; };
 		059248E62318F3A2000E54C2 /* EnumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059248E52318F3A2000E54C2 /* EnumCell.swift */; };
 		059248E823191E2E000E54C2 /* DayPeriodController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059248E723191E2E000E54C2 /* DayPeriodController.swift */; };
@@ -132,6 +133,7 @@
 		058B647F232E30EB004F0BF0 /* ManageRoutineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageRoutineController.swift; sourceTree = "<group>"; };
 		058B6481232E31D9004F0BF0 /* EditRoutineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRoutineCell.swift; sourceTree = "<group>"; };
 		058B6482232E31D9004F0BF0 /* EditRoutineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditRoutineCell.xib; sourceTree = "<group>"; };
+		058B649A232F6BEA004F0BF0 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		059248E12318B382000E54C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		059248E52318F3A2000E54C2 /* EnumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumCell.swift; sourceTree = "<group>"; };
 		059248E723191E2E000E54C2 /* DayPeriodController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPeriodController.swift; sourceTree = "<group>"; };
@@ -335,6 +337,7 @@
 				0537C53D2306811F00454618 /* UIView+.swift */,
 				05DA76B8230D390200929FA3 /* Date+.swift */,
 				05439B4C2314FE4900210D79 /* UIViewController+.swift */,
+				058B649A232F6BEA004F0BF0 /* UIColor+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -664,6 +667,7 @@
 				0537C5442306815600454618 /* RoutineComponentCell.swift in Sources */,
 				0537C53E2306811F00454618 /* UIView+.swift in Sources */,
 				058A3DC622F48B2A00AB00F2 /* RoutineModel.swift in Sources */,
+				058B649B232F6BEA004F0BF0 /* UIColor+.swift in Sources */,
 				058A3DCC22F496D400AB00F2 /* RoutineDatabase.swift in Sources */,
 				05439B502315096500210D79 /* DatePicker.swift in Sources */,
 				0537C5302306568000454618 /* RemindModel.swift in Sources */,

@@ -9,10 +9,14 @@
 final class SetUpPasswordController: UIViewController {
     
     // MARK: - Constants
-    static let numberOfSections = 3
-    static let numberOfRowInSections = [1, 1, 1]
-    static let heightForRow: CGFloat = 60
-    static let heightForHeader: CGFloat = 17
+    struct Constants {
+        static let numberOfSections = 3
+        static let numberOfRowInSections = [1, 1, 1]
+        static let heightForRow: CGFloat = 60
+        static let heightForHeader: CGFloat = 17
+        static let titlePasswordMode = "Khoá ứng dụng"
+        static let titleTouchIDMode = "Mở khoá bằng TouchID"
+    }
 
     // MARK: - Variables
     var checkPasswordOn = false
@@ -43,7 +47,7 @@ final class SetUpPasswordController: UIViewController {
 
 extension SetUpPasswordController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return SetUpPasswordController.numberOfRowInSections[section]
+        return Constants.numberOfRowInSections[section]
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -53,16 +57,20 @@ extension SetUpPasswordController: UITableViewDataSource {
         switch typeCell {
         case .passWordMode:
             let cell: SetUpPasswordCell = tableView.dequeueReusableCell(for: indexPath)
-            cell.setContentForCell(passwordMode: "Khoá ứng dụng", state: checkPasswordOn, isDisable: false)
-            cell.didChangeSwitch = {[weak self] changeState in
-                self?.checkPasswordOn = changeState
-                self?.setUpPwTableView.reloadData()
+            cell.setContentForCell(passwordMode: Constants.titlePasswordMode,
+                                   state: checkPasswordOn, isDisable: false)
+            cell.didChangeSwitch = {[unowned self] changeState in
+                self.checkPasswordOn = changeState
+                self.setUpPwTableView.reloadData()
             }
             return cell
+            
         case .touchIDMode:
             let cell: SetUpPasswordCell = tableView.dequeueReusableCell(for: indexPath)
-            cell.setContentForCell(passwordMode: "Mở khoá bằng TouchID", state: false, isDisable: !checkPasswordOn)
+            cell.setContentForCell(passwordMode: Constants.titleTouchIDMode,
+                                   state: false, isDisable: !checkPasswordOn)
             return cell
+            
         case .changePassword:
             let cell: ChangePasswordCell = tableView.dequeueReusableCell(for: indexPath)
             cell.disableContent(isDisable: !checkPasswordOn)
@@ -71,24 +79,23 @@ extension SetUpPasswordController: UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return SetUpPasswordController.numberOfSections
+        return Constants.numberOfSections
     }
     
 }
 
 extension SetUpPasswordController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return SetUpPasswordController.heightForRow
+        return Constants.heightForRow
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return SetUpPasswordController.heightForHeader
+        return Constants.heightForHeader
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView().then {
-            $0.backgroundColor = UIColor(red: 235/255, green: 235/255,
-                                         blue: 235/255, alpha: 0)
+            $0.backgroundColor = UIColor.backgroundColor
         }
         return view
     }

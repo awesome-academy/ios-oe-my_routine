@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="62" id="KGk-i7-Jjw" customClass="StatisticRoutineCell" customModule="MyRoutine" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="419" height="62"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="419" height="61.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jlh-tm-hen" customClass="MBCircularProgressBarView">
+                        <rect key="frame" x="7.5" y="13.5" width="35" height="35"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="35" id="s6D-Ne-3B2"/>
+                            <constraint firstAttribute="height" constant="35" id="tu0-Oo-0jc"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="progressLineWidth">
+                                <real key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="showValueString" value="NO"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="emptyLineWidth">
+                                <real key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="progressAngle">
+                                <real key="value" value="100"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
+                                <color key="value" red="0.97140935569999998" green="0.73333333329999995" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="emptyLineStrokeColor">
+                                <color key="value" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="emptyLineColor">
+                                <color key="value" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                <real key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="progressStrokeColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="progressRotationAngle">
+                                <real key="value" value="50"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thói quen 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R49-0c-xeD">
+                        <rect key="frame" x="50" y="21" width="87" height="20"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 / 7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eO3-QK-hlc">
+                        <rect key="frame" x="352" y="20.5" width="34.5" height="20.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXH-rP-9b5">
+                        <rect key="frame" x="391.5" y="21" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="PCF-HU-ibk"/>
+                            <constraint firstAttribute="width" constant="20" id="ir8-5B-Tp7"/>
+                        </constraints>
+                        <state key="normal" image="next"/>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aYL-kd-8SI">
+                        <rect key="frame" x="50" y="61" width="361.5" height="0.5"/>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.75" id="xpI-eq-UrP"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="aYL-kd-8SI" secondAttribute="bottom" id="0Uw-nx-t0c"/>
+                    <constraint firstAttribute="trailing" secondItem="aYL-kd-8SI" secondAttribute="trailing" constant="7.5" id="9T2-ka-RdO"/>
+                    <constraint firstItem="R49-0c-xeD" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="IUh-na-kNA"/>
+                    <constraint firstItem="Jlh-tm-hen" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="OHX-Uc-5iA"/>
+                    <constraint firstItem="Jlh-tm-hen" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="7.5" id="XwM-io-Ok6"/>
+                    <constraint firstItem="R49-0c-xeD" firstAttribute="leading" secondItem="Jlh-tm-hen" secondAttribute="trailing" constant="7.5" id="mfH-Mf-yv9"/>
+                    <constraint firstItem="eO3-QK-hlc" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="nWP-bI-RGs"/>
+                    <constraint firstItem="XXH-rP-9b5" firstAttribute="leading" secondItem="eO3-QK-hlc" secondAttribute="trailing" constant="5" id="rLk-0I-CKg"/>
+                    <constraint firstItem="aYL-kd-8SI" firstAttribute="leading" secondItem="R49-0c-xeD" secondAttribute="leading" id="w7b-ek-iPH"/>
+                    <constraint firstItem="XXH-rP-9b5" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="yFS-cf-mDO"/>
+                    <constraint firstAttribute="trailing" secondItem="XXH-rP-9b5" secondAttribute="trailing" constant="7.5" id="yHq-gA-CsJ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="completionLabel" destination="eO3-QK-hlc" id="Afc-W3-4vL"/>
+                <outlet property="completionProgessBar" destination="Jlh-tm-hen" id="69g-n8-wCu"/>
+                <outlet property="routineNameLabel" destination="R49-0c-xeD" id="6L6-4N-B0i"/>
+            </connections>
+            <point key="canvasLocation" x="209.42028985507247" y="100.44642857142857"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="next" width="30" height="30"/>
+    </resources>
+</document>

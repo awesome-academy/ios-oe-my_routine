@@ -31,4 +31,18 @@ class DateService {
         }
         return result
     }
+    
+    func allDaysInWeek(dayInWeek: Date) -> [Date] {
+        let gregorian = Calendar(identifier: .gregorian)
+        guard let sunday = gregorian.date(from: gregorian.dateComponents([.yearForWeekOfYear, .weekOfYear],
+                                                                         from: dayInWeek)) else { return [] }
+        var week = [Date]()
+        for i in 2...8 {
+            guard let day = gregorian.date(byAdding: .day,
+                                           value: i,
+                                           to: sunday) else { return [] }
+            week.append(day.addingTimeInterval(-61200))
+        }
+        return week
+    }
 }

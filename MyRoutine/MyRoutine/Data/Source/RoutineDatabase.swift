@@ -63,11 +63,8 @@ class RoutineDatabase {
     func getRoutineForWeek(daysOnWeek: [Date]) -> [RoutineModel] {
         var routines = [RoutineModel]()
         let lastDay = daysOnWeek.last ?? Date()
-        for rou in RoutineDatabase.shared.getAllRoutine() {
-            if rou.dayStart.getDate(format: DateFormat.fullDateFormat.rawValue) <= lastDay {
-                routines.append(rou)
-            }
-        }
+        let allRoutines = RoutineDatabase.shared.getAllRoutine()
+        routines = allRoutines.filter { $0.dayStart.getDate(format: DateFormat.fullDateFormat.rawValue) <= lastDay }
         return routines
     }
     

@@ -19,4 +19,3 @@ struct WeekInfo {
         return totalDoneTimes / totalTargetTimes
     }
 }
-

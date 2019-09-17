@@ -34,7 +34,7 @@ final class StatisticAllController: UIViewController {
     
     // MARK: - Variables
     private var numberOfRow = 0
-    private var isExpaned = false
+    private var isExpanded = false
     private var weekInfo: WeekInfo?
     private var daysInWeek = DateService.shared.allDaysInWeek(dayInWeek: Date())
     
@@ -66,7 +66,7 @@ final class StatisticAllController: UIViewController {
     private func setDefaultTableView() {
         // If week Info is empty, hiddenView appear
         guard let weekInfo = weekInfo else { return }
-        isExpaned = false
+        isExpanded = false
         hiddenView.isHidden = true
         if weekInfo.makeRoutines.count < Constants.shortenNumberOfRow {
             numberOfRow = weekInfo.makeRoutines.count
@@ -88,7 +88,7 @@ final class StatisticAllController: UIViewController {
         guard let weekInfo = weekInfo else { return }
         if weekInfo.makeRoutines.count > Constants.shortenNumberOfRow {
             let expandHeight = CGFloat(weekInfo.makeRoutines.count - Constants.shortenNumberOfRow) * Constants.heightOfRow
-            if isExpaned {
+            if isExpanded {
                 numberOfRow = Constants.shortenNumberOfRow
                 heightOfScrollView.constant -= expandHeight
                 heightOfTableView.constant -= expandHeight
@@ -102,7 +102,7 @@ final class StatisticAllController: UIViewController {
     
     @objc private func expandTableView() {
         changeHeightTableView()
-        isExpaned = !isExpaned
+        isExpanded = !isExpanded
         weekInfoTableView.reloadData()
         view.setNeedsLayout()
     }
@@ -116,8 +116,8 @@ final class StatisticAllController: UIViewController {
         // totalNumberOfRoutinesLabel - Show all routines was created
         totalNumberOfRoutinesLabel.text = "\(RoutineDatabase.shared.getAllRoutine().count)"
         // totalNumberOfCompleteRoutineLabel - Show all routines was finished on someday before
-        var totalRoutineDoneTimes: Float = 0
-        var totalRoutineComplete: Float = 0
+        var totalRoutineDoneTimes = 0.0
+        var totalRoutineComplete = 0.0
         for dayInfo in DayInfoDatabase.shared.getAllDayInfo() {
             for makeRou in dayInfo.makeRoutines {
                 totalRoutineDoneTimes += 1
@@ -168,7 +168,7 @@ extension StatisticAllController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let footerCell = StatisticRoutineFooterCell.loadFromNib()
-        footerCell.setContentForCell(isExpanded: isExpaned)
+        footerCell.setContentForCell(isExpanded: isExpanded)
         footerCell.expandButton.addTarget(self,
                                           action: #selector(expandTableView),
                                           for: .touchUpInside)

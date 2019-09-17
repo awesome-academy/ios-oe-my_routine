@@ -14,5 +14,6 @@ enum Storyboards {
     static let diary = UIStoryboard(name: "Diary", bundle: nil)
     static let statisticAll = UIStoryboard(name: "StatisticAll", bundle: nil)
     static let setting = UIStoryboard(name: "Setting", bundle: nil)
+    static let statisticARoutine = UIStoryboard(name: "StatisticARoutine", bundle: nil)
     
 }

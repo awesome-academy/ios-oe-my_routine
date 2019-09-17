@@ -55,4 +55,24 @@ class DateService {
         }
         return week
     }
+    
+    /// This function returns maximum number of consecutive date in a list of date
+    ///
+    /// Usage:
+    ///     let dates = [Date(), Date() + 1, Date() + 2, Date() + 4, Date() + 5]
+    ///     println(maximalConsecutiveDate(days: dates) // 3 -> [Date(), Date() + 1, Date() + 2]
+    ///
+    /// - Parameter array of date
+    //
+    func maximalConsecutiveDate(days: [Date]) -> Int {
+        let shortedDays = days.sorted()
+        guard let firstDay = shortedDays.first else { return 0 }
+        let referenceDate = Date.currentCalendar.startOfDay(for: firstDay)
+        let dayDiffs = shortedDays.map { date in
+            return Date.currentCalendar.dateComponents([.day],
+                                                       from: referenceDate,
+                                                       to: date).day ?? 0
+        }
+        return SupportService.shared.maximalConsecutiveNumbers(in: dayDiffs)
+    }
 }

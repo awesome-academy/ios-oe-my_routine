@@ -182,4 +182,14 @@ extension StatisticAllController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return Constants.heightOfRow
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let makeRou =  weekInfo?.makeRoutines[indexPath.row] else { return }
+        let controller = DetailRoutineController.instantiate().then {
+            $0.nameRoutine = makeRou.routine.nameRoutine
+            $0.idRoutine = makeRou.routine.idRoutine
+            $0.targetWeek = "\(Int(makeRou.completion.doneCount))/\(Int(makeRou.completion.targetTime))"
+        }
+        navigationController?.pushViewController(controller, animated: true)
+    }
 }

@@ -17,5 +17,9 @@ class RoutineModelRealm: Object {
     let repeatRoutine = List<Int>()
     let remindRoutine = List<RemindModel>()
     @objc dynamic var doneCount = 0
+    @objc dynamic var note = ""
     
+    override static func primaryKey() -> String? {
+        return "idRoutine"
+    }
 }

@@ -24,6 +24,11 @@
 		05385A242330654800D48657 /* StatisticRoutineHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 058B6492232F592D004F0BF0 /* StatisticRoutineHeaderCell.xib */; };
 		05385A252330654C00D48657 /* StatisticRoutineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 058B6493232F592D004F0BF0 /* StatisticRoutineCell.xib */; };
 		05385A272330A7C200D48657 /* WeekInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05385A262330A7C200D48657 /* WeekInfoService.swift */; };
+		05385A2D2330C29700D48657 /* StatisticARoutineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05385A2C2330C29700D48657 /* StatisticARoutineController.swift */; };
+		05385A2F2330C2C400D48657 /* NoteRoutineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05385A2E2330C2C400D48657 /* NoteRoutineController.swift */; };
+		05385A312330C2D300D48657 /* DetailRoutineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05385A302330C2D300D48657 /* DetailRoutineController.swift */; };
+		05385A332330C78B00D48657 /* StatisticARoutineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05385A322330C78B00D48657 /* StatisticARoutineModel.swift */; };
+		05385A352330C7D600D48657 /* SupportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05385A342330C7D600D48657 /* SupportService.swift */; };
 		05439B4D2314FE4900210D79 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05439B4C2314FE4900210D79 /* UIViewController+.swift */; };
 		05439B4E2315095100210D79 /* PickerViewControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA76D7230FB63700929FA3 /* PickerViewControl.swift */; };
 		05439B4F2315096200210D79 /* DatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05DA76D2230FB4A700929FA3 /* DatePicker.xib */; };
@@ -107,6 +112,11 @@
 		0537C549230799DB00454618 /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		05385A1E2330642300D48657 /* WeekInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekInfo.swift; sourceTree = "<group>"; };
 		05385A262330A7C200D48657 /* WeekInfoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekInfoService.swift; sourceTree = "<group>"; };
+		05385A2C2330C29700D48657 /* StatisticARoutineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticARoutineController.swift; sourceTree = "<group>"; };
+		05385A2E2330C2C400D48657 /* NoteRoutineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteRoutineController.swift; sourceTree = "<group>"; };
+		05385A302330C2D300D48657 /* DetailRoutineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRoutineController.swift; sourceTree = "<group>"; };
+		05385A322330C78B00D48657 /* StatisticARoutineModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticARoutineModel.swift; sourceTree = "<group>"; };
+		05385A342330C7D600D48657 /* SupportService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportService.swift; sourceTree = "<group>"; };
 		05439B4C2314FE4900210D79 /* UIViewController+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		05439B5423164DE200210D79 /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DateService.swift; path = ../Data/Source/DateService.swift; sourceTree = "<group>"; };
 		05579ACE231F935800FF4BD3 /* MakeRoutine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeRoutine.swift; sourceTree = "<group>"; };
@@ -246,6 +256,9 @@
 			children = (
 				05385A1D2330629800D48657 /* CellStatistic */,
 				058A3DA722F2797C00AB00F2 /* StatisticAllController.swift */,
+				05385A2C2330C29700D48657 /* StatisticARoutineController.swift */,
+				05385A2E2330C2C400D48657 /* NoteRoutineController.swift */,
+				05385A302330C2D300D48657 /* DetailRoutineController.swift */,
 			);
 			path = StatisticAll;
 			sourceTree = "<group>";
@@ -288,6 +301,7 @@
 				05DA76D5230FB4D400929FA3 /* SystemInfo.swift */,
 				059248E52318F3A2000E54C2 /* EnumCell.swift */,
 				05439B5423164DE200210D79 /* DateService.swift */,
+				05385A342330C7D600D48657 /* SupportService.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -421,6 +435,7 @@
 		05B23D4E22F16EBD00E8140F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				05385A322330C78B00D48657 /* StatisticARoutineModel.swift */,
 				0537C52F2306568000454618 /* RemindModel.swift */,
 				058A3DC522F48B2A00AB00F2 /* RoutineModel.swift */,
 				058A3DC922F4942100AB00F2 /* RoutineModelRealm.swift */,
@@ -638,6 +653,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MyRoutine/Pods-MyRoutine-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/MBCircularProgressBar/MBCircularProgressBar.framework",
 				"${BUILT_PRODUCTS_DIR}/Parchment/Parchment.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
@@ -650,6 +666,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBCircularProgressBar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parchment.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
@@ -690,6 +707,8 @@
 				05DA76D3230FB4A700929FA3 /* DatePicker.swift in Sources */,
 				057A7C2123223570001263FF /* DateFomat.swift in Sources */,
 				0561CC6F2318296D00AD13D2 /* RemindRoutineController.swift in Sources */,
+				05385A312330C2D300D48657 /* DetailRoutineController.swift in Sources */,
+				05385A2F2330C2C400D48657 /* NoteRoutineController.swift in Sources */,
 				058A3DC822F48E3100AB00F2 /* String+.swift in Sources */,
 				058A3DCA22F4942100AB00F2 /* RoutineModelRealm.swift in Sources */,
 				0561CC6D23181CDE00AD13D2 /* AddRemindCell.swift in Sources */,
@@ -707,6 +726,8 @@
 				058A3D9E22F2773B00AB00F2 /* TabBarController.swift in Sources */,
 				05385A232330654500D48657 /* StatisticRoutineHeaderCell.swift in Sources */,
 				05385A212330653A00D48657 /* StatisticRoutineFooterCell.swift in Sources */,
+				05385A332330C78B00D48657 /* StatisticARoutineModel.swift in Sources */,
+				05385A352330C7D600D48657 /* SupportService.swift in Sources */,
 				059248EA23192AA7000E54C2 /* PeriodDay.swift in Sources */,
 				05385A202330653300D48657 /* StatisticRoutineCell.swift in Sources */,
 				05439B4E2315095100210D79 /* PickerViewControl.swift in Sources */,
@@ -724,6 +745,7 @@
 				058A3DA622F2796200AB00F2 /* DiaryController.swift in Sources */,
 				05DA76BB230D7A6200929FA3 /* DayOfWeek.swift in Sources */,
 				05579AD1231F93BE00FF4BD3 /* DayInfo.swift in Sources */,
+				05385A2D2330C29700D48657 /* StatisticARoutineController.swift in Sources */,
 				05DA76B7230D361100929FA3 /* MapperService.swift in Sources */,
 				05DA76FA2313D5B800929FA3 /* CompletionModel.swift in Sources */,
 				058B6478232E1DCA004F0BF0 /* SetUpPasswordCell.swift in Sources */,

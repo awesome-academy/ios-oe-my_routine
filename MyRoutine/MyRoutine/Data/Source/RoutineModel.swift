@@ -17,6 +17,7 @@ struct RoutineModel {
     var remindRoutine: [RemindModel]
     var periodRoutine: Int
     var doneCount: Int
+    var noteRoutine: String
     
     // MARK: - Init
     static func defautInit() -> RoutineModel {
@@ -27,7 +28,8 @@ struct RoutineModel {
                             targetRoutine: 1,
                             remindRoutine: [RemindModel(timeString: "09:00", state: true)],
                             periodRoutine: 4,
-                            doneCount: 0)
+                            doneCount: 0,
+                            noteRoutine: "")
     }
 }
 
@@ -50,6 +52,7 @@ class MapperRoutine {
             obj.remindRoutine.append(i)
         }
         obj.doneCount = routine.doneCount
+        obj.note = routine.noteRoutine
         return obj
     }
     
@@ -63,6 +66,7 @@ class MapperRoutine {
                             targetRoutine: routineRealm.targetRoutine,
                             remindRoutine: routineRealm.remindRoutine.toArray(type: RemindModel.self),
                             periodRoutine: routineRealm.period,
-                            doneCount: routineRealm.doneCount)
+                            doneCount: routineRealm.doneCount,
+                            noteRoutine: routineRealm.note)
     }
 }

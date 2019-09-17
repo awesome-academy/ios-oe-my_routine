@@ -10,6 +10,7 @@ target 'MyRoutine' do
   pod 'Then'
   pod 'Parchment'
   pod 'FSCalendar'
+  pod 'IQKeyboardManagerSwift'
   # Pods for MyRoutine
 
 end

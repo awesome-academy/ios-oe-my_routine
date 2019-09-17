@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Detail Routine Controller-->
         <scene sceneID="yea-4h-2W1">
             <objects>
-                <viewController storyboardIdentifier="DetailRoutineController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5et-Hi-eB4" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailRoutineController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5et-Hi-eB4" customClass="DetailRoutineController" customModule="MyRoutine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PY0-uK-yU1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,7 +31,7 @@
                                         <rect key="frame" x="12" y="47.666666666666664" width="30" height="29.999999999999993"/>
                                         <state key="normal" image="back"/>
                                         <connections>
-                                            <action selector="handleBackButton:" destination="5et-Hi-eB4" eventType="touchUpInside" id="TGI-8V-CU2"/>
+                                            <action selector="handleBackButton:" destination="5et-Hi-eB4" eventType="touchUpInside" id="nYz-YC-bhk"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -62,18 +62,18 @@
                         <viewLayoutGuide key="safeArea" id="tqF-kn-D1I"/>
                     </view>
                     <connections>
-                        <outlet property="containView" destination="EMv-06-w5u" id="OoE-v8-esS"/>
-                        <outlet property="nameRoutineLabel" destination="vtN-vN-f7B" id="GvJ-wd-IKt"/>
+                        <outlet property="containerView" destination="EMv-06-w5u" id="ZoK-gl-eI2"/>
+                        <outlet property="nameRoutineLabel" destination="vtN-vN-f7B" id="cPZ-Ne-Na5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hxG-gl-tE0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-273" y="68"/>
         </scene>
-        <!--View Controller-->
+        <!--StatisticA Routine Controller-->
         <scene sceneID="6A4-ab-ML5">
             <objects>
-                <viewController storyboardIdentifier="StatisticARoutineController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9M5-kJ-Nat" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StatisticARoutineController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9M5-kJ-Nat" customClass="StatisticARoutineController" customModule="MyRoutine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ucq-FO-aU4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -328,20 +328,20 @@
                         <viewLayoutGuide key="safeArea" id="kX0-BK-EjE"/>
                     </view>
                     <connections>
-                        <outlet property="calendarView" destination="EDo-2T-0nv" id="LTz-X2-lz9"/>
-                        <outlet property="dateFromCalendarLabel" destination="xht-zG-5EG" id="YxW-HG-1dR"/>
-                        <outlet property="maximalConsecutiveDaysLabel" destination="KaC-H9-nzA" id="jei-U1-FUd"/>
-                        <outlet property="weekTargetLabel" destination="1Au-Vm-Tsm" id="qQh-ok-bJH"/>
+                        <outlet property="calendarView" destination="EDo-2T-0nv" id="RTu-sb-kjw"/>
+                        <outlet property="dateFromCalendarLabel" destination="xht-zG-5EG" id="9FK-Oa-cyL"/>
+                        <outlet property="maxConsecutiveDaysLabel" destination="KaC-H9-nzA" id="XBR-6T-gfn"/>
+                        <outlet property="weekTargetLabel" destination="1Au-Vm-Tsm" id="L6h-vm-BSK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ozQ-zd-5E2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="580.43478260869574" y="66.294642857142861"/>
         </scene>
-        <!--View Controller-->
+        <!--Note Routine Controller-->
         <scene sceneID="h04-L5-dZt">
             <objects>
-                <viewController storyboardIdentifier="TakeNoteController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6Kk-77-vvd" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NoteRoutineController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6Kk-77-vvd" customClass="NoteRoutineController" customModule="MyRoutine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="50W-EV-Ojl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -378,8 +378,8 @@
                         <viewLayoutGuide key="safeArea" id="YIr-U2-eej"/>
                     </view>
                     <connections>
-                        <outlet property="heightOfTextView" destination="1fE-g1-hvQ" id="t2V-vx-YIP"/>
-                        <outlet property="noteTextView" destination="bXC-ru-L0Q" id="DKf-8j-mhf"/>
+                        <outlet property="heightOfTextView" destination="1fE-g1-hvQ" id="8hv-Ei-Hw5"/>
+                        <outlet property="noteTextView" destination="bXC-ru-L0Q" id="ORK-mY-528"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WoR-fD-UKz" userLabel="First Responder" sceneMemberID="firstResponder"/>

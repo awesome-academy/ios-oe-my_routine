@@ -57,6 +57,7 @@
 		058B6480232E30EB004F0BF0 /* ManageRoutineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058B647F232E30EB004F0BF0 /* ManageRoutineController.swift */; };
 		058B6483232E31D9004F0BF0 /* EditRoutineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058B6481232E31D9004F0BF0 /* EditRoutineCell.swift */; };
 		058B6484232E31D9004F0BF0 /* EditRoutineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 058B6482232E31D9004F0BF0 /* EditRoutineCell.xib */; };
+		058B648C232F56FB004F0BF0 /* StatisticARoutine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058B648B232F56FB004F0BF0 /* StatisticARoutine.storyboard */; };
 		058B649B232F6BEA004F0BF0 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058B649A232F6BEA004F0BF0 /* UIColor+.swift */; };
 		059248E22318B382000E54C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 059248E12318B382000E54C2 /* Assets.xcassets */; };
 		059248E62318F3A2000E54C2 /* EnumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059248E52318F3A2000E54C2 /* EnumCell.swift */; };
@@ -97,7 +98,7 @@
 		0537C5422306815500454618 /* SuggestionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionViewCell.swift; sourceTree = "<group>"; };
 		0537C549230799DB00454618 /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		05439B4C2314FE4900210D79 /* UIViewController+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
-		05439B5423164DE200210D79 /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateService.swift; sourceTree = "<group>"; };
+		05439B5423164DE200210D79 /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DateService.swift; path = ../Data/Source/DateService.swift; sourceTree = "<group>"; };
 		05579ACE231F935800FF4BD3 /* MakeRoutine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeRoutine.swift; sourceTree = "<group>"; };
 		05579AD0231F93BE00FF4BD3 /* DayInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayInfo.swift; sourceTree = "<group>"; };
 		05579AD2231F941E00FF4BD3 /* DayInfoDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayInfoDatabase.swift; sourceTree = "<group>"; };
@@ -133,6 +134,13 @@
 		058B647F232E30EB004F0BF0 /* ManageRoutineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageRoutineController.swift; sourceTree = "<group>"; };
 		058B6481232E31D9004F0BF0 /* EditRoutineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRoutineCell.swift; sourceTree = "<group>"; };
 		058B6482232E31D9004F0BF0 /* EditRoutineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditRoutineCell.xib; sourceTree = "<group>"; };
+		058B648B232F56FB004F0BF0 /* StatisticARoutine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StatisticARoutine.storyboard; sourceTree = "<group>"; };
+		058B648E232F592D004F0BF0 /* StatisticRoutineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticRoutineCell.swift; sourceTree = "<group>"; };
+		058B648F232F592D004F0BF0 /* StatisticRoutineFooterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatisticRoutineFooterCell.xib; sourceTree = "<group>"; };
+		058B6490232F592D004F0BF0 /* StatisticRoutineHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticRoutineHeaderCell.swift; sourceTree = "<group>"; };
+		058B6491232F592D004F0BF0 /* StatisticRoutineFooterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticRoutineFooterCell.swift; sourceTree = "<group>"; };
+		058B6492232F592D004F0BF0 /* StatisticRoutineHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatisticRoutineHeaderCell.xib; sourceTree = "<group>"; };
+		058B6493232F592D004F0BF0 /* StatisticRoutineCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatisticRoutineCell.xib; sourceTree = "<group>"; };
 		058B649A232F6BEA004F0BF0 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		059248E12318B382000E54C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		059248E52318F3A2000E54C2 /* EnumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumCell.swift; sourceTree = "<group>"; };
@@ -188,6 +196,19 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		05385A1D2330629800D48657 /* CellStatistic */ = {
+			isa = PBXGroup;
+			children = (
+				058B648E232F592D004F0BF0 /* StatisticRoutineCell.swift */,
+				058B6493232F592D004F0BF0 /* StatisticRoutineCell.xib */,
+				058B6491232F592D004F0BF0 /* StatisticRoutineFooterCell.swift */,
+				058B648F232F592D004F0BF0 /* StatisticRoutineFooterCell.xib */,
+				058B6490232F592D004F0BF0 /* StatisticRoutineHeaderCell.swift */,
+				058B6492232F592D004F0BF0 /* StatisticRoutineHeaderCell.xib */,
+			);
+			path = CellStatistic;
+			sourceTree = "<group>";
+		};
 		0561CC61231679A900AD13D2 /* Alert */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +234,7 @@
 		058A3DBF22F48A4400AB00F2 /* StatisticAll */ = {
 			isa = PBXGroup;
 			children = (
+				05385A1D2330629800D48657 /* CellStatistic */,
 				058A3DA722F2797C00AB00F2 /* StatisticAllController.swift */,
 			);
 			path = StatisticAll;
@@ -255,6 +277,7 @@
 				0599454D230A73210050830E /* Constants.swift */,
 				05DA76D5230FB4D400929FA3 /* SystemInfo.swift */,
 				059248E52318F3A2000E54C2 /* EnumCell.swift */,
+				05439B5423164DE200210D79 /* DateService.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -373,6 +396,7 @@
 				058A3D9F22F2787E00AB00F2 /* Diary.storyboard */,
 				058A3DA122F278C500AB00F2 /* StatisticAll.storyboard */,
 				058A3DAB22F27EF200AB00F2 /* Setting.storyboard */,
+				058B648B232F56FB004F0BF0 /* StatisticARoutine.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -414,7 +438,6 @@
 				058A3DC322F48AE000AB00F2 /* RealmService.swift */,
 				058A3DCB22F496D400AB00F2 /* RoutineDatabase.swift */,
 				05DA76B6230D361100929FA3 /* MapperService.swift */,
-				05439B5423164DE200210D79 /* DateService.swift */,
 				05579AD2231F941E00FF4BD3 /* DayInfoDatabase.swift */,
 			);
 			name = Local;
@@ -527,6 +550,7 @@
 				0561CC6A23181CDE00AD13D2 /* RemindCell.xib in Resources */,
 				058B6477232E1DCA004F0BF0 /* ChangePasswordCell.xib in Resources */,
 				058A3D9A22F276DA00AB00F2 /* TabBar.storyboard in Resources */,
+				058B648C232F56FB004F0BF0 /* StatisticARoutine.storyboard in Resources */,
 				0561CC6B23181CDE00AD13D2 /* AddRemindCell.xib in Resources */,
 				058B647B232E1DCA004F0BF0 /* SetUpPasswordCell.xib in Resources */,
 				05B23D3D22F1678100E8140F /* LaunchScreen.storyboard in Resources */,
@@ -598,7 +622,9 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MyRoutine/Pods-MyRoutine-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/MBCircularProgressBar/MBCircularProgressBar.framework",
+				"${BUILT_PRODUCTS_DIR}/Parchment/Parchment.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
@@ -608,7 +634,9 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBCircularProgressBar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parchment.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",

@@ -8,6 +8,8 @@ target 'MyRoutine' do
   pod 'Reusable', '~> 4.0.2'
   pod "MBCircularProgressBar"
   pod 'Then'
+  pod 'Parchment'
+  pod 'FSCalendar'
   # Pods for MyRoutine
 
 end

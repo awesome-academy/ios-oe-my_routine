@@ -6,7 +6,7 @@
 //  Copyright © 2019 huy. All rights reserved.
 //
 
-struct StatisticARoutineModel {
+struct StatisticARoutine {
     
     var routineID: String
     var finishDays: [Date]

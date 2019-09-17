@@ -15,7 +15,7 @@ final class DetailRoutineController: UIViewController {
         static let numberOfPageController = 2
         static let titleFirstPage = "Thống kê"
         static let titleSecondPage = "Ghi chú"
-        static let font = UIFont(name: "Helvetica Neue", size: 17)!
+        static let font = UIFont(name: "Helvetica Neue", size: 17) ?? UIFont.systemFont(ofSize: 17)
     }
     
     // MARK: - Outlets
@@ -39,7 +39,7 @@ final class DetailRoutineController: UIViewController {
     // MARK: - Support Method
     private func setUp() {
         nameRoutineLabel.text = nameRoutine
-        let statistic = StatisticARoutineModel(dayInfos: DayInfoDatabase.shared.getAllDayInfo(),
+        let statistic = StatisticARoutine(dayInfos: DayInfoDatabase.shared.getAllDayInfo(),
                                                routineID: idRoutine)
         statisticController.do {
             $0.title = Constants.titleFirstPage
@@ -67,8 +67,8 @@ final class DetailRoutineController: UIViewController {
     
     // MARK: - Actions
     @IBAction func handleBackButton(_ sender: Any) {
-        if let newRou = takeNote.routine {
-            RoutineDatabase.shared.updateRoutine(newRouine: newRou)
+        if let newRoutine = takeNote.routine {
+            RoutineDatabase.shared.updateRoutine(newRouine: newRoutine)
         }
         navigationController?.popViewController(animated: true)
     }

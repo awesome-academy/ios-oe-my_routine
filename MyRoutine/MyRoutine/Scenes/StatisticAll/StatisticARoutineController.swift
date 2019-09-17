@@ -10,12 +10,12 @@ import FSCalendar
 
 final class StatisticARoutineController: UIViewController {
 
-    @IBOutlet weak var dateFromCalendarLabel: UILabel!
-    @IBOutlet weak var calendarView: FSCalendar!
-    @IBOutlet weak var maxConsecutiveDaysLabel: UILabel!
-    @IBOutlet weak var weekTargetLabel: UILabel!
+    @IBOutlet private weak var dateFromCalendarLabel: UILabel!
+    @IBOutlet private weak var calendarView: FSCalendar!
+    @IBOutlet private weak var maxConsecutiveDaysLabel: UILabel!
+    @IBOutlet private weak var weekTargetLabel: UILabel!
     
-    var statisticARouine: StatisticARoutineModel?
+    var statisticARouine: StatisticARoutine?
     var weekTarget: String?
     
     override func viewDidLoad() {

@@ -27,7 +27,7 @@
 		05385A2D2330C29700D48657 /* StatisticARoutineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05385A2C2330C29700D48657 /* StatisticARoutineController.swift */; };
 		05385A2F2330C2C400D48657 /* NoteRoutineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05385A2E2330C2C400D48657 /* NoteRoutineController.swift */; };
 		05385A312330C2D300D48657 /* DetailRoutineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05385A302330C2D300D48657 /* DetailRoutineController.swift */; };
-		05385A332330C78B00D48657 /* StatisticARoutineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05385A322330C78B00D48657 /* StatisticARoutineModel.swift */; };
+		05385A332330C78B00D48657 /* StatisticARoutine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05385A322330C78B00D48657 /* StatisticARoutine.swift */; };
 		05385A352330C7D600D48657 /* SupportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05385A342330C7D600D48657 /* SupportService.swift */; };
 		05439B4D2314FE4900210D79 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05439B4C2314FE4900210D79 /* UIViewController+.swift */; };
 		05439B4E2315095100210D79 /* PickerViewControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA76D7230FB63700929FA3 /* PickerViewControl.swift */; };
@@ -115,7 +115,7 @@
 		05385A2C2330C29700D48657 /* StatisticARoutineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticARoutineController.swift; sourceTree = "<group>"; };
 		05385A2E2330C2C400D48657 /* NoteRoutineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteRoutineController.swift; sourceTree = "<group>"; };
 		05385A302330C2D300D48657 /* DetailRoutineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRoutineController.swift; sourceTree = "<group>"; };
-		05385A322330C78B00D48657 /* StatisticARoutineModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticARoutineModel.swift; sourceTree = "<group>"; };
+		05385A322330C78B00D48657 /* StatisticARoutine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticARoutine.swift; sourceTree = "<group>"; };
 		05385A342330C7D600D48657 /* SupportService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportService.swift; sourceTree = "<group>"; };
 		05439B4C2314FE4900210D79 /* UIViewController+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		05439B5423164DE200210D79 /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DateService.swift; path = ../Data/Source/DateService.swift; sourceTree = "<group>"; };
@@ -435,7 +435,7 @@
 		05B23D4E22F16EBD00E8140F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				05385A322330C78B00D48657 /* StatisticARoutineModel.swift */,
+				05385A322330C78B00D48657 /* StatisticARoutine.swift */,
 				0537C52F2306568000454618 /* RemindModel.swift */,
 				058A3DC522F48B2A00AB00F2 /* RoutineModel.swift */,
 				058A3DC922F4942100AB00F2 /* RoutineModelRealm.swift */,
@@ -726,7 +726,7 @@
 				058A3D9E22F2773B00AB00F2 /* TabBarController.swift in Sources */,
 				05385A232330654500D48657 /* StatisticRoutineHeaderCell.swift in Sources */,
 				05385A212330653A00D48657 /* StatisticRoutineFooterCell.swift in Sources */,
-				05385A332330C78B00D48657 /* StatisticARoutineModel.swift in Sources */,
+				05385A332330C78B00D48657 /* StatisticARoutine.swift in Sources */,
 				05385A352330C7D600D48657 /* SupportService.swift in Sources */,
 				059248EA23192AA7000E54C2 /* PeriodDay.swift in Sources */,
 				05385A202330653300D48657 /* StatisticRoutineCell.swift in Sources */,

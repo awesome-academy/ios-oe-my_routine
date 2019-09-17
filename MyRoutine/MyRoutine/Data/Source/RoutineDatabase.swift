@@ -50,4 +50,25 @@ class RoutineDatabase {
         }
     }
     
+    func updateRoutine(newRouine: RoutineModel) {
+        do {
+            let realm = try Realm()
+            try realm.write {
+                let update = MapperRoutine.shared.routineToRoutineRealm(routine: newRouine)
+                realm.add(update, update: true)
+            }
+        } catch { }
+    }
+    
+    func getRoutineForWeek(daysOnWeek: [Date]) -> [RoutineModel] {
+        var routines = [RoutineModel]()
+        let lastDay = daysOnWeek.last ?? Date()
+        for rou in RoutineDatabase.shared.getAllRoutine() {
+            if rou.dayStart.getDate(format: DateFormat.fullDateFormat.rawValue) <= lastDay {
+                routines.append(rou)
+            }
+        }
+        return routines
+    }
+    
 }

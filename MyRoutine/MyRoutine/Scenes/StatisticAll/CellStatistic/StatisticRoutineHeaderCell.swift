@@ -14,8 +14,8 @@ final class StatisticRoutineHeaderCell: UITableViewCell, NibLoadable {
     
     // MARK: - Setup
     func setContentForCell(days: [Date], completion: Float) {
-        let firstDate = days.first?.getShortVNDateString()
-        let lastDate = days.last?.getShortVNDateString()
+        let firstDate = days.first?.getShortVNDateString() ?? ""
+        let lastDate = days.last?.getShortVNDateString() ?? ""
         dateRangeLabel.text = "( \(firstDate) - \(lastDate) )"
         completionProgessBar.setProgress(completion,
                                          animated: true)

@@ -9,7 +9,7 @@
 final class StatisticRoutineFooterCell: UITableViewCell, NibLoadable {
     
     // MARK: - Outlets
-    @IBOutlet private weak var expandButton: UIButton!
+    @IBOutlet weak var expandButton: UIButton!
     
     // MARK: - Setup
     func setContentForCell(isExpanded: Bool) {

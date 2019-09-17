@@ -63,4 +63,13 @@ class DayInfoDatabase {
             completion?(nil)
         }
     }
+    
+    func getAllDayInfoForWeek(daysOnWeek: [Date]) ->  [DayInfo] {
+        var dayInfos = [DayInfo]()
+        for day in daysOnWeek {
+            guard let dayInfo = getADayInfo(dateStr: day.getFullDateString()) else { continue }
+            dayInfos.append(dayInfo)
+        }
+        return dayInfos
+    }
 }

@@ -45,10 +45,10 @@
             </objects>
             <point key="canvasLocation" x="-239" y="-518"/>
         </scene>
-        <!--StatisticAll-->
+        <!--NavStatistic-->
         <scene sceneID="09k-WF-YZS">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="StatisticAll" storyboardName="StatisticAll" referencedIdentifier="StatisticAll" id="sPv-WH-sPX" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="StatisticAll" storyboardName="StatisticAll" referencedIdentifier="NavStatistic" id="sPv-WH-sPX" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" image="iconStatistic" id="0C9-Kd-fJ7"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="syu-x0-Xgz" userLabel="First Responder" sceneMemberID="firstResponder"/>

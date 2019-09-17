@@ -16,6 +16,14 @@
 		0537C5452306815600454618 /* RoutineComponentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0537C5412306815500454618 /* RoutineComponentCell.xib */; };
 		0537C5462306815600454618 /* SuggestionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C5422306815500454618 /* SuggestionViewCell.swift */; };
 		0537C54B230799DB00454618 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C549230799DB00454618 /* RoundedView.swift */; };
+		05385A1F2330642300D48657 /* WeekInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05385A1E2330642300D48657 /* WeekInfo.swift */; };
+		05385A202330653300D48657 /* StatisticRoutineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058B648E232F592D004F0BF0 /* StatisticRoutineCell.swift */; };
+		05385A212330653A00D48657 /* StatisticRoutineFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058B6491232F592D004F0BF0 /* StatisticRoutineFooterCell.swift */; };
+		05385A222330654100D48657 /* StatisticRoutineFooterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 058B648F232F592D004F0BF0 /* StatisticRoutineFooterCell.xib */; };
+		05385A232330654500D48657 /* StatisticRoutineHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058B6490232F592D004F0BF0 /* StatisticRoutineHeaderCell.swift */; };
+		05385A242330654800D48657 /* StatisticRoutineHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 058B6492232F592D004F0BF0 /* StatisticRoutineHeaderCell.xib */; };
+		05385A252330654C00D48657 /* StatisticRoutineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 058B6493232F592D004F0BF0 /* StatisticRoutineCell.xib */; };
+		05385A272330A7C200D48657 /* WeekInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05385A262330A7C200D48657 /* WeekInfoService.swift */; };
 		05439B4D2314FE4900210D79 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05439B4C2314FE4900210D79 /* UIViewController+.swift */; };
 		05439B4E2315095100210D79 /* PickerViewControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA76D7230FB63700929FA3 /* PickerViewControl.swift */; };
 		05439B4F2315096200210D79 /* DatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05DA76D2230FB4A700929FA3 /* DatePicker.xib */; };
@@ -97,6 +105,8 @@
 		0537C5412306815500454618 /* RoutineComponentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoutineComponentCell.xib; sourceTree = "<group>"; };
 		0537C5422306815500454618 /* SuggestionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionViewCell.swift; sourceTree = "<group>"; };
 		0537C549230799DB00454618 /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		05385A1E2330642300D48657 /* WeekInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekInfo.swift; sourceTree = "<group>"; };
+		05385A262330A7C200D48657 /* WeekInfoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekInfoService.swift; sourceTree = "<group>"; };
 		05439B4C2314FE4900210D79 /* UIViewController+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		05439B5423164DE200210D79 /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DateService.swift; path = ../Data/Source/DateService.swift; sourceTree = "<group>"; };
 		05579ACE231F935800FF4BD3 /* MakeRoutine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeRoutine.swift; sourceTree = "<group>"; };
@@ -420,6 +430,7 @@
 				05579AD0231F93BE00FF4BD3 /* DayInfo.swift */,
 				059248E923192AA7000E54C2 /* PeriodDay.swift */,
 				057A7C2023223570001263FF /* DateFomat.swift */,
+				05385A1E2330642300D48657 /* WeekInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -439,6 +450,7 @@
 				058A3DCB22F496D400AB00F2 /* RoutineDatabase.swift */,
 				05DA76B6230D361100929FA3 /* MapperService.swift */,
 				05579AD2231F941E00FF4BD3 /* DayInfoDatabase.swift */,
+				05385A262330A7C200D48657 /* WeekInfoService.swift */,
 			);
 			name = Local;
 			sourceTree = "<group>";
@@ -551,9 +563,12 @@
 				058B6477232E1DCA004F0BF0 /* ChangePasswordCell.xib in Resources */,
 				058A3D9A22F276DA00AB00F2 /* TabBar.storyboard in Resources */,
 				058B648C232F56FB004F0BF0 /* StatisticARoutine.storyboard in Resources */,
+				05385A222330654100D48657 /* StatisticRoutineFooterCell.xib in Resources */,
 				0561CC6B23181CDE00AD13D2 /* AddRemindCell.xib in Resources */,
 				058B647B232E1DCA004F0BF0 /* SetUpPasswordCell.xib in Resources */,
+				05385A252330654C00D48657 /* StatisticRoutineCell.xib in Resources */,
 				05B23D3D22F1678100E8140F /* LaunchScreen.storyboard in Resources */,
+				05385A242330654800D48657 /* StatisticRoutineHeaderCell.xib in Resources */,
 				059248E22318B382000E54C2 /* Assets.xcassets in Resources */,
 				058B6475232E1DCA004F0BF0 /* ManageRoutineCell.xib in Resources */,
 				05DA76D4230FB4A700929FA3 /* DatePicker.xib in Resources */,
@@ -657,6 +672,7 @@
 				058B6476232E1DCA004F0BF0 /* ChangePasswordCell.swift in Sources */,
 				058A3DA822F2797C00AB00F2 /* StatisticAllController.swift in Sources */,
 				05DA76D6230FB4D500929FA3 /* SystemInfo.swift in Sources */,
+				05385A1F2330642300D48657 /* WeekInfo.swift in Sources */,
 				05DA76C2230E99A100929FA3 /* DateCell.swift in Sources */,
 				058B647A232E1DCA004F0BF0 /* PasswordSettingCell.swift in Sources */,
 				05439B4D2314FE4900210D79 /* UIViewController+.swift in Sources */,
@@ -689,7 +705,10 @@
 				05DA76D8230FB63700929FA3 /* PickerViewControl.swift in Sources */,
 				05DA76F8230FD0FD00929FA3 /* MakeRoutineController.swift in Sources */,
 				058A3D9E22F2773B00AB00F2 /* TabBarController.swift in Sources */,
+				05385A232330654500D48657 /* StatisticRoutineHeaderCell.swift in Sources */,
+				05385A212330653A00D48657 /* StatisticRoutineFooterCell.swift in Sources */,
 				059248EA23192AA7000E54C2 /* PeriodDay.swift in Sources */,
+				05385A202330653300D48657 /* StatisticRoutineCell.swift in Sources */,
 				05439B4E2315095100210D79 /* PickerViewControl.swift in Sources */,
 				05DA76C6230EDE5F00929FA3 /* RoutineDiaryCelll.swift in Sources */,
 				0537C5442306815600454618 /* RoutineComponentCell.swift in Sources */,
@@ -700,6 +719,7 @@
 				05439B502315096500210D79 /* DatePicker.swift in Sources */,
 				0537C5302306568000454618 /* RemindModel.swift in Sources */,
 				058B647C232E1DCA004F0BF0 /* ManageRoutineCell.swift in Sources */,
+				05385A272330A7C200D48657 /* WeekInfoService.swift in Sources */,
 				0561CC63231679DE00AD13D2 /* AlertViewControl.swift in Sources */,
 				058A3DA622F2796200AB00F2 /* DiaryController.swift in Sources */,
 				05DA76BB230D7A6200929FA3 /* DayOfWeek.swift in Sources */,

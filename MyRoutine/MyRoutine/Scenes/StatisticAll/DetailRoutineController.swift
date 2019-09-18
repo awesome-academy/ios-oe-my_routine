@@ -54,7 +54,7 @@ final class DetailRoutineController: UIViewController {
             $0.delegate = self
             $0.view.frame = CGRect(x: 0, y: 0,
                                    width: SystemInfo.screenWidth,
-                                   height: SystemInfo.screenHeight)
+                                   height: view.height)
             $0.font = Constants.font
             $0.selectedFont = Constants.font
             $0.indicatorColor = UIColor.seclectedColor

@@ -22,4 +22,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
     }
     
+    func checkPassCode() {
+        if PasscodeService.shared.checkTurnOnPasscode() {
+            if PasscodeService.shared.checkExistPasscode() {
+                let controller = PasswordInputContrroller.instantiate()
+                controller.typeOfInputPasscode = .inputPasscode
+                UIViewController.top()?.present(controller, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    func applicationWillResignActive(_ application: UIApplication) {
+        checkPassCode()
+    }
+    
 }

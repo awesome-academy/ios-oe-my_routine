@@ -6,6 +6,8 @@
 //  Copyright © 2019 huy. All rights reserved.
 //
 
+typealias TimeRemind = (hour: Int, minute: Int)
+
 class RoutineDatabase {
     
     // MARK: - Singleton
@@ -68,4 +70,14 @@ class RoutineDatabase {
         return routines
     }
     
+    func getTimeRemind(routine: RoutineModel) -> [TimeRemind] {
+        let reminds = routine.remindRoutine.filter { $0.state }.map { $0.timeString }
+        var res = [TimeRemind]()
+        for remind in reminds {
+            let hour = String(remind.prefix(2))
+            let minute = String(remind.suffix(2))
+            res.append((hour.int, minute.int))
+        }
+        return res
+    }
 }

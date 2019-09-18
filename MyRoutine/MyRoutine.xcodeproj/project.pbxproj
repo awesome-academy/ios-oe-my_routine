@@ -90,6 +90,7 @@
 		05D26375233268BA00B12FFA /* InputPasscodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D26373233268BA00B12FFA /* InputPasscodeCell.swift */; };
 		05D263782332902200B12FFA /* PasscodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D263772332902200B12FFA /* PasscodeService.swift */; };
 		05D2637F23329BA200B12FFA /* InputPasscodeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05D2637D23329BA200B12FFA /* InputPasscodeCell.xib */; };
+		05D2636C2331ACD500B12FFA /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D2636B2331ACD500B12FFA /* NotificationService.swift */; };
 		05DA76B7230D361100929FA3 /* MapperService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA76B6230D361100929FA3 /* MapperService.swift */; };
 		05DA76B9230D390200929FA3 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA76B8230D390200929FA3 /* Date+.swift */; };
 		05DA76BB230D7A6200929FA3 /* DayOfWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DA76BA230D7A6200929FA3 /* DayOfWeek.swift */; };
@@ -189,6 +190,7 @@
 		05D26373233268BA00B12FFA /* InputPasscodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPasscodeCell.swift; sourceTree = "<group>"; };
 		05D263772332902200B12FFA /* PasscodeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeService.swift; sourceTree = "<group>"; };
 		05D2637D23329BA200B12FFA /* InputPasscodeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputPasscodeCell.xib; sourceTree = "<group>"; };
+		05D2636B2331ACD500B12FFA /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		05DA76B6230D361100929FA3 /* MapperService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperService.swift; sourceTree = "<group>"; };
 		05DA76B8230D390200929FA3 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		05DA76BA230D7A6200929FA3 /* DayOfWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayOfWeek.swift; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 				05439B5423164DE200210D79 /* DateService.swift */,
 				05385A342330C7D600D48657 /* SupportService.swift */,
 				05D263772332902200B12FFA /* PasscodeService.swift */,
+				05D2636B2331ACD500B12FFA /* NotificationService.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -752,6 +755,7 @@
 				05385A212330653A00D48657 /* StatisticRoutineFooterCell.swift in Sources */,
 				05385A332330C78B00D48657 /* StatisticARoutine.swift in Sources */,
 				05385A352330C7D600D48657 /* SupportService.swift in Sources */,
+				05D2636C2331ACD500B12FFA /* NotificationService.swift in Sources */,
 				059248EA23192AA7000E54C2 /* PeriodDay.swift in Sources */,
 				05385A202330653300D48657 /* StatisticRoutineCell.swift in Sources */,
 				05439B4E2315095100210D79 /* PickerViewControl.swift in Sources */,

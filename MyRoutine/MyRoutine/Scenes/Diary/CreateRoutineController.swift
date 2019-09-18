@@ -82,6 +82,7 @@ final class CreateRoutineController: UIViewController {
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "updateDayInfo"),
                                             object: nil,
                                             userInfo: ["message": routine])
+            NotificationSerivce.shared.addNotificationARoutine(routine: routine)
             self.dismiss(animated: true, completion: nil)
         }
     }

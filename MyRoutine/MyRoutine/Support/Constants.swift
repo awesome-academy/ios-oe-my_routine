@@ -17,4 +17,5 @@ class Constants {
                                        .Thursday, .Friday, .Saturday]
     static let numberDayOnWeek = 7
     static let freeDayStatus = "Tận hưởng một ngày nghỉ nhé !"
+    static let notificationBody = "Tới giờ thực hiện rồi đó !!! Làm ngay thôi 💪🏻"
 }

@@ -9,4 +9,6 @@
 extension UIColor {
     static let backgroundColor = UIColor(red: 235 / 255, green: 235 / 255,
                                          blue: 235 / 255, alpha: 1)
+    static let seclectedColor = UIColor(red: 234 / 255, green: 185 / 255,
+                                        blue: 186 / 255, alpha: 1)
 }

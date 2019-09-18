@@ -36,4 +36,10 @@ extension Date {
         let month = Date.currentCalendar.component(.month, from: self)
         return "\(day) tháng \(month)"
     }
+    
+    func getMonthAndYearString() -> String {
+        let month = Date.currentCalendar.component(.month, from: self)
+        let year = Date.currentCalendar.component(.year, from: self)
+        return "Tháng \(month) năm \(year)"
+    }
 }

@@ -12,12 +12,13 @@ final class ManageRoutineController: UIViewController {
     static let heightForRow: CGFloat = 65
     
     // MARK: - Variables:
-    var routine = RoutineDatabase.shared.getAllRoutine()
+    var allRoutine = RoutineDatabase.shared.getAllRoutine()
     
     // MARK: - Outlets
-    @IBOutlet private weak var routineSearchBar: UISearchBar!
     @IBOutlet private weak var routineTableView: UITableView!
     @IBOutlet private weak var hiddenView: UIView!
+    @IBOutlet weak var routineSearchBar: UISearchBar!
+    @IBOutlet weak var deleteButton: UIButton!
     
     // MARK: - View Life Cycles
     override func viewDidLoad() {
@@ -27,11 +28,10 @@ final class ManageRoutineController: UIViewController {
     
     // MARK: - Support Method
     private func setUpView() {
-        hiddenView.isHidden = !routine.isEmpty
+        hiddenView.isHidden = !allRoutine.isEmpty
         routineTableView.do {
             $0.dataSource = self
             $0.delegate = self
-            $0.isEditing = true
             $0.register(cellType: EditRoutineCell.self)
         }
     }
@@ -40,16 +40,25 @@ final class ManageRoutineController: UIViewController {
     @IBAction func handleBackButton(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
+    
+    @IBAction func handleDeleteButton(_ sender: Any) {
+        deleteButton.do {
+            $0.setTitleColor(routineTableView.isEditing ? UIColor.red : UIColor.green, for: .normal)
+            $0.setTitle(routineTableView.isEditing ? "Xoá" : "Xong",
+                        for: .normal)
+        }
+        routineTableView.isEditing = !routineTableView.isEditing
+    }
 }
 
 extension ManageRoutineController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return routine.count
+        return allRoutine.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: EditRoutineCell = tableView.dequeueReusableCell(for: indexPath)
-        cell.setContentCell(routine: routine[indexPath.row])
+        cell.setContentCell(routine: allRoutine[indexPath.row])
         return cell
     }
 }
@@ -57,6 +66,23 @@ extension ManageRoutineController: UITableViewDataSource {
 extension ManageRoutineController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return ManageRoutineController.heightForRow
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let controller = EditRoutineController.instantiate()
+        controller.routine = allRoutine[indexPath.row]
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            self.allRoutine.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .right)
+            RoutineDatabase.shared.removeAllRoutine()
+            allRoutine.forEach {
+                RoutineDatabase.shared.saveRoutinetoDB($0)
+            }
+        }
     }
 }
 

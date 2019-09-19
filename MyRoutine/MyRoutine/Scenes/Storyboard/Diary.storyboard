@@ -469,7 +469,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aOk-Nl-65g" customClass="MBCircularProgressBarView">
-                                <rect key="frame" x="34.666666666666657" y="176.33333333333337" width="345" height="345"/>
+                                <rect key="frame" x="34.666666666666657" y="190" width="345" height="345"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="aOk-Nl-65g" secondAttribute="height" id="fOh-zC-UkE"/>
@@ -510,7 +510,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAD-NT-VyQ">
-                                <rect key="frame" x="95.666666666666671" y="560.33333333333337" width="57.000000000000014" height="57"/>
+                                <rect key="frame" x="95.666666666666671" y="574" width="57.000000000000014" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="HXZ-0Q-lhT"/>
                                     <constraint firstAttribute="width" constant="57" id="RUU-Et-ehY"/>
@@ -521,7 +521,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Fh-su-r1n">
-                                <rect key="frame" x="261.33333333333331" y="560.33333333333337" width="57" height="57"/>
+                                <rect key="frame" x="261.33333333333331" y="574" width="57" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="57" id="UI5-h2-p1O"/>
                                     <constraint firstAttribute="height" constant="57" id="q7g-a8-XaJ"/>
@@ -532,7 +532,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PYk-nq-V61" customClass="RoundedButton" customModule="MyRoutine" customModuleProvider="target">
-                                <rect key="frame" x="88.666666666666671" y="672.33333333333337" width="236.66666666666663" height="59.666666666666629"/>
+                                <rect key="frame" x="88.666666666666671" y="695" width="236.66666666666663" height="59.666666666666629"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Hoàn thành">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -550,7 +550,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SfH-P6-HUw" customClass="RoundedButton" customModule="MyRoutine" customModuleProvider="target">
-                                <rect key="frame" x="88.666666666666671" y="744.66666666666663" width="236.66666666666663" height="59.666666666666629"/>
+                                <rect key="frame" x="88.666666666666671" y="763" width="236.66666666666663" height="59.666666666666629"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Hoàn tác">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -584,14 +584,14 @@
                         <constraints>
                             <constraint firstItem="SfH-P6-HUw" firstAttribute="width" secondItem="PYk-nq-V61" secondAttribute="width" id="1GC-pC-Ha7"/>
                             <constraint firstItem="UAD-NT-VyQ" firstAttribute="centerX" secondItem="lWH-vy-o81" secondAttribute="centerX" multiplier="0.6" id="2yx-pV-WsK"/>
-                            <constraint firstItem="8Fh-su-r1n" firstAttribute="centerY" secondItem="lWH-vy-o81" secondAttribute="centerY" multiplier="1.3" id="4ia-1O-t5x"/>
+                            <constraint firstItem="8Fh-su-r1n" firstAttribute="centerY" secondItem="lWH-vy-o81" secondAttribute="centerY" multiplier="1.33" id="4ia-1O-t5x"/>
                             <constraint firstItem="SfH-P6-HUw" firstAttribute="centerX" secondItem="lWH-vy-o81" secondAttribute="centerX" id="5LG-Gg-7Hz"/>
                             <constraint firstItem="lWH-vy-o81" firstAttribute="trailing" secondItem="Hy9-45-ngo" secondAttribute="trailing" constant="15" id="5hG-Rj-gIE"/>
                             <constraint firstItem="PYk-nq-V61" firstAttribute="centerX" secondItem="lWH-vy-o81" secondAttribute="centerX" id="7G7-KY-XSs"/>
-                            <constraint firstItem="aOk-Nl-65g" firstAttribute="centerY" secondItem="lWH-vy-o81" secondAttribute="centerY" multiplier="0.77" id="85P-6j-iEn"/>
+                            <constraint firstItem="aOk-Nl-65g" firstAttribute="centerY" secondItem="lWH-vy-o81" secondAttribute="centerY" multiplier="0.8" id="85P-6j-iEn"/>
                             <constraint firstItem="aOk-Nl-65g" firstAttribute="width" secondItem="9u6-gc-LIH" secondAttribute="width" multiplier="5/6" id="8MX-hC-0Xf"/>
                             <constraint firstItem="UEj-p2-9tL" firstAttribute="firstBaseline" secondItem="Hy9-45-ngo" secondAttribute="firstBaseline" id="8g8-yd-mCo"/>
-                            <constraint firstItem="SfH-P6-HUw" firstAttribute="centerY" secondItem="lWH-vy-o81" secondAttribute="centerY" multiplier="1.71" id="AiE-to-gbM"/>
+                            <constraint firstItem="SfH-P6-HUw" firstAttribute="centerY" secondItem="lWH-vy-o81" secondAttribute="centerY" multiplier="1.75" id="AiE-to-gbM"/>
                             <constraint firstItem="aOk-Nl-65g" firstAttribute="centerX" secondItem="lWH-vy-o81" secondAttribute="centerX" id="AwC-Ic-k0I"/>
                             <constraint firstItem="ZGh-Rg-58O" firstAttribute="height" secondItem="9u6-gc-LIH" secondAttribute="height" multiplier="1/8.75" id="ELk-P1-E1I"/>
                             <constraint firstItem="lWH-vy-o81" firstAttribute="trailing" secondItem="ZGh-Rg-58O" secondAttribute="trailing" id="JDT-b3-WqE"/>
@@ -603,8 +603,8 @@
                             <constraint firstItem="8Fh-su-r1n" firstAttribute="centerX" secondItem="lWH-vy-o81" secondAttribute="centerX" multiplier="1.4" id="dEG-zr-bIM"/>
                             <constraint firstItem="Hy9-45-ngo" firstAttribute="centerY" secondItem="lWH-vy-o81" secondAttribute="centerY" multiplier="0.3" id="dU4-Ol-6ZC"/>
                             <constraint firstItem="ZGh-Rg-58O" firstAttribute="top" secondItem="9u6-gc-LIH" secondAttribute="top" id="e56-xd-B6l"/>
-                            <constraint firstItem="UAD-NT-VyQ" firstAttribute="centerY" secondItem="lWH-vy-o81" secondAttribute="centerY" multiplier="1.3" id="k3t-xe-Pfe"/>
-                            <constraint firstItem="PYk-nq-V61" firstAttribute="centerY" secondItem="lWH-vy-o81" secondAttribute="centerY" multiplier="1.55" id="rHh-dF-uNv"/>
+                            <constraint firstItem="UAD-NT-VyQ" firstAttribute="centerY" secondItem="lWH-vy-o81" secondAttribute="centerY" multiplier="1.33" id="k3t-xe-Pfe"/>
+                            <constraint firstItem="PYk-nq-V61" firstAttribute="centerY" secondItem="lWH-vy-o81" secondAttribute="centerY" multiplier="1.6" id="rHh-dF-uNv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lWH-vy-o81"/>
                     </view>

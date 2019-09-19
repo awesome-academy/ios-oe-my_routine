@@ -145,6 +145,16 @@
                                             <action selector="handleBackButton:" destination="hVO-Sb-ztS" eventType="touchUpInside" id="IHB-LH-mbU"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5oB-0g-Boq">
+                                        <rect key="frame" x="367" y="45" width="35" height="35"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="19"/>
+                                        <state key="normal" title="Xoá">
+                                            <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="handleDeleteButton:" destination="hVO-Sb-ztS" eventType="touchUpInside" id="6EY-dr-Wid"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -152,6 +162,8 @@
                                     <constraint firstItem="KHv-BK-rtY" firstAttribute="centerY" secondItem="jX9-Et-O6J" secondAttribute="centerY" multiplier="1.4" id="7ao-F2-Gfb"/>
                                     <constraint firstItem="2B0-fs-AJz" firstAttribute="leading" secondItem="jX9-Et-O6J" secondAttribute="leading" constant="12" id="BLC-Ig-vCd"/>
                                     <constraint firstItem="2B0-fs-AJz" firstAttribute="centerY" secondItem="KHv-BK-rtY" secondAttribute="centerY" id="DXx-Oc-HR6"/>
+                                    <constraint firstItem="5oB-0g-Boq" firstAttribute="centerY" secondItem="KHv-BK-rtY" secondAttribute="centerY" id="PQy-fO-Isz"/>
+                                    <constraint firstAttribute="trailing" secondItem="5oB-0g-Boq" secondAttribute="trailing" constant="12" id="pMz-TH-43i"/>
                                 </constraints>
                             </view>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="IPd-d5-A7f">
@@ -200,8 +212,9 @@
                         <viewLayoutGuide key="safeArea" id="mtU-Ob-Int"/>
                     </view>
                     <connections>
+                        <outlet property="deleteButton" destination="5oB-0g-Boq" id="DTl-Nf-2To"/>
                         <outlet property="hiddenView" destination="3cb-bI-fHs" id="SUt-hz-fyu"/>
-                        <outlet property="routineSearchBar" destination="IPd-d5-A7f" id="29F-4a-yJk"/>
+                        <outlet property="routineSearchBar" destination="IPd-d5-A7f" id="oNm-tU-qId"/>
                         <outlet property="routineTableView" destination="5p2-nF-gmX" id="heV-f6-Jzp"/>
                     </connections>
                 </viewController>
@@ -550,6 +563,82 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yAn-9i-VFp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2904" y="-335"/>
+        </scene>
+        <!--Edit Routine Controller-->
+        <scene sceneID="eS5-Rt-EOG">
+            <objects>
+                <viewController storyboardIdentifier="EditRoutineController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="f7g-g8-PYn" customClass="EditRoutineController" customModule="MyRoutine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xev-wG-fD5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I23-T9-fz3">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="89.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chỉnh sửa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Paj-Cu-TwQ">
+                                        <rect key="frame" x="103.5" y="50.5" width="207" height="24"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csT-hf-zFj">
+                                        <rect key="frame" x="12" y="45" width="35" height="35"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="19"/>
+                                        <state key="normal" title="Huỷ">
+                                            <color key="titleColor" red="0.95294117649999999" green="0.68235294120000001" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="handleCancelButton:" destination="f7g-g8-PYn" eventType="touchUpInside" id="u48-k2-sLz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBb-9d-2wX">
+                                        <rect key="frame" x="367" y="45" width="35" height="35"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="19"/>
+                                        <state key="normal" title="Lưu">
+                                            <color key="titleColor" red="0.95294117649999999" green="0.68235294120000001" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="handleSaveButton:" destination="f7g-g8-PYn" eventType="touchUpInside" id="pkb-w1-ezA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Paj-Cu-TwQ" firstAttribute="width" secondItem="I23-T9-fz3" secondAttribute="width" multiplier="1/2" id="9hk-xm-Lkk"/>
+                                    <constraint firstItem="csT-hf-zFj" firstAttribute="centerY" secondItem="Paj-Cu-TwQ" secondAttribute="centerY" id="PTq-qJ-PBG"/>
+                                    <constraint firstItem="NBb-9d-2wX" firstAttribute="centerY" secondItem="Paj-Cu-TwQ" secondAttribute="centerY" id="QRq-FG-2aa"/>
+                                    <constraint firstAttribute="trailing" secondItem="NBb-9d-2wX" secondAttribute="trailing" constant="12" id="T9L-wk-Nj2"/>
+                                    <constraint firstItem="Paj-Cu-TwQ" firstAttribute="centerY" secondItem="I23-T9-fz3" secondAttribute="centerY" multiplier="1.4" id="f8E-ep-rfh"/>
+                                    <constraint firstItem="csT-hf-zFj" firstAttribute="leading" secondItem="I23-T9-fz3" secondAttribute="leading" constant="12" id="gHD-Jn-Brv"/>
+                                    <constraint firstItem="Paj-Cu-TwQ" firstAttribute="centerX" secondItem="I23-T9-fz3" secondAttribute="centerX" id="q0i-OA-lPE"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FVG-PE-l4H">
+                                <rect key="frame" x="0.0" y="89.5" width="414" height="772.5"/>
+                                <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FVG-PE-l4H" firstAttribute="top" secondItem="I23-T9-fz3" secondAttribute="bottom" id="7pi-qa-HnX"/>
+                            <constraint firstItem="Tru-RY-59m" firstAttribute="bottom" secondItem="FVG-PE-l4H" secondAttribute="bottom" id="AOW-z3-WHN"/>
+                            <constraint firstItem="Tru-RY-59m" firstAttribute="trailing" secondItem="I23-T9-fz3" secondAttribute="trailing" id="J02-20-tcz"/>
+                            <constraint firstItem="Tru-RY-59m" firstAttribute="trailing" secondItem="FVG-PE-l4H" secondAttribute="trailing" id="K6d-Em-JJF"/>
+                            <constraint firstItem="I23-T9-fz3" firstAttribute="top" secondItem="Xev-wG-fD5" secondAttribute="top" id="WaT-ed-MIw"/>
+                            <constraint firstItem="I23-T9-fz3" firstAttribute="height" secondItem="Xev-wG-fD5" secondAttribute="height" multiplier="1/10" id="kBK-n9-IPY"/>
+                            <constraint firstItem="I23-T9-fz3" firstAttribute="leading" secondItem="Tru-RY-59m" secondAttribute="leading" id="qJW-AF-OSk"/>
+                            <constraint firstItem="FVG-PE-l4H" firstAttribute="leading" secondItem="Tru-RY-59m" secondAttribute="leading" id="sw2-Vt-4N4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Tru-RY-59m"/>
+                    </view>
+                    <connections>
+                        <outlet property="infoRoutineTableView" destination="FVG-PE-l4H" id="5V2-e3-V3a"/>
+                        <outlet property="nameRoutineLabel" destination="Paj-Cu-TwQ" id="xGd-hh-5Ln"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SmH-BS-os9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3599" y="-334"/>
         </scene>
         <!--Cài đặt-->
         <scene sceneID="1lh-jr-0dG">

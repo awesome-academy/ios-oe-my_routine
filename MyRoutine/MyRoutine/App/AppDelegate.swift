@@ -8,6 +8,7 @@
 
 import IQKeyboardManagerSwift
 import UserNotifications
+import LocalAuthentication
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setUpKeyboard()
         setupPushNotification()
         return true
+    }
+    
+    func applicationWillEnterForeground(_ application: UIApplication) {
+       checkPassCode()
     }
     
     private func setUpKeyboard() {
@@ -32,14 +37,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
-    func applicationWillResignActive(_ application: UIApplication) {
-        checkPassCode()
-    }
+//    func applicationWillResignActive(_ application: UIApplication) {
+//        checkPassCode()
+//    }
     
     private func setupPushNotification() {
         UNUserNotificationCenter.current().delegate = self
         NotificationSerivce.shared.registerPushNotification()
     }
+
 }
 
 extension AppDelegate: UNUserNotificationCenterDelegate {

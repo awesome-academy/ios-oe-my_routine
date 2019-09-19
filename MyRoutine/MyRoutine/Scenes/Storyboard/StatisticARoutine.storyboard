@@ -28,7 +28,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDr-W4-lAE">
-                                        <rect key="frame" x="12" y="51.666666666666664" width="16" height="21.999999999999993"/>
+                                        <rect key="frame" x="12" y="47.666666666666664" width="30" height="29.999999999999993"/>
                                         <state key="normal" image="back"/>
                                         <connections>
                                             <action selector="handleBackButton:" destination="5et-Hi-eB4" eventType="touchUpInside" id="nYz-YC-bhk"/>
@@ -51,8 +51,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="EMv-06-w5u" secondAttribute="bottom" id="CYA-pk-mez"/>
+                            <constraint firstItem="0K7-CL-eAf" firstAttribute="top" secondItem="PY0-uK-yU1" secondAttribute="top" id="Ka5-LP-bm3"/>
                             <constraint firstItem="0K7-CL-eAf" firstAttribute="height" secondItem="PY0-uK-yU1" secondAttribute="height" multiplier="1/10" id="P4T-ZT-Iuf"/>
-                            <constraint firstItem="0K7-CL-eAf" firstAttribute="top" secondItem="tqF-kn-D1I" secondAttribute="top" constant="-44" id="UIB-yf-YL9"/>
                             <constraint firstAttribute="trailing" secondItem="0K7-CL-eAf" secondAttribute="trailing" id="elW-gW-rJk"/>
                             <constraint firstItem="EMv-06-w5u" firstAttribute="top" secondItem="0K7-CL-eAf" secondAttribute="bottom" id="fLY-BM-BFg"/>
                             <constraint firstItem="0K7-CL-eAf" firstAttribute="leading" secondItem="PY0-uK-yU1" secondAttribute="leading" id="qLg-Vs-M38"/>

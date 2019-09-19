@@ -5,7 +5,7 @@
 //  Created by Bùi Xuân Huy on 9/18/19.
 //  Copyright © 2019 huy. All rights reserved.
 //
-
+import LocalAuthentication
 enum TypeInputPasscode {
     case comfirmNewPasscode
     case failToComfirmNewPasscode
@@ -39,6 +39,13 @@ final class PasswordInputContrroller: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpCollectionView()
+        if typeOfInputPasscode == .inputPasscode, TouchIDService.shared.checkTurnOnTouchID() {
+            TouchIDService.shared.authenticateUserTouchID { (success) in
+                if success {
+                    self.dismiss(animated: true, completion: nil)
+                }
+            }
+        }
     }
     
     // MARK: - Actions

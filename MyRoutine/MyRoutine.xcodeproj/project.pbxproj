@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		05006443233341A10016613B /* EditRoutineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05006442233341A10016613B /* EditRoutineController.swift */; };
+		05006445233369950016613B /* TouchIDService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05006444233369950016613B /* TouchIDService.swift */; };
 		0537C5302306568000454618 /* RemindModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C52F2306568000454618 /* RemindModel.swift */; };
 		0537C536230657BB00454618 /* List+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C535230657BB00454618 /* List+.swift */; };
 		0537C53C23066A6600454618 /* CreateRoutineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0537C53B23066A6600454618 /* CreateRoutineController.swift */; };
@@ -110,6 +111,7 @@
 
 /* Begin PBXFileReference section */
 		05006442233341A10016613B /* EditRoutineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRoutineController.swift; sourceTree = "<group>"; };
+		05006444233369950016613B /* TouchIDService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchIDService.swift; sourceTree = "<group>"; };
 		0537C52F2306568000454618 /* RemindModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindModel.swift; sourceTree = "<group>"; };
 		0537C535230657BB00454618 /* List+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "List+.swift"; sourceTree = "<group>"; };
 		0537C53B23066A6600454618 /* CreateRoutineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoutineController.swift; sourceTree = "<group>"; };
@@ -334,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				0537C547230799DB00454618 /* View */,
+				05006444233369950016613B /* TouchIDService.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -721,6 +724,7 @@
 				058B647A232E1DCA004F0BF0 /* PasswordSettingCell.swift in Sources */,
 				05439B4D2314FE4900210D79 /* UIViewController+.swift in Sources */,
 				0599454E230A73210050830E /* Constants.swift in Sources */,
+				05006445233369950016613B /* TouchIDService.swift in Sources */,
 				0537C536230657BB00454618 /* List+.swift in Sources */,
 				05579ACF231F935800FF4BD3 /* MakeRoutine.swift in Sources */,
 				058B647E232E2299004F0BF0 /* SetUpPasswordController.swift in Sources */,

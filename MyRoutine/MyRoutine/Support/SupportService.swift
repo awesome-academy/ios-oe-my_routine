@@ -19,6 +19,7 @@ class SupportService {
     /// - Parameter array of Int
     ///
     func maximalConsecutiveNumbers(in array: [Int]) -> Int {
+        if array.count < 2 { return 1 }
         var longest = 1
         var currentCount = 1
         for i in 0...(array.count - 2) {

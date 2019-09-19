@@ -9,7 +9,7 @@
 final class ManageRoutineController: UIViewController {
     
     // MARK: - Constants
-    static let heightForRow: CGFloat = 65
+    static let heightForRow: CGFloat = 70
     
     // MARK: - Variables:
     var allRoutine = RoutineDatabase.shared.getAllRoutine()

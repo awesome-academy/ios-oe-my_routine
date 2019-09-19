@@ -19,7 +19,7 @@ final class SetUpPasswordController: UIViewController {
     }
 
     // MARK: - Variables
-    var checkPasswordOn = false
+    var checkPasswordOn = PasscodeService.shared.checkTurnOnPasscode()
     
     // MARK: - Outlets
     @IBOutlet weak var setUpPwTableView: UITableView!
@@ -62,6 +62,11 @@ extension SetUpPasswordController: UITableViewDataSource {
             cell.didChangeSwitch = {[unowned self] changeState in
                 self.checkPasswordOn = changeState
                 self.setUpPwTableView.reloadData()
+                PasscodeService.shared.turnOnPasscodeMode(turnOn: changeState)
+                if changeState && !PasscodeService.shared.checkExistPasscode() {
+                    let controller = PasswordInputContrroller.instantiate()
+                    self.navigationController?.pushViewController(controller, animated: true)
+                }
             }
             return cell
             
@@ -98,6 +103,18 @@ extension SetUpPasswordController: UITableViewDelegate {
             $0.backgroundColor = UIColor.backgroundColor
         }
         return view
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let typeCell = CellSetUpPasswordTableView(rawValue: indexPath.section) else { return }
+        switch typeCell {
+        case .changePassword:
+            let controller = PasswordInputContrroller.instantiate()
+            controller.typeOfInputPasscode = .newPasscode
+            navigationController?.pushViewController(controller, animated: true)
+        default:
+            break
+        }
     }
 }
 

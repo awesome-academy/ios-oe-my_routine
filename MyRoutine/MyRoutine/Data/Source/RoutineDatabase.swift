@@ -57,7 +57,7 @@ class RoutineDatabase {
             let realm = try Realm()
             try realm.write {
                 let update = MapperRoutine.shared.routineToRoutineRealm(routine: newRouine)
-                realm.add(update, update: true)
+                realm.add(update, update: .all)
             }
         } catch { }
     }

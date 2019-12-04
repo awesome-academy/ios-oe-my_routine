@@ -58,6 +58,9 @@
                                                 <real key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="handleFIlterInfo:" destination="fQh-Uj-jcm" eventType="touchUpInside" id="h2O-9z-RLL"/>
+                                        </connections>
                                     </button>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="x4f-E9-BMh">
                                         <rect key="frame" x="0.0" y="41" width="414" height="73"/>
@@ -510,7 +513,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAD-NT-VyQ">
-                                <rect key="frame" x="95.666666666666671" y="574" width="57.000000000000014" height="57"/>
+                                <rect key="frame" x="95.666666666666671" y="596.66666666666663" width="57.000000000000014" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="HXZ-0Q-lhT"/>
                                     <constraint firstAttribute="width" constant="57" id="RUU-Et-ehY"/>
@@ -521,7 +524,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Fh-su-r1n">
-                                <rect key="frame" x="261.33333333333331" y="574" width="57" height="57"/>
+                                <rect key="frame" x="261.33333333333331" y="596.66666666666663" width="57" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="57" id="UI5-h2-p1O"/>
                                     <constraint firstAttribute="height" constant="57" id="q7g-a8-XaJ"/>
@@ -584,7 +587,7 @@
                         <constraints>
                             <constraint firstItem="SfH-P6-HUw" firstAttribute="width" secondItem="PYk-nq-V61" secondAttribute="width" id="1GC-pC-Ha7"/>
                             <constraint firstItem="UAD-NT-VyQ" firstAttribute="centerX" secondItem="lWH-vy-o81" secondAttribute="centerX" multiplier="0.6" id="2yx-pV-WsK"/>
-                            <constraint firstItem="8Fh-su-r1n" firstAttribute="centerY" secondItem="lWH-vy-o81" secondAttribute="centerY" multiplier="1.33" id="4ia-1O-t5x"/>
+                            <constraint firstItem="8Fh-su-r1n" firstAttribute="centerY" secondItem="lWH-vy-o81" secondAttribute="centerY" multiplier="1.38" id="4ia-1O-t5x"/>
                             <constraint firstItem="SfH-P6-HUw" firstAttribute="centerX" secondItem="lWH-vy-o81" secondAttribute="centerX" id="5LG-Gg-7Hz"/>
                             <constraint firstItem="lWH-vy-o81" firstAttribute="trailing" secondItem="Hy9-45-ngo" secondAttribute="trailing" constant="15" id="5hG-Rj-gIE"/>
                             <constraint firstItem="PYk-nq-V61" firstAttribute="centerX" secondItem="lWH-vy-o81" secondAttribute="centerX" id="7G7-KY-XSs"/>
@@ -603,7 +606,7 @@
                             <constraint firstItem="8Fh-su-r1n" firstAttribute="centerX" secondItem="lWH-vy-o81" secondAttribute="centerX" multiplier="1.4" id="dEG-zr-bIM"/>
                             <constraint firstItem="Hy9-45-ngo" firstAttribute="centerY" secondItem="lWH-vy-o81" secondAttribute="centerY" multiplier="0.3" id="dU4-Ol-6ZC"/>
                             <constraint firstItem="ZGh-Rg-58O" firstAttribute="top" secondItem="9u6-gc-LIH" secondAttribute="top" id="e56-xd-B6l"/>
-                            <constraint firstItem="UAD-NT-VyQ" firstAttribute="centerY" secondItem="lWH-vy-o81" secondAttribute="centerY" multiplier="1.33" id="k3t-xe-Pfe"/>
+                            <constraint firstItem="UAD-NT-VyQ" firstAttribute="centerY" secondItem="lWH-vy-o81" secondAttribute="centerY" multiplier="1.38" id="k3t-xe-Pfe"/>
                             <constraint firstItem="PYk-nq-V61" firstAttribute="centerY" secondItem="lWH-vy-o81" secondAttribute="centerY" multiplier="1.6" id="rHh-dF-uNv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lWH-vy-o81"/>

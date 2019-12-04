@@ -74,7 +74,7 @@ extension SetUpPasswordController: UITableViewDataSource {
             let cell: SetUpPasswordCell = tableView.dequeueReusableCell(for: indexPath)
             cell.setContentForCell(passwordMode: Constants.titleTouchIDMode,
                                    state: false, isDisable: !checkPasswordOn)
-            cell.didChangeSwitch = {[unowned self] changeState in
+            cell.didChangeSwitch = { changeState in
                 TouchIDService.shared.turnOnTouchID(turnOn: changeState)
             }
             return cell

@@ -37,10 +37,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
-//    func applicationWillResignActive(_ application: UIApplication) {
-//        checkPassCode()
-//    }
-    
     private func setupPushNotification() {
         UNUserNotificationCenter.current().delegate = self
         NotificationSerivce.shared.registerPushNotification()

@@ -310,6 +310,21 @@
             </objects>
             <point key="canvasLocation" x="1076.8115942028987" y="93.75"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="XNj-f2-BAi">
+            <objects>
+                <viewController id="Oik-9t-M0v" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RUh-9d-kkD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="l37-uk-kSq"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FVd-ks-4fH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2109" y="101"/>
+        </scene>
         <!--Thống kê-->
         <scene sceneID="c0d-RI-Tvd">
             <objects>

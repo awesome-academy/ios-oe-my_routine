@@ -56,7 +56,7 @@ class DayInfoDatabase {
             let realm = try Realm()
             try realm.write {
                 let update = MapperDayInfo.shared.dayInfoToRealm(updateDayInfo)
-                realm.add(update, update: true)
+                realm.add(update, update: .all)
                 completion?(updateDayInfo)
             }
         } catch {

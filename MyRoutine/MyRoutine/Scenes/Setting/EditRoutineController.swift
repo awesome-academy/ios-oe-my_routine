@@ -44,6 +44,10 @@ final class EditRoutineController: UIViewController {
         setUpTableView()
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     // MARK: - Support Method
     private func setUpData() {
         nameRoutineLabel.text = routine?.nameRoutine

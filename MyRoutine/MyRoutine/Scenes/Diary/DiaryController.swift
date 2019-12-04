@@ -13,6 +13,7 @@ final class DiaryController: UIViewController {
     static let dates = DateService.shared.getArrayOfDate(numberOfDate: DiaryController.numberOfDates)
    
     // MARK: - Variables
+   private var dayInfoShow: DayInfo?
     private var dayInfo: DayInfo?
     private var routine = [RoutineModel]()
     private var chooseDate = DiaryController.numberOfDates - 2
@@ -61,11 +62,34 @@ final class DiaryController: UIViewController {
         let controller = UINavigationController().then {
             $0.navigationBar.isHidden = true
             $0.viewControllers = [CreateRoutineController.instantiate()]
+            $0.modalPresentationStyle = .fullScreen
         }
+      
         self.present(controller, animated: true, completion: nil)
     }
-    
-    // MARK: - Support Function
+   
+   @IBAction func handleFIlterInfo(_ sender: Any) {
+      let optionMenu = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+      let addToShowMorningRoutine = UIAlertAction(title: "Sáng", style: .default) { _ in
+      }
+      let addToShowNoonRoutine = UIAlertAction(title: "Trưa", style: .default) { _ in
+      }
+      let addToShowAfternoonRoutine = UIAlertAction(title: "Chiều", style: .default) { _ in
+      }
+      let addToShowNightRoutine = UIAlertAction(title: "Tối", style: .default) { _ in
+      }
+      let cancle = UIAlertAction(title: "Huỷ", style: .cancel)
+      optionMenu.do {
+         $0.addAction(addToShowMorningRoutine)
+         $0.addAction(addToShowNoonRoutine)
+         $0.addAction(addToShowAfternoonRoutine)
+         $0.addAction(addToShowNightRoutine)
+         $0.addAction(cancle)
+      }
+      present(optionMenu, animated: true, completion: nil)
+   }
+   
+   // MARK: - Support Function
     private func setUpCollectionView() {
         let layout = UICollectionViewFlowLayout().then {
             $0.sectionInset = UIEdgeInsets(top: 2, left: 7, bottom: 2, right: 7)
